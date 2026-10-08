@@ -1,19 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
-
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+import { REGION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gurugram Startup Map: startups and tech companies, mapped",
-    template: "%s | Gurugram Startup Map",
+    default: `${SITE_NAME}: ${SITE_TAGLINE.toLowerCase()}`,
+    template: `%s | ${SITE_NAME}`,
   },
   description:
-    "A public, community-owned map and directory of Gurugram's startups and tech companies, and the organisations that support them.",
-  applicationName: "Gurugram Startup Map",
-  openGraph: { type: "website", siteName: "Gurugram Startup Map", locale: "en_IN" },
+    `A public, community-owned map and directory of ${REGION}'s startups and tech companies, and the organisations that support them. Gurugram first; Noida and Delhi next.`,
+  applicationName: SITE_NAME,
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_IN" },
   twitter: { card: "summary_large_image" },
 };
 

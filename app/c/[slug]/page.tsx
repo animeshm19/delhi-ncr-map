@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!org) return {};
   const sector = org.sectors[0] ? `${sectorLabel(org.sectors[0])} ` : "";
   return {
-    title: `${org.name}: Gurugram ${sector}startup`,
+    title: `${org.name}: ${org.municipality} ${sector}startup`,
     description: org.one_liner ?? undefined,
     alternates: { canonical: `/c/${org.slug}` },
   };

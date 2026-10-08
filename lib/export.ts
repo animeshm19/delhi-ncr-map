@@ -12,10 +12,10 @@ function point(o: Org): [number, number] | null {
   return o.lng != null && o.lat != null ? [o.lng, o.lat] : null;
 }
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+import { SITE_URL as SITE } from "./site";
 
 export const ATTRIBUTION =
-  "Gurugram Startup Map, CC BY 4.0. Map data © OpenStreetMap contributors.";
+  "Delhi NCR Map, CC BY 4.0. Map data © OpenStreetMap contributors.";
 
 function coordKind(o: Org) {
   if (o.location_precision === "exact") return "address";

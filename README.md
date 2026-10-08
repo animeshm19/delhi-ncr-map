@@ -1,7 +1,7 @@
-# Gurugram Startup Map
+# Delhi NCR Map
 
-A public, community-owned map and directory of Gurugram's startups and tech companies and the
-organisations that support them. Modelled on the [Edmonton Startup Map](https://map.techwednesdays.ca)
+A public, community-owned map and directory of Delhi NCR's startups and tech companies and the
+organisations that support them. Gurugram is mapped first; Noida and Delhi are next. Modelled on the [Edmonton Startup Map](https://map.techwednesdays.ca)
 (hosted by Edmonton Tech Wednesdays, code MIT, data CC BY 4.0).
 
 ```bash

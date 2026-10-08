@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import { getOrgs } from "@/lib/data";
+import { SITE_NAME } from "@/lib/site";
 
 export const revalidate = 3600;
 export const metadata: Metadata = { title: "Open data" };
@@ -34,7 +35,7 @@ export default async function DataPage() {
       </ul>
       <h2>Licence</h2>
       <p>
-        Credit it as &ldquo;Gurugram Startup Map, CC BY 4.0&rdquo;. Descriptions quoted from organisations&apos; own
+        Credit it as &ldquo;{SITE_NAME}, CC BY 4.0&rdquo;. Descriptions quoted from organisations&apos; own
         sites and their logos are left out, because they aren&apos;t ours to license.
       </p>
       <SiteFooter />

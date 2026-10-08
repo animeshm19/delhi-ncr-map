@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getOrgs, profilePath } from "@/lib/data";
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+import { SITE_URL as SITE } from "@/lib/site";
 
 export const revalidate = 3600;
 

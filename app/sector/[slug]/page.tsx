@@ -5,6 +5,7 @@ import OrgTable from "@/components/OrgTable";
 import SiteFooter from "@/components/SiteFooter";
 import { getOrgs } from "@/lib/data";
 import { SECTORS } from "@/lib/taxonomy";
+import { REGION } from "@/lib/site";
 
 export const revalidate = 3600;
 type Params = { params: Promise<{ slug: string }> };
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const s = SECTORS[(await params).slug];
-  return s ? { title: `${s.label} startups in Gurugram` } : {};
+  return s ? { title: `${s.label} startups in ${REGION}` } : {};
 }
 
 export default async function SectorPage({ params }: Params) {
@@ -28,7 +29,7 @@ export default async function SectorPage({ params }: Params) {
       <nav className="crumbs"><Link href="/">Map</Link>/<Link href="/directory">Directory</Link>/<span>{sector.label}</span></nav>
       <h1>
         <span className="dot" style={{ background: sector.color, width: 14, height: 14, marginRight: 10 }} />
-        {sector.label} in Gurugram
+        {sector.label} in {REGION}
       </h1>
       <p className="lede">{orgs.length} organisations.</p>
       {orgs.length ? <OrgTable orgs={orgs} /> : <p className="muted">None listed yet.</p>}

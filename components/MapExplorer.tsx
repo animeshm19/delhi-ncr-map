@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Map as MLMap, GeoJSONSource, LngLatBounds } from "maplibre-gl";
 import { KINDS, SECTORS, sectorColor, sectorLabel } from "@/lib/taxonomy";
+import { SITE_NAME } from "@/lib/site";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -252,7 +253,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
       <aside className="sidebar" aria-label="Search and list">
         <header>
           <div className="brand">
-            <h1>Gurugram Startup Map</h1>
+            <h1>{SITE_NAME}</h1>
             <nav>
               <Link href="/directory">Directory</Link>
               <Link href="/about">About</Link>
@@ -347,7 +348,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
           <button className="chip" aria-pressed={!is3d} onClick={() => setIs3d(false)}>2D</button>
           <button className="chip" aria-pressed={is3d} onClick={() => setIs3d(true)}>3D</button>
         </div>
-        <div ref={mapEl} className="map" role="region" aria-label="Map of Gurugram" />
+        <div ref={mapEl} className="map" role="region" aria-label="Map of Delhi NCR" />
       </div>
     </div>
   );

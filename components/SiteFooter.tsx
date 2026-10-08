@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { SITE_NAME } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
     <footer className="site">
       <p>
-        Gurugram Startup Map, an independent community project. Company names and logos are trademarks of
+        {SITE_NAME}, an independent community project. Company names and logos are trademarks of
         their owners, shown for identification. Data compiled from public sources; request corrections or
         removal anytime.
       </p>

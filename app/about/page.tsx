@@ -7,7 +7,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "About and methodology",
   description:
-    "How the Gurugram Startup Map is made: public sources only, every fact linked to its source, no home addresses, corrections open to anyone.",
+    "How the Delhi NCR Map is made: public sources only, every fact linked to its source, no home addresses, corrections open to anyone.",
 };
 
 export default async function About() {
@@ -16,15 +16,16 @@ export default async function About() {
   return (
     <main id="main" className="page">
       <nav className="crumbs"><Link href="/">Map</Link>/<span>About</span></nav>
-      <h1>Gurugram&apos;s innovation ecosystem, in one place</h1>
+      <h1>Delhi NCR&apos;s innovation ecosystem, in one place</h1>
       <p className="lede">
-        A public, community-owned map and directory of the startups and tech companies in Gurugram, and the
+        A public, community-owned map and directory of the startups and tech companies in Delhi NCR, and the
         organisations that support them. {orgs.length} organisations listed today, {companies} of them companies.
+        Gurugram is mapped first; Noida and Delhi are next.
       </p>
 
       <h2>Who&apos;s included</h2>
       <p>
-        Any innovative or tech company headquartered or with a real team in Gurugram, at any age, including acquired
+        Any innovative or tech company headquartered or with a real team in Delhi NCR (Gurugram, Noida, Delhi and around), at any age, including acquired
         and closed companies (tagged as such). Support organisations get their own layer: incubators and
         accelerators, investors, coworking spaces, universities and research labs, government programmes and
         community groups. IT-services shops, agencies and multinationals with only a sales office are left out; so are
@@ -34,10 +35,10 @@ export default async function About() {
 
       <h2>How the data is collected</h2>
       <ul>
-        <li><b>Who&apos;s listed.</b> Every organisation comes from a public list that places it in Gurugram: Inc42&apos;s
-          Gurugram startup lists (overall, fintech, edtech, healthtech, AI, ecommerce, enterprise tech), Seedtable,
+        <li><b>Who&apos;s listed.</b> Every organisation comes from a public list that places it in the region: for Gurugram, Inc42&apos;s
+          city startup lists (overall, fintech, edtech, healthtech, AI, ecommerce, enterprise tech), Seedtable,
           Wikipedia, and news of funding rounds. Sector and founding year come from the same lists.</li>
-        <li><b>Where they are.</b> An office location comes from public records: the company&apos;s Haryana GST
+        <li><b>Where they are.</b> An office location comes from public records: the company&apos;s state GST
           registration (place of business), its company-registry filing, or its own contact page. Each one is linked
           on the profile, with the date it was read.</li>
         <li><b>Fields stay empty when no source states them.</b> A thin, true entry beats a rich, invented one. Where
