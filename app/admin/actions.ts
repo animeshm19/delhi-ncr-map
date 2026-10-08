@@ -3,6 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
+import { runJobSync } from "@/lib/job-sync";
+import { isHttpUrl } from "@/lib/requests";
 
 const id = (f: FormData) => {
   const n = Number(f.get("id"));
@@ -14,7 +16,7 @@ const str = (f: FormData, k: string) => String(f.get(k) ?? "").trim();
 function done(result: { error: { message: string } | null }, ok: string) {
   if (result.error) {
     const m = result.error.message;
-    const safe = /^(invalid slug|slug already exists|unknown area|request already reviewed|a source is required for this change|invalid url|field \w+ cannot be edited|wrong request type|unknown organisation)/.exec(m);
+    const safe = /^(invalid slug|slug already exists|unknown area|request already reviewed|a source is required for this change|invalid url|field \w+ cannot be edited|wrong request type|unknown organisation|unknown job board|invalid job board handle)/.exec(m);
     redirect(`/admin?error=${encodeURIComponent(safe ? safe[0] : "That didn't work.")}`);
   }
   revalidatePath("/", "layout");
@@ -60,4 +62,32 @@ export async function approveClaim(form: FormData) {
 export async function reject(form: FormData) {
   const { sb } = await requireAdmin();
   done(await sb.rpc("admin_reject", { p_request_id: id(form), p_note: str(form, "note") }), "Request rejected.");
+}
+
+export async function setHiring(form: FormData) {
+  const { sb } = await requireAdmin();
+  const careers = str(form, "careers_url");
+  if (careers && !isHttpUrl(careers)) redirect(`/admin?error=${encodeURIComponent("invalid url")}#hiring`);
+  const provider = str(form, "job_board_provider");
+  const hiring = str(form, "hiring");
+  const changes: Record<string, unknown> = {
+    careers_url: careers,
+    job_board_provider: provider,
+    job_board_handle: provider ? str(form, "job_board_handle") : "",
+  };
+  if (hiring === "yes" || hiring === "no") changes.hiring = hiring === "yes";
+  done(await sb.rpc("admin_set_hiring", { p_slug: str(form, "slug"), p_changes: changes }), "Hiring details saved.");
+}
+
+export async function syncJobsNow() {
+  await requireAdmin();
+  let message: string;
+  try {
+    const r = await runJobSync();
+    message = `Read ${r.boards} job boards: ${r.roles} open roles${r.failed ? `, ${r.failed} boards failed` : ""}.`;
+  } catch {
+    redirect(`/admin?error=${encodeURIComponent("The job sync isn't configured.")}`);
+  }
+  revalidatePath("/", "layout");
+  redirect(`/admin?done=${encodeURIComponent(message)}`);
 }

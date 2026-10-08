@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import { requireAdmin } from "@/lib/auth";
-import { AREAS } from "@/lib/data";
+import { AREAS, getOrgs } from "@/lib/data";
 import { SECTORS } from "@/lib/taxonomy";
-import { approveClaim, approveSubmission, applyEdit, reject } from "./actions";
+import { approveClaim, approveSubmission, applyEdit, reject, setHiring, syncJobsNow } from "./actions";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Review queue", robots: { index: false } };
@@ -68,6 +68,8 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
     sb.from("review_queue").select("*").neq("status", "pending").order("reviewed_at", { ascending: false }).limit(15),
   ]);
   const reqs = (pending ?? []) as Req[];
+  const companies = (await getOrgs()).filter((o) => o.kind === "company");
+  const withBoards = companies.filter((o) => o.job_board);
   return (
     <main id="main" className="page wide">
       <nav className="crumbs"><Link href="/account">Account</Link>/<span>Review queue</span></nav>
@@ -149,6 +151,44 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
       <datalist id="sector-list">
         {Object.keys(SECTORS).map((s) => <option key={s} value={s} />)}
       </datalist>
+
+      <h2 id="hiring">Hiring details</h2>
+      <p className="muted">
+        Set a company&apos;s public job board (read every morning) or careers page. Check the board belongs to the company first.
+      </p>
+      <form action={setHiring} className="form grid2 card" data-testid="admin-hiring">
+        <label><span>Company</span>
+          <select name="slug" required defaultValue="">
+            <option value="" disabled>Choose…</option>
+            {companies.map((o) => <option key={o.slug} value={o.slug}>{o.name}</option>)}
+          </select>
+        </label>
+        <label><span>Hiring</span>
+          <select name="hiring" defaultValue="">
+            <option value="">Leave as is</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+        <label><span>Job board</span>
+          <select name="job_board_provider" defaultValue="">
+            <option value="">None</option>
+            <option value="greenhouse">Greenhouse</option>
+            <option value="lever">Lever</option>
+            <option value="ashby">Ashby</option>
+          </select>
+        </label>
+        <label><span>Board handle</span><input name="job_board_handle" maxLength={80} pattern="[A-Za-z0-9_.\-]*" placeholder="e.g. acme in jobs.lever.co/acme" /></label>
+        <label className="span2"><span>Careers page</span><input name="careers_url" type="url" placeholder="https://" /></label>
+        <div className="span2 actions"><button className="btn" type="submit">Save hiring details</button></div>
+      </form>
+      <form action={syncJobsNow} className="actions">
+        <button className="btn ghost" type="submit">Read all job boards now</button>
+        <span className="muted">
+          {withBoards.length} boards:{" "}
+          {withBoards.map((o) => `${o.name} (${o.open_roles ?? 0} roles${o.jobs_checked_at ? `, read ${o.jobs_checked_at.slice(0, 10)}` : ", not read yet"})`).join(" · ") || "none yet"}
+        </span>
+      </form>
 
       <h2>Recently reviewed</h2>
       <ul className="sources">
