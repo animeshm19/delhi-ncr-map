@@ -1,7 +1,7 @@
 /** Dates on the site are shown in India Standard Time, whatever the server's zone. */
 export const TZ = "Asia/Kolkata";
 
-export function formatEventTime(start: Date, end?: Date | null) {
+export function formatEventTime(start: Date, end?: Date | null): string {
   const day = start.toLocaleDateString("en-IN", { timeZone: TZ, weekday: "short", day: "numeric", month: "short", year: "numeric" });
   const t = (d: Date) => d.toLocaleTimeString("en-IN", { timeZone: TZ, hour: "numeric", minute: "2-digit", hour12: true });
   if (!end) return `${day}, ${t(start)}`;
