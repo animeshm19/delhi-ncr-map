@@ -15,7 +15,8 @@
     "seed:supabase": "node --experimental-strip-types scripts/seed-supabase.ts",
     "test:db": "bash scripts/test-db.sh",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "verify": "bash scripts/verify.sh"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
