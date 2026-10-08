@@ -19,6 +19,7 @@ if (/supabase\.(co|com)/.test(ADMIN_URL)) throw new Error("Refusing to run the e
 const DB = "dncr_e2e";
 const DB_URL = ADMIN_URL.replace(/\/[^/]*$/, `/${DB}`);
 const JWT_SECRET = "e2e-only-jwt-secret-that-is-at-least-32-characters";
+const INGEST_TOKEN = "e2e-ingest-token-0123456789abcdef";
 const PORTS = { postgrest: 54330, gateway: 54321, app: 3100 };
 const children = [];
 
@@ -53,6 +54,13 @@ async function buildDatabase() {
   // Test fixtures: an admin account (the real one is added the same way in production).
   if ((await db.query("select to_regclass('private.admins') as t")).rows[0].t) {
     await db.query("insert into private.admins (email) values ('admin@e2e.test') on conflict do nothing");
+  }
+  // The job sync's token, stored hashed exactly as in production.
+  if ((await db.query("select to_regclass('private.settings') as t")).rows[0].t) {
+    await db.query(
+      "insert into private.settings values ('ingest_token_sha256', encode(sha256(convert_to($1, 'UTF8')), 'hex')) on conflict (key) do update set value = excluded.value",
+      [INGEST_TOKEN],
+    );
   }
   await db.end();
 }
@@ -98,8 +106,9 @@ async function main() {
     NEXT_PUBLIC_SUPABASE_URL: `http://localhost:${PORTS.gateway}`,
     NEXT_PUBLIC_SUPABASE_ANON_KEY: anonKey,
     NEXT_PUBLIC_SITE_URL: `http://localhost:${PORTS.app}`,
-    INGEST_TOKEN: "e2e-ingest-token-0123456789abcdef",
-    CRON_SECRET: "e2e-cron-secret",
+    INGEST_TOKEN,
+    E2E_JOB_BOARD_ORIGIN: `http://localhost:${PORTS.gateway}/__boards`,
+    CRON_SECRET: "e2e-cron-secret-0123456789",
     NEXT_TELEMETRY_DISABLED: "1",
   };
   fs.mkdirSync(path.join(ROOT, ".e2e"), { recursive: true });

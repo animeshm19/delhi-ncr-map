@@ -2,7 +2,8 @@
 //   /rest/v1/*     → proxied to a real PostgREST (so RLS and RPCs are the real thing)
 //   /auth/v1/*     → a tiny GoTrue: magic-link sign-in (PKCE), /user, refresh, logout
 //   /storage/v1/*  → uploads checked against storage.objects RLS as the caller, files on disk
-//   /__e2e/*       → test hooks: read the last "email" sent to an address
+//   /__e2e/*       → test hooks: read the last "email" sent to an address, set fake job boards
+//   /__boards/*    → plays Greenhouse, Lever and Ashby's public job-board APIs
 // Tokens are HS256 JWTs signed with the same secret PostgREST uses.
 
 import http from "node:http";
@@ -32,6 +33,7 @@ export function verifyJwt(token, secret) {
 export function startGateway({ port, postgrestUrl, databaseUrl, jwtSecret, storageDir }) {
   const pool = new pg.Pool({ connectionString: databaseUrl, max: 4 });
   const outbox = new Map(); // email -> last magic link
+  const boards = new Map(); // "provider/handle" -> { status, body } for the fake job-board APIs
   const codes = new Map(); // auth code -> { email, challenge, method }
   const refresh = new Map(); // refresh token -> email
   fs.mkdirSync(storageDir, { recursive: true });
@@ -187,6 +189,20 @@ export function startGateway({ port, postgrestUrl, databaseUrl, jwtSecret, stora
       if (url.pathname.startsWith("/storage/v1")) return await storage(req, res, url);
       if (url.pathname === "/__e2e/last-link") return json(res, 200, { link: outbox.get(String(url.searchParams.get("email")).toLowerCase()) ?? null });
       if (url.pathname === "/__e2e/health") return json(res, 200, { ok: true });
+      if (url.pathname === "/__e2e/boards" && req.method === "POST") {
+        const { provider, handle, status = 200, body } = JSON.parse((await readBody(req)).toString() || "{}");
+        boards.set(`${provider}/${handle}`, { status, body });
+        return json(res, 200, { ok: true });
+      }
+      if (url.pathname.startsWith("/__boards/")) {
+        const m =
+          url.pathname.match(/^\/__boards\/(greenhouse)\/v1\/boards\/([^/]+)\/jobs$/) ??
+          url.pathname.match(/^\/__boards\/(lever)\/v0\/postings\/([^/]+)$/) ??
+          url.pathname.match(/^\/__boards\/(ashby)\/posting-api\/job-board\/([^/]+)$/);
+        const board = m && boards.get(`${m[1]}/${decodeURIComponent(m[2])}`);
+        if (!board) return json(res, 404, { error: "not found" });
+        return json(res, board.status, board.body);
+      }
       json(res, 404, { msg: "not found" });
     } catch (e) {
       json(res, 500, { msg: String(e?.message ?? e) });
