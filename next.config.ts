@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { securityHeaders } from "./lib/security";
+import { badgeHeaders, securityHeaders } from "./lib/security";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       { source: "/((?!embed|badge).*)", headers: securityHeaders() },
       { source: "/embed/:path*", headers: securityHeaders({ embeddable: true }) },
       { source: "/embed", headers: securityHeaders({ embeddable: true }) },
-      { source: "/badge/:path*", headers: securityHeaders({ embeddable: true }) },
+      { source: "/badge/:path*", headers: badgeHeaders() },
     ];
   },
 };

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { contentSecurityPolicy, securityHeaders } from "@/lib/security";
+import { badgeHeaders, contentSecurityPolicy, securityHeaders } from "@/lib/security";
 
 const header = (h: { key: string; value: string }[], k: string) => h.find((x) => x.key === k)?.value;
 
@@ -35,5 +35,14 @@ describe("security headers", () => {
   });
   it("drops X-Frame-Options only for embeddable routes", () => {
     expect(header(securityHeaders({ embeddable: true }), "X-Frame-Options")).toBeUndefined();
+  });
+});
+
+describe("badgeHeaders", () => {
+  it("sandboxes badges and lets any site load them", () => {
+    const h = Object.fromEntries(badgeHeaders().map((x) => [x.key, x.value]));
+    expect(h["Content-Security-Policy"]).toBe("default-src 'none'; style-src 'unsafe-inline'; sandbox");
+    expect(h["X-Content-Type-Options"]).toBe("nosniff");
+    expect(h["Cross-Origin-Resource-Policy"]).toBe("cross-origin");
   });
 });

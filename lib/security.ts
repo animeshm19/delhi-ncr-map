@@ -51,3 +51,13 @@ export function securityHeaders({ embeddable = false } = {}) {
   if (!embeddable) headers.push({ key: "X-Frame-Options", value: "DENY" });
   return headers;
 }
+
+/** Badges are images other sites embed: nothing in them may run, and any site may load them. */
+export function badgeHeaders() {
+  return [
+    { key: "Content-Security-Policy", value: "default-src 'none'; style-src 'unsafe-inline'; sandbox" },
+    { key: "X-Content-Type-Options", value: "nosniff" },
+    { key: "Cross-Origin-Resource-Policy", value: "cross-origin" },
+    { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  ];
+}
