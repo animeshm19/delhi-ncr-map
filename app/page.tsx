@@ -16,6 +16,7 @@ export default async function Home() {
     one_liner: o.one_liner ?? null,
     place: [getArea(o.area)?.name, o.municipality].filter(Boolean).join(", "),
     precision: o.location_precision,
+    city: o.municipality,
     area: o.area ?? null,
     founded: o.founded_year ?? null,
     lng: o.lng ?? null,

@@ -101,3 +101,4 @@ table.orgs .num { text-align: right; white-space: nowrap; font-variant-numeric: 
 a.chip { color: var(--text); text-decoration: none; }
 a.chip:hover { border-color: var(--muted); }
 .dot { display: inline-block; border-radius: 50%; vertical-align: middle; }
+.chip.soon { opacity: 0.55; cursor: default; }

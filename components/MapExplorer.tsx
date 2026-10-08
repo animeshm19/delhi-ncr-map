@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Map as MLMap, GeoJSONSource, LngLatBounds } from "maplibre-gl";
 import { KINDS, SECTORS, sectorColor, sectorLabel } from "@/lib/taxonomy";
-import { SITE_NAME } from "@/lib/site";
+import { CITIES, SITE_NAME } from "@/lib/site";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -16,6 +16,7 @@ export interface ExplorerOrg {
   one_liner: string | null;
   place: string;
   precision: Precision;
+  city: string;
   area: string | null;
   founded: number | null;
   lng: number | null;
@@ -28,7 +29,7 @@ export interface ExplorerOrg {
 // OpenFreeMap serves OpenMapTiles vector tiles from OSM data, free and keyless.
 // It's what the Edmonton map uses.
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
-const GURUGRAM: [number, number] = [77.06, 28.46];
+const NCR_CENTER: [number, number] = [77.2, 28.55];
 
 type Layer = "companies" | "support";
 
@@ -39,6 +40,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
 
   const [layer, setLayer] = useState<Layer>("companies");
   const [sector, setSector] = useState<string>("");
+  const [city, setCity] = useState<string>("");
   const [query, setQuery] = useState("");
   const [followMap, setFollowMap] = useState(false);
   const [bounds, setBounds] = useState<LngLatBounds | null>(null);
@@ -51,10 +53,11 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
     return orgs.filter((o) => {
       if (layer === "companies" ? o.kind !== "company" : o.kind === "company") return false;
       if (sector && !o.sectors.includes(sector)) return false;
+      if (city && o.city !== city) return false;
       if (q && !`${o.name} ${o.one_liner ?? ""} ${o.place}`.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [orgs, layer, sector, query]);
+  }, [orgs, layer, sector, city, query]);
 
   const listed = useMemo(() => {
     if (!followMap || !bounds) return filtered;
@@ -88,8 +91,8 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
       const map = new maplibregl.Map({
         container: mapEl.current,
         style: STYLE_URL,
-        center: GURUGRAM,
-        zoom: 11.3,
+        center: NCR_CENTER,
+        zoom: 10,
         attributionControl: { compact: true },
         cooperativeGestures: false,
       });
@@ -165,6 +168,16 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
         map.on("mouseleave", "orgs", () => (map.getCanvas().style.cursor = ""));
         map.on("moveend", () => setBounds(map.getBounds()));
 
+        // Frame whatever is pinned (Gurugram today; Noida and Delhi as they're added).
+        const pts = orgs.filter((o) => o.lng != null && o.lat != null);
+        if (pts.length > 1) {
+          const lngs = pts.map((o) => o.lng!);
+          const lats = pts.map((o) => o.lat!);
+          map.fitBounds(
+            [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+            { padding: 60, duration: 0, maxZoom: 13 },
+          );
+        }
         setBounds(map.getBounds());
         setReady(true);
 
@@ -279,6 +292,20 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
                 </option>
               ))}
             </select>
+          </div>
+          <div className="tabs" role="group" aria-label="City">
+            <button className="chip" aria-pressed={city === ""} onClick={() => setCity("")}>All of NCR</button>
+            {CITIES.map((c) =>
+              c.live ? (
+                <button key={c.slug} className="chip" aria-pressed={city === c.name} onClick={() => setCity(c.name)}>
+                  {c.name}
+                </button>
+              ) : (
+                <span key={c.slug} className="chip soon" title={`${c.name} is being added next`}>
+                  {c.name} <span className="muted">soon</span>
+                </span>
+              ),
+            )}
           </div>
           <div className="stats">
             <div className="stat"><b>{stats.companies}</b><span>Companies</span></div>

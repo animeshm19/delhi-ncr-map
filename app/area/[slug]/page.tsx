@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const a = getArea((await params).slug);
-  return a ? { title: `Startups in ${a.name}, Gurugram` } : {};
+  return a ? { title: `Startups in ${a.name}, ${a.city}` } : {};
 }
 
 export default async function AreaPage({ params }: Params) {
@@ -26,7 +26,7 @@ export default async function AreaPage({ params }: Params) {
       <nav className="crumbs"><Link href="/">Map</Link>/<Link href="/directory">Directory</Link>/<span>{area.name}</span></nav>
       <h1>{area.name}</h1>
       <p className="lede">
-        {orgs.length} organisations with a public office in this part of Gurugram. Pins are placed at the area, not the
+        {orgs.length} organisations with a public office in this part of {area.city}. Pins are placed at the area, not the
         street address.
       </p>
       {orgs.length ? <OrgTable orgs={orgs} /> : <p className="muted">None listed yet.</p>}

@@ -72,6 +72,8 @@ export interface Org {
 export interface Area {
   slug: string;
   name: string;
+  /** City the area belongs to, e.g. Gurugram, Noida, Delhi */
+  city: string;
   /** [lng, lat] approximate centroid */
   center: [number, number];
   /** Rough radius in metres, for the faint "somewhere in here" circle */
