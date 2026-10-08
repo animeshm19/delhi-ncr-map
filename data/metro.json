@@ -1,0 +1,294 @@
+{
+  "lines": [
+    {
+      "slug": "yellow",
+      "name": "Yellow Line",
+      "operator": "Delhi Metro",
+      "color": "#f2c40c",
+      "complete": true,
+      "note": "Gurugram section only (Arjan Garh to Millennium City Centre); the line continues north into Delhi.",
+      "stations": [
+        "arjan-garh",
+        "guru-dronacharya",
+        "sikanderpur",
+        "mg-road",
+        "iffco-chowk",
+        "millennium-city-centre"
+      ],
+      "source": "https://en.wikipedia.org/wiki/Yellow_Line_(Delhi_Metro)"
+    },
+    {
+      "slug": "rapid",
+      "name": "Rapid Metro",
+      "operator": "Rapid Metro Gurgaon",
+      "color": "#3fa9f5",
+      "complete": true,
+      "note": "Loop through Cyber City (Sikanderpur → Phase 2 → Belvedere Towers → Cyber City → Moulsari Avenue → Phase 3 → Sikanderpur) plus the spur south to Sector 55–56.",
+      "stations": [
+        "sector-55-56",
+        "sector-54-chowk",
+        "sector-53-54",
+        "sector-42-43",
+        "phase-1",
+        "sikanderpur",
+        "phase-2",
+        "belvedere-towers",
+        "cyber-city",
+        "moulsari-avenue",
+        "phase-3",
+        "sikanderpur"
+      ],
+      "source": "https://en.wikipedia.org/wiki/Rapid_Metro_Gurgaon"
+    },
+    {
+      "slug": "aqua",
+      "name": "Aqua Line",
+      "operator": "Noida Metro",
+      "color": "#14b8a6",
+      "complete": false,
+      "note": "21 stations from Noida Sector 51 to Depot. Only stations with a published location are shown; the full line is drawn when Noida is added to the map.",
+      "stations": [
+        "noida-sector-51",
+        "aqua-depot"
+      ],
+      "source": "https://en.wikipedia.org/wiki/Aqua_Line_(Noida_Metro)"
+    }
+  ],
+  "stations": [
+    {
+      "id": "millennium-city-centre",
+      "name": "Millennium City Centre Gurugram",
+      "lng": 77.0724192,
+      "lat": 28.4592693,
+      "lines": [
+        "yellow"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Millennium_City_Centre_Gurugram_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "iffco-chowk",
+      "name": "IFFCO Chowk",
+      "lng": 77.0725545,
+      "lat": 28.4720889,
+      "lines": [
+        "yellow"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/IFFCO_Chowk_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "mg-road",
+      "name": "MG Road",
+      "lng": 77.0799521,
+      "lat": 28.4795558,
+      "lines": [
+        "yellow"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/MG_Road_metro_station_(Gurgaon)",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "sikanderpur",
+      "name": "Sikanderpur",
+      "lng": 77.0931,
+      "lat": 28.4814,
+      "lines": [
+        "yellow",
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sikanderpur_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "guru-dronacharya",
+      "name": "Guru Dronacharya",
+      "lng": 77.1025,
+      "lat": 28.4819,
+      "lines": [
+        "yellow"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Guru_Dronacharya_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "arjan-garh",
+      "name": "Arjan Garh",
+      "lng": 77.1258,
+      "lat": 28.4808,
+      "lines": [
+        "yellow"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Arjan_Garh_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "sector-55-56",
+      "name": "Sector 55–56",
+      "lng": 77.105221,
+      "lat": 28.423278,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sector_55–56_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "sector-54-chowk",
+      "name": "Sector 54 Chowk",
+      "lng": 77.104921,
+      "lat": 28.432921,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sector_54_Chowk_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "sector-53-54",
+      "name": "Sector 53–54",
+      "lng": 77.100435,
+      "lat": 28.446374,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sector_53-54_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "sector-42-43",
+      "name": "Sector 42–43",
+      "lng": 77.096895,
+      "lat": 28.457392,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Sector_42-43_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "phase-1",
+      "name": "DLF Phase 1",
+      "lng": 77.093933,
+      "lat": 28.471408,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Phase_1_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "phase-2",
+      "name": "DLF Phase 2",
+      "lng": 77.092947,
+      "lat": 28.487534,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Phase_2_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "belvedere-towers",
+      "name": "Belvedere Towers",
+      "lng": 77.088139,
+      "lat": 28.491664,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Belvedere_Towers_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "cyber-city",
+      "name": "Cyber City",
+      "lng": 77.089168,
+      "lat": 28.497963,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Cyber_City_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "moulsari-avenue",
+      "name": "Moulsari Avenue",
+      "lng": 77.0946,
+      "lat": 28.500697,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Moulsari_Avenue_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "phase-3",
+      "name": "DLF Phase 3",
+      "lng": 77.093676,
+      "lat": 28.493512,
+      "lines": [
+        "rapid"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Phase_3_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "noida-sector-51",
+      "name": "Noida Sector 51",
+      "lng": 77.3753,
+      "lat": 28.5857,
+      "lines": [
+        "aqua"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Noida_Sector_51_metro_station",
+        "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "aqua-depot",
+      "name": "Depot Station",
+      "lng": 77.543994,
+      "lat": 28.488962,
+      "lines": [
+        "aqua"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Depot_Station_metro_station_(Noida)",
+        "retrieved": "2026-10-08"
+      }
+    }
+  ]
+}
