@@ -85,7 +85,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const maplibregl = (await import("maplibre-gl")).default;
+      const maplibregl = await import("maplibre-gl");
       if (cancelled || !mapEl.current) return;
 
       const map = new maplibregl.Map({
@@ -235,7 +235,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
     if (!org || org.lng == null || org.lat == null) return;
     map.easeTo({ center: [org.lng, org.lat], zoom: Math.max(map.getZoom(), 13.5) });
     let popup: import("maplibre-gl").Popup | null = null;
-    import("maplibre-gl").then(({ default: ml }) => {
+    import("maplibre-gl").then((ml) => {
       const el = document.createElement("div");
       const strong = document.createElement("strong");
       strong.textContent = org.name;
