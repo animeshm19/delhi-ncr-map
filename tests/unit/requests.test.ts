@@ -78,3 +78,27 @@ describe("helpers", () => {
     expect(publicError("too many requests, try again later").status).toBe(400);
   });
 });
+
+describe("event suggestions", () => {
+  const now = Date.parse("2026-10-08T06:00:00Z");
+  const ev = (fields: Record<string, string>) =>
+    parseRequest({ type: "event", contact: "host@example.com", started_at: now - 10_000, fields }, now);
+  const good = { title: "AI Meetup", starts_at: "2026-10-20T18:30", url: "https://lu.ma/ai", city: "Gurugram" };
+
+  it("accepts a well-formed event without an organisation", () => {
+    const r = ev(good);
+    expect(r.ok).toBe(true);
+    if (r.ok === true) expect(r.value.slug).toBeNull();
+  });
+
+  it("needs a name, a link and a start time in range", () => {
+    expect(ev({ ...good, title: "" })).toMatchObject({ ok: false, error: "Give the event a name." });
+    expect(ev({ ...good, url: "" })).toMatchObject({ ok: false, error: "Add a link to the event page." });
+    expect(ev({ ...good, url: "javascript:alert(1)" })).toMatchObject({ ok: false, status: 400 });
+    expect(ev({ ...good, starts_at: "next week" })).toMatchObject({ ok: false, error: "Pick a start date and time." });
+    expect(ev({ ...good, starts_at: "2020-01-01T10:00" })).toMatchObject({ ok: false, error: "The event should be in the next two years." });
+    expect(ev({ ...good, starts_at: "2031-01-01T10:00" })).toMatchObject({ ok: false, error: "The event should be in the next two years." });
+    expect(ev({ ...good, ends_at: "2026-10-20T17:00" })).toMatchObject({ ok: false, error: "The end time should be after the start." });
+    expect(ev({ ...good, ends_at: "2026-10-20T21:00" }).ok).toBe(true);
+  });
+});

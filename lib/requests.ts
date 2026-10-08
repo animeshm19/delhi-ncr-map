@@ -1,11 +1,12 @@
 import { EMAIL_RE } from "./auth-shared";
+import { istLocalToIso } from "./time";
 
 /**
- * Validation for public requests (edit / claim / removal / submit).
+ * Validation for public requests (edit / claim / removal / submit / event).
  * Pure functions so they can be unit-tested; the database re-checks everything.
  */
 
-export const REQUEST_TYPES = ["edit", "claim", "removal", "submit"] as const;
+export const REQUEST_TYPES = ["edit", "claim", "removal", "submit", "event"] as const;
 export type RequestType = (typeof REQUEST_TYPES)[number];
 
 export const MAX_FIELD = 1500;
@@ -64,6 +65,20 @@ export function parseRequest(body: unknown, now = Date.now()): ParseResult {
   }
   for (const k of ["website", "source", "url"]) {
     if (payload[k] && !isHttpUrl(payload[k])) return { ok: false, status: 400, error: "Links must start with http:// or https://." };
+  }
+  if (type === "event") {
+    if (!payload.title) return { ok: false, status: 400, error: "Give the event a name." };
+    if (!payload.url) return { ok: false, status: 400, error: "Add a link to the event page." };
+    const start = payload.starts_at ? istLocalToIso(payload.starts_at) : null;
+    if (!start) return { ok: false, status: 400, error: "Pick a start date and time." };
+    const t = Date.parse(start);
+    if (t < now - 24 * 3600_000 || t > now + 2 * 365 * 24 * 3600_000) {
+      return { ok: false, status: 400, error: "The event should be in the next two years." };
+    }
+    if (payload.ends_at) {
+      const end = istLocalToIso(payload.ends_at);
+      if (!end || Date.parse(end) < t) return { ok: false, status: 400, error: "The end time should be after the start." };
+    }
   }
   return { ok: true, value: { type, slug, contact, payload } };
 }

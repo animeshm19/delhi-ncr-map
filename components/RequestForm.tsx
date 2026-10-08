@@ -7,7 +7,7 @@ import type { RequestType } from "@/lib/requests";
 type Field = {
   name: string;
   label: string;
-  kind?: "text" | "textarea" | "select" | "url";
+  kind?: "text" | "textarea" | "select" | "url" | "datetime";
   options?: { value: string; label: string }[];
   required?: boolean;
   hint?: string;
@@ -71,6 +71,22 @@ const FIELDS: Record<RequestType, Field[]> = {
     { name: "office", label: "Office sector or area (optional)", hint: "e.g. Sector 44 or Udyog Vihar. Only the sector is ever shown, never a street address or a home." },
     { name: "source", label: "A public page that shows it's based here", kind: "url", placeholder: "https://" },
   ],
+  event: [
+    { name: "title", label: "Event name", required: true },
+    { name: "starts_at", label: "Starts (India time)", kind: "datetime", required: true },
+    { name: "ends_at", label: "Ends (optional)", kind: "datetime" },
+    {
+      name: "city",
+      label: "City",
+      kind: "select",
+      required: true,
+      options: ["Gurugram", "Noida", "Delhi", "Faridabad", "Ghaziabad", "Online"].map((c) => ({ value: c, label: c })),
+    },
+    { name: "venue", label: "Venue", hint: "A public venue: a coworking space, office or campus. Never a home address.", placeholder: "e.g. 91springboard, Sector 44" },
+    { name: "url", label: "Event page", kind: "url", required: true, placeholder: "https://", hint: "Where people register: Meetup, Luma, Eventbrite, your site…" },
+    { name: "organizer", label: "Organised by" },
+    { name: "description", label: "What it's about", kind: "textarea" },
+  ],
 };
 
 const TITLES: Record<RequestType, string> = {
@@ -78,6 +94,7 @@ const TITLES: Record<RequestType, string> = {
   claim: "Claim this profile",
   removal: "Send the removal request",
   submit: "Submit for review",
+  event: "Suggest the event",
 };
 
 export default function RequestForm({ type, slug, emailHint }: { type: RequestType; slug?: string; emailHint?: string }) {
@@ -145,7 +162,13 @@ export default function RequestForm({ type, slug, emailHint }: { type: RequestTy
               ))}
             </select>
           ) : (
-            <input name={f.name} type={f.kind === "url" ? "url" : "text"} required={f.required} maxLength={300} placeholder={f.placeholder} />
+            <input
+              name={f.name}
+              type={f.kind === "url" ? "url" : f.kind === "datetime" ? "datetime-local" : "text"}
+              required={f.required}
+              maxLength={f.kind === "datetime" ? undefined : 300}
+              placeholder={f.placeholder}
+            />
           )}
           {f.hint && <small className="muted">{f.hint}</small>}
         </label>
