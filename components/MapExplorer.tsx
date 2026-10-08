@@ -40,7 +40,18 @@ const NCR_CENTER: [number, number] = [77.2, 28.55];
 
 type Layer = "companies" | "support";
 
-export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; areas: Area[] }) {
+export default function MapExplorer({
+  orgs,
+  areas,
+  embedded = false,
+  siteUrl = "",
+}: {
+  orgs: ExplorerOrg[];
+  areas: Area[];
+  /** Map only, for <iframe> embeds on other sites: links open in a new tab. */
+  embedded?: boolean;
+  siteUrl?: string;
+}) {
   const mapEl = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
   const listRef = useRef<HTMLUListElement>(null);
@@ -262,6 +273,13 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
         if (st && getStation(st)) setStation(st);
         const r = Number(params.get("r"));
         if (RADII.includes(r)) setRadius(r);
+        // Filters for shared links and embeds: ?sector=fintech&city=Gurugram&hiring=1
+        const sec = params.get("sector");
+        if (sec && SECTORS[sec]) setSector(sec);
+        const cty = params.get("city");
+        if (cty && CITIES.some((x) => x.live && x.name === cty)) setCity(cty);
+        if (params.get("hiring") === "1") setHiringOnly(true);
+        if (params.get("layer") === "support") setLayer("support");
       });
     })();
     return () => {
@@ -321,8 +339,12 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
       sub.className = "muted";
       sub.textContent = org.precision === "area" ? `${org.place} (approx.)` : org.place;
       const a = document.createElement("a");
-      a.href = org.href;
+      a.href = embedded ? `${siteUrl}${org.href}` : org.href;
       a.textContent = "Open profile →";
+      if (embedded) {
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
       el.append(strong, sub, a);
       popup = new ml.Popup({ offset: 12, closeButton: false }).setLngLat([org.lng!, org.lat!]).setDOMContent(el).addTo(map);
     });
@@ -372,6 +394,23 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
     if (map.getLayer("buildings-3d")) map.setLayoutProperty("buildings-3d", "visibility", is3d ? "visible" : "none");
     map.easeTo(is3d ? { pitch: 60, bearing: -20, zoom: Math.max(map.getZoom(), 14) } : { pitch: 0, bearing: 0 });
   }, [is3d, ready]);
+
+  if (embedded) {
+    return (
+      <div className="explorer embedded">
+        <div className="mapwrap">
+          <div className="embed-head">
+            <a href={siteUrl || "/"} target="_blank" rel="noopener">{SITE_NAME}</a>
+            <span className="muted" data-testid="embed-count">
+              {stationObj ? `${filtered.length} within ${formatDistance(radius)} of ${stationObj.name}` : `${onMap} on the map`}
+              {sector ? ` · ${SECTORS[sector]?.label}` : ""}
+            </span>
+          </div>
+          <div ref={mapEl} className="map" role="region" aria-label="Map of Delhi NCR" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="explorer">
