@@ -23,11 +23,14 @@ export async function updateProfile(slug: string, _: FormState, form: FormData):
   const { sb } = await requireUser(`/account/${slug}`);
   const website = String(form.get("website") ?? "").trim();
   if (website && !isHttpUrl(website)) return { status: "error", message: "The website must start with https://." };
+  const careers = String(form.get("careers_url") ?? "").trim();
+  if (careers && !isHttpUrl(careers)) return { status: "error", message: "The careers page must start with https://." };
   const provider = String(form.get("job_board_provider") ?? "");
   const changes = {
     one_liner: String(form.get("one_liner") ?? "").slice(0, 280),
     website,
     hiring: form.get("hiring") === "on",
+    careers_url: careers,
     job_board_provider: provider,
     job_board_handle: provider ? String(form.get("job_board_handle") ?? "").trim() : "",
   };

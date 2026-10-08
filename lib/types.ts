@@ -70,6 +70,12 @@ export interface Org {
   /** Storage path of an uploaded logo, e.g. "spinny/logo.png?v=1" */
   logo_path?: string | null;
   created_at?: string | null;
+  /** Careers page for companies whose board isn't synced */
+  careers_url?: string | null;
+  /** Roles currently synced from the job board */
+  open_roles?: number | null;
+  /** When the job board was last read */
+  jobs_checked_at?: string | null;
 }
 
 export interface Area {
@@ -84,9 +90,11 @@ export interface Area {
 }
 
 export interface Job {
-  org: string;
+  org_slug: string;
   title: string;
-  location: string;
+  team: string | null;
+  location: string | null;
   url: string;
-  posted?: string | null;
+  posted: string | null;
+  first_seen: string;
 }

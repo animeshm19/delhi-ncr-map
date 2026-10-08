@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getArea, getOrgs, profilePath } from "@/lib/data";
+import { getArea, getJobs, getOrgs, profilePath } from "@/lib/data";
 import { KINDS, sectorLabel } from "@/lib/taxonomy";
 import type { Org } from "@/lib/types";
 import { logoUrl } from "@/lib/logos";
@@ -20,7 +20,8 @@ const PRECISION_LABEL: Record<Org["location_precision"], string> = {
 };
 
 export default async function Profile({ org }: { org: Org }) {
-  const all = await getOrgs();
+  const [all, allJobs] = await Promise.all([getOrgs(), getJobs()]);
+  const roles = allJobs.filter((j) => j.org_slug === org.slug);
   const bySlug = new Map(all.map((o) => [o.slug, o]));
   const area = getArea(org.area);
   const connections = org.connected_to.map((s) => bySlug.get(s)).filter(Boolean) as Org[];
@@ -82,7 +83,17 @@ export default async function Profile({ org }: { org: Org }) {
           </>
         )}
         <dt>Hiring</dt>
-        <dd>{org.hiring == null ? <span className="muted">Unknown</span> : org.hiring ? "Yes" : "No open roles"}</dd>
+        <dd>
+          {org.hiring == null ? <span className="muted">Unknown</span> : org.hiring ? <span className="badge hiring">Hiring</span> : "No open roles"}
+          {roles.length > 0 && <> · <a href="#roles">{roles.length} open {roles.length === 1 ? "role" : "roles"}</a></>}
+          {org.careers_url && <> · <a href={org.careers_url} rel="noopener nofollow">Careers page</a></>}
+          {org.jobs_checked_at && (
+            <>
+              <br />
+              <small className="muted">Read from their {org.job_board?.provider ?? "job"} board on {org.jobs_checked_at.slice(0, 10)}</small>
+            </>
+          )}
+        </dd>
         {org.sectors.length > 0 && (
           <>
             <dt>Sectors</dt>
@@ -97,6 +108,24 @@ export default async function Profile({ org }: { org: Org }) {
           </>
         )}
       </dl>
+
+      {roles.length > 0 && (
+        <>
+          <h2 id="roles">Open roles ({roles.length})</h2>
+          <ul className="roles">
+            {roles.slice(0, 25).map((r) => (
+              <li key={r.url} className="role">
+                <div>
+                  <a href={r.url} rel="noopener nofollow" target="_blank" className="role-title">{r.title}</a>
+                  <div className="muted">{[r.team, r.location].filter(Boolean).join(" · ")}</div>
+                </div>
+                {r.posted && <time dateTime={r.posted} className="muted">{r.posted}</time>}
+              </li>
+            ))}
+          </ul>
+          {roles.length > 25 && <p><Link href="/hiring">All {roles.length} roles on the hiring board →</Link></p>}
+        </>
+      )}
 
       {connections.length > 0 && (
         <>

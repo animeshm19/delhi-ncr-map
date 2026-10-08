@@ -9,6 +9,7 @@ type Profile = {
   website: string | null;
   hiring: boolean | null;
   job_board: { provider: string; handle: string } | null;
+  careers_url: string | null;
 };
 
 const idle: FormState = { status: "idle" };
@@ -41,6 +42,11 @@ export default function OwnerForms({ org }: { org: Profile }) {
         <label className="check">
           <input name="hiring" type="checkbox" defaultChecked={!!org.hiring} />
           <span>We&apos;re hiring</span>
+        </label>
+        <label>
+          <span>Careers page</span>
+          <input name="careers_url" type="url" defaultValue={org.careers_url ?? ""} placeholder="https://" />
+          <small className="muted">Shown on your profile and the hiring board. Use this if you hire through Keka, Darwinbox, Zoho or similar.</small>
         </label>
         <label>
           <span>Public job board</span>

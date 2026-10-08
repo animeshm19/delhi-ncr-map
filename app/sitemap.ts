@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE}/about` },
     { url: `${SITE}/data` },
     { url: `${SITE}/directory` },
+    { url: `${SITE}/hiring` },
     ...orgs.map((o) => ({ url: `${SITE}${profilePath(o)}`, lastModified: o.updated_at })),
   ];
 }

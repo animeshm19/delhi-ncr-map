@@ -16,7 +16,7 @@ export default async function ManageProfile({ params }: { params: Promise<{ slug
   if (owns !== true) notFound();
   const { data: org } = await sb
     .from("organizations_public")
-    .select("slug, name, one_liner, website, hiring, job_board, logo_path")
+    .select("slug, name, one_liner, website, hiring, job_board, careers_url, logo_path")
     .eq("slug", slug)
     .maybeSingle();
   if (!org) notFound();

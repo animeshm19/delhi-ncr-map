@@ -273,6 +273,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
             <nav>
               <Link href="/submit">Submit</Link>
               <Link href="/directory">Directory</Link>
+              <Link href="/hiring">Hiring</Link>
               <Link href="/about">About</Link>
               <Link href="/data">Data</Link>
             </nav>
@@ -361,7 +362,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
                   <h3>
                     {o.name}
                     {o.status !== "active" && <span className="badge">{o.status}</span>}
-                    {o.hiring && <span className="badge">Hiring</span>}
+                    {o.hiring && <span className="badge hiring">Hiring</span>}
                   </h3>
                   {o.one_liner && <p>{o.one_liner}</p>}
                   <small>
