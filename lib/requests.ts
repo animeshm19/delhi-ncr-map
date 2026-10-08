@@ -11,7 +11,7 @@ export const MAX_FIELDS = 12;
 export const MIN_FILL_MS = 3000;
 const SLUG_RE = /^[a-z0-9-]{1,80}$/;
 const KEY_RE = /^[a-z_]{1,32}$/;
-const EMAIL_RE = /^[^@\s]{1,100}@[^@\s]{1,100}\.[^@\s]{2,}$/;
+const EMAIL_RE = /^[a-z0-9._%+'-]{1,64}@[a-z0-9-]{1,63}(\.[a-z0-9-]{1,63})*\.[a-z]{2,24}$/;
 
 export type ParsedRequest = {
   type: RequestType;
