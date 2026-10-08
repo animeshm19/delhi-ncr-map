@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description:
     `A public, community-owned map and directory of ${REGION}'s startups and tech companies, and the organisations that support them. Gurugram first; Noida and Delhi next.`,
   applicationName: SITE_NAME,
+  alternates: { types: { "application/rss+xml": [{ url: "/feed.xml", title: `${SITE_NAME}: new companies and events` }] } },
   openGraph: { type: "website", siteName: SITE_NAME, locale: "en_IN" },
   twitter: { card: "summary_large_image" },
 };

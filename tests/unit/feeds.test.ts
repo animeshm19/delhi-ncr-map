@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { buildCalendar, escapeText, foldLine, icsDate } from "@/lib/ical";
 import { buildRss, escapeXml } from "@/lib/rss";
 import { formatEventTime, istDay, istLocalToIso } from "@/lib/time";
+import { addedSinceLaunch } from "@/lib/launch";
 
 describe("iCal", () => {
   it("escapes text so a title can't add properties", () => {
@@ -67,5 +68,18 @@ describe("IST helpers", () => {
     const start = new Date("2030-01-15T13:00:00Z");
     expect(istDay(new Date("2030-01-15T19:00:00Z"))).toBe("2030-01-16");
     expect(formatEventTime(start, new Date("2030-01-15T15:30:00Z"))).toMatch(/^Tue, 15 Jan,? 2030, 6:30\s?pm–9:00\s?pm$/i);
+  });
+});
+
+describe("addedSinceLaunch", () => {
+  it("treats the first hour's batch as the initial import", () => {
+    const orgs = [
+      { slug: "a", created_at: "2026-10-08T07:00:00Z" },
+      { slug: "b", created_at: "2026-10-08T07:40:00Z" },
+      { slug: "c", created_at: "2026-10-12T10:00:00Z" },
+      { slug: "d", created_at: null },
+    ];
+    expect(addedSinceLaunch(orgs).map((o) => o.slug)).toEqual(["c"]);
+    expect(addedSinceLaunch([])).toEqual([]);
   });
 });
