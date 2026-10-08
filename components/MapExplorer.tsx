@@ -15,6 +15,8 @@ export interface ExplorerOrg {
   one_liner: string | null;
   place: string;
   precision: Precision;
+  area: string | null;
+  founded: number | null;
   lng: number | null;
   lat: number | null;
   radius_m: number | null;
@@ -99,7 +101,13 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
           id: "halos",
           type: "fill",
           source: "halos",
-          paint: { "fill-color": ["get", "color"], "fill-opacity": 0.08 },
+          paint: { "fill-color": ["get", "color"], "fill-opacity": 0.06 },
+        });
+        map.addLayer({
+          id: "halos-line",
+          type: "line",
+          source: "halos",
+          paint: { "line-color": ["get", "color"], "line-opacity": 0.35, "line-width": 1, "line-dasharray": [2, 2] },
         });
 
         map.addSource("orgs", { type: "geojson", data: emptyFC() });
@@ -189,17 +197,19 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
         },
       })),
     });
+    // One faint circle per sector that has approximate pins in view.
+    const usedAreas = new Set(pinned.filter((o) => o.precision === "area" && o.area).map((o) => o.area!));
     (map.getSource("halos") as GeoJSONSource).setData({
       type: "FeatureCollection",
-      features: pinned
-        .filter((o) => o.precision === "area" && o.radius_m)
-        .map((o) => ({
+      features: areas
+        .filter((a) => usedAreas.has(a.slug))
+        .map((a) => ({
           type: "Feature",
-          geometry: circlePolygon([o.lng!, o.lat!], o.radius_m!),
-          properties: { color: sectorColor(o.sectors[0]) },
+          geometry: circlePolygon(a.center, a.radius_m),
+          properties: { color: "#7cc4ff", name: a.name },
         })),
     });
-  }, [filtered, ready]);
+  }, [filtered, ready, areas]);
 
   // ---- Selection: highlight pin, fly to it, popup, scroll list ----
   useEffect(() => {
@@ -244,6 +254,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
           <div className="brand">
             <h1>Gurugram Startup Map</h1>
             <nav>
+              <Link href="/directory">Directory</Link>
               <Link href="/about">About</Link>
               <Link href="/data">Data</Link>
             </nav>
@@ -262,7 +273,9 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
             <select className="chip" value={sector} onChange={(e) => setSector(e.target.value)} aria-label="Sector">
               <option value="">All sectors</option>
               {usedSectors.map((s) => (
-                <option key={s} value={s}>{sectorLabel(s)}</option>
+                <option key={s} value={s}>
+                  {sectorLabel(s)} ({orgs.filter((o) => o.sectors.includes(s)).length})
+                </option>
               ))}
             </select>
           </div>
@@ -319,6 +332,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
                     {" · "}
                     {o.place}
                     {o.precision !== "exact" && o.precision !== "building" ? " (approx.)" : ""}
+                    {o.founded ? ` · est. ${o.founded}` : ""}
                   </small>
                 </span>
               </a>

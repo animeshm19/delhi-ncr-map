@@ -27,28 +27,33 @@ export default async function About() {
         Any innovative or tech company headquartered or with a real team in Gurugram, at any age, including acquired
         and closed companies (tagged as such). Support organisations get their own layer: incubators and
         accelerators, investors, coworking spaces, universities and research labs, government programmes and
-        community groups. IT-services shops, agencies and multinationals with only a sales office are left out, and
-        every exclusion is written down with its reason.
+        community groups. IT-services shops, agencies and multinationals with only a sales office are left out; so are
+        airlines, hotel owners and consumer brands without a tech product. Exclusions are recorded with their
+        reasons in the project&apos;s data notes.
       </p>
 
       <h2>How the data is collected</h2>
       <ul>
-        <li><b>Public sources only.</b> Startup Haryana and DPIIT/Startup India listings, incubator cohorts and
-          portfolios, stock-exchange filings, Wikipedia, local tech news and each organisation&apos;s own website.
-          Every fact on a profile links to the page it came from, with the date it was read.</li>
-        <li><b>Fields stay empty when no source states them.</b> A thin, true entry beats a rich, invented one.</li>
-        <li><b>Polite crawling.</b> The crawler identifies itself, follows robots.txt, waits between requests and
-          skips sites whose terms forbid automated access. LinkedIn, Crunchbase and Tracxn are never scraped.</li>
+        <li><b>Who&apos;s listed.</b> Every organisation comes from a public list that places it in Gurugram: Inc42&apos;s
+          Gurugram startup lists (overall, fintech, edtech, healthtech, AI, ecommerce, enterprise tech), Seedtable,
+          Wikipedia, and news of funding rounds. Sector and founding year come from the same lists.</li>
+        <li><b>Where they are.</b> An office location comes from public records: the company&apos;s Haryana GST
+          registration (place of business), its company-registry filing, or its own contact page. Each one is linked
+          on the profile, with the date it was read.</li>
+        <li><b>Fields stay empty when no source states them.</b> A thin, true entry beats a rich, invented one. Where
+          a list gave no description, the profile has none.</li>
+        <li><b>Polite crawling.</b> Sites&apos; robots.txt rules are respected. LinkedIn, Crunchbase and Tracxn are
+          never scraped.</li>
       </ul>
 
       <h2>Locations and privacy</h2>
       <p>
-        A pin marks an office only when the address is public <i>and</i> the land use at that point is commercial,
-        office, retail or industrial in OpenStreetMap (Gurugram has no open parcel-zoning API like Edmonton&apos;s,
-        so OSM land use and building tags stand in). Otherwise the location is approximate: a sector or business
-        district, shown as a pin with a faint circle. Organisations known only by city are listed but not mapped.
-        <b> A home address is never pinned, even when it&apos;s public</b> — many Indian startups register at a
-        founder&apos;s residence, so when in doubt, it counts as a home.
+        Pins mark the <b>sector or business district</b> of a company&apos;s public office (for example Sector 44,
+        Udyog Vihar or Golf Course Road), never the street address, so no building can be identified from the map.
+        Companies sharing a sector are spread out inside its dashed circle so each pin can be clicked; the circle is
+        the honest answer to &ldquo;where&rdquo;. Sector centres are approximate, anchored on metro stations and
+        landmarks. Organisations with no public office address found yet are listed but not mapped. The downloads
+        give the sector centre, not the display spot.
       </p>
 
       <h2>What &ldquo;verified&rdquo; means</h2>

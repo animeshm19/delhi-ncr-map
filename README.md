@@ -55,6 +55,41 @@ Everything below comes from its public pages, page metadata, asset URLs, `/about
 | Lever/Greenhouse | Same, plus Ashby; many Indian startups use **Keka, Darwinbox, Zoho Recruit, Freshteam** — handle per site, respect robots.txt |
 | "Home addresses never pinned" | Even more important: many Indian startups are registered at a founder's flat. |
 
+## Live
+
+- Site: https://gurugram-startup-map.vercel.app (Vercel Hobby, free)
+- Database: Supabase project `gurugram-startup-map` (Free plan, Mumbai `ap-south-1`)
+- Data today: 137 organisations (130 companies, 7 support), 43 pinned at sector level, 220 sources
+
+### Cost: ₹0
+
+Both accounts are on free plans with no payment method attached, so nothing can be billed:
+
+- **Vercel Hobby** — free, but for **non-commercial use only**. If this becomes a business, Vercel requires Pro.
+- **Supabase Free** — 500 MB database, plenty for this. A free project **pauses after 7 days with no
+  database activity**; the site keeps serving its last cached pages, and you un-pause it from the Supabase
+  dashboard in one click. Hourly page revalidation keeps it active while people visit.
+
+### How the data was built
+
+1. **Who**: Inc42's Gurugram lists (top funded overall, fintech, edtech, healthtech, AI, ecommerce, enterprise
+   tech), Seedtable, Wikipedia, funding news. Exclusions and reasons: `research/EXCLUDED.md`.
+2. **Where**: the company's Haryana GST registration (principal place of business, via knowyourgst.com),
+   its company-registry filing (ZaubaCorp), or its own contact page — `research/addresses.tsv`.
+3. **Pins**: sector/business-district level only (`data/areas.json`), never the street address. Sector centres
+   are approximate, anchored on metro-station coordinates. Companies in the same sector are spread inside the
+   sector circle so each pin is clickable (`lib/data.ts`).
+4. `python3 research/build_seed.py` → `data/seed.json`; `python3 research/seed_sql.py` → `supabase/seed.sql`.
+
+To add companies: add a row to `ORGS` in `research/build_seed.py` (and an address row to `addresses.tsv` if
+you have one), rebuild, then run the generated SQL in the Supabase SQL editor. The site picks it up within an hour.
+
+### Deploying changes
+
+The Vercel project isn't linked to a Git repo yet. Easiest path: push this folder to GitHub and connect the repo
+in the Vercel dashboard (Project → Settings → Git) — every push then deploys. Optional env var
+`NEXT_PUBLIC_CONTACT_EMAIL` turns on the edit/claim/removal links on profiles.
+
 ## What's in this repo
 
 ```
@@ -74,8 +109,7 @@ scripts/geocode.ts             Nominatim + Overpass non-residential check
 scripts/seed-supabase.ts       load seed into Supabase
 ```
 
-The app reads `data/seed.json` by default. Set `SUPABASE_URL` + `SUPABASE_ANON_KEY` and it reads the
-`organizations_public` view instead.
+Locally the app reads `data/seed.json` (an exact copy of the database) unless `SUPABASE_URL` + `SUPABASE_ANON_KEY` are set, in which case it reads the `organizations_public` view.
 
 ### The seed data
 

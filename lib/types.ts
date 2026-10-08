@@ -51,6 +51,8 @@ export interface Org {
   website?: string | null;
   founded_year?: number | null;
   acquired_by?: string | null;
+  /** Total disclosed funding as reported by a cited list, e.g. "$106M" */
+  funding_note?: string | null;
   municipality: string;
   /** Slug from data/areas.json */
   area?: string | null;

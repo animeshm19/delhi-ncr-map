@@ -10,6 +10,7 @@ export default function SiteFooter() {
       </p>
       <p className="actions">
         <Link href="/">Map</Link>
+        <Link href="/directory">Directory</Link>
         <Link href="/about">About and methodology</Link>
         <Link href="/data">Open data</Link>
       </p>

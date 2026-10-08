@@ -1,4 +1,16 @@
-import type { Org } from "./types";
+import type { Area, Org } from "./types";
+import areasJson from "@/data/areas.json";
+
+const AREA = new Map((areasJson as Area[]).map((a) => [a.slug, a]));
+
+/** Exports give the honest point: the sector centroid for area pins, not the spread-out display spot. */
+function point(o: Org): [number, number] | null {
+  if (o.location_precision === "area") {
+    const a = o.area ? AREA.get(o.area) : null;
+    return a ? a.center : null;
+  }
+  return o.lng != null && o.lat != null ? [o.lng, o.lat] : null;
+}
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -20,16 +32,16 @@ function profileUrl(o: Org) {
 export function orgsToCsv(orgs: Org[]) {
   const cols = [
     "slug", "name", "kind", "sectors", "status", "website", "founded_year",
-    "acquired_by", "municipality", "area", "location_precision", "address",
+    "acquired_by", "funding_note", "municipality", "area", "location_precision", "address",
     "longitude", "latitude", "coordinates", "connected_to", "hiring",
     "verification", "profile_url", "updated_at",
   ];
   const rows = orgs.map((o) => [
     o.slug, o.name, o.kind, o.sectors.join(";"), o.status, o.website ?? "",
-    o.founded_year ?? "", o.acquired_by ?? "", o.municipality, o.area ?? "",
+    o.founded_year ?? "", o.acquired_by ?? "", o.funding_note ?? "", o.municipality, o.area ?? "",
     o.location_precision,
     o.location_precision === "exact" || o.location_precision === "building" ? o.address ?? "" : "",
-    o.lng ?? "", o.lat ?? "", coordKind(o), o.connected_to.join(";"),
+    point(o)?.[0] ?? "", point(o)?.[1] ?? "", coordKind(o), o.connected_to.join(";"),
     o.hiring == null ? "" : String(o.hiring), o.verification, profileUrl(o), o.updated_at,
   ]);
   return toCsv([cols, ...rows]);
@@ -47,10 +59,10 @@ export function orgsToGeoJson(orgs: Org[]) {
     type: "FeatureCollection",
     attribution: ATTRIBUTION,
     features: orgs
-      .filter((o) => o.lng != null && o.lat != null)
+      .filter((o) => point(o) != null)
       .map((o) => ({
         type: "Feature",
-        geometry: { type: "Point", coordinates: [o.lng, o.lat] },
+        geometry: { type: "Point", coordinates: point(o) },
         properties: {
           slug: o.slug,
           name: o.name,

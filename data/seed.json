@@ -1,236 +1,5340 @@
 [
-  {
-    "slug": "eternal",
-    "name": "Eternal (Zomato)",
-    "kind": "company",
-    "sectors": ["food-quick-commerce", "commerce-marketplaces"],
-    "status": "active",
-    "one_liner": "Holding company behind Zomato food delivery, Blinkit quick commerce, Hyperpure B2B supplies and the District events app.",
-    "website": "https://www.eternal.com",
-    "founded_year": null,
-    "municipality": "Gurugram",
-    "area": "golf-course-extension-road",
-    "location_precision": "area",
-    "connected_to": ["blinkit"],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Eternal_Limited", "note": "Headquartered in Gurugram; founding year given inconsistently (2008 vs 2010), so left empty", "fields": ["name", "municipality", "summary", "connections"], "retrieved": "2026-10-08" },
-      { "url": "https://nz.finance.yahoo.com/quote/ZOMATO.BO/profile", "note": "Exchange profile lists the Pioneer Square building as its address", "fields": ["area"], "retrieved": "2026-10-08" }
+ {
+  "slug": "eternal",
+  "name": "Eternal (Zomato)",
+  "kind": "company",
+  "sectors": [
+   "food-quick-commerce",
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Holding company behind Zomato food delivery, Blinkit quick commerce, Hyperpure B2B supplies and the District going-out app.",
+  "website": "https://www.eternal.com",
+  "founded_year": 2008,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-62",
+  "location_precision": "area",
+  "connected_to": [
+   "blinkit"
+  ],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "blinkit",
-    "name": "Blinkit",
-    "kind": "company",
-    "sectors": ["food-quick-commerce"],
-    "status": "acquired",
-    "acquired_by": "eternal",
-    "one_liner": "Quick-commerce app delivering groceries and essentials in minutes from dark stores. Started as Grofers.",
-    "website": "https://blinkit.com",
-    "founded_year": 2013,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": ["eternal"],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Blinkit", "note": "Headquartered in Gurugram, founded December 2013 as Grofers, owned by Eternal", "fields": ["municipality", "founded_year", "status", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "policybazaar",
-    "name": "Policybazaar",
-    "kind": "company",
-    "sectors": ["insurtech", "fintech"],
-    "status": "active",
-    "one_liner": "Online marketplace to compare and buy insurance; flagship business of PB Fintech.",
-    "website": "https://www.policybazaar.com",
-    "founded_year": 2008,
-    "municipality": "Gurugram",
-    "area": "sector-44",
-    "location_precision": "area",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Policybazaar", "note": "Headquarters at Plot No. 119, Sector 44, Gurugram; founded 2008", "fields": ["area", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/zomato-limited-06AADCD4946L1ZE/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "makemytrip",
-    "name": "MakeMyTrip",
-    "kind": "company",
-    "sectors": ["travel-hospitality"],
-    "status": "active",
-    "one_liner": "Online travel company selling flights, hotels, holidays, buses, trains and cabs.",
-    "website": "https://www.makemytrip.com",
-    "founded_year": 2000,
-    "municipality": "Gurugram",
-    "area": "dlf-cyber-city",
-    "location_precision": "area",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/MakeMyTrip", "note": "Headquartered in Gurugram; founded 2000", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" },
-      { "url": "https://hk.finance.yahoo.com/quote/MMYT/profile", "note": "Exchange profile lists DLF Building No. 5 as its address", "fields": ["area"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "blinkit",
+  "name": "Blinkit",
+  "kind": "company",
+  "sectors": [
+   "food-quick-commerce"
+  ],
+  "status": "acquired",
+  "one_liner": "Quick-commerce app delivering groceries and essentials in minutes from dark stores. Started as Grofers; owned by Eternal.",
+  "website": "https://blinkit.com",
+  "founded_year": 2013,
+  "acquired_by": "eternal",
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-62",
+  "location_precision": "area",
+  "connected_to": [
+   "eternal"
+  ],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "delhivery",
-    "name": "Delhivery",
-    "kind": "company",
-    "sectors": ["logistics-mobility"],
-    "status": "active",
-    "one_liner": "Logistics and supply-chain company: parcel delivery, freight and warehousing.",
-    "website": "https://www.delhivery.com",
-    "founded_year": 2011,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Delhivery", "note": "Headquartered in Gurugram; founded May 2011", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "oyo",
-    "name": "OYO",
-    "kind": "company",
-    "sectors": ["travel-hospitality"],
-    "status": "active",
-    "one_liner": "Hospitality company that leases and operates hotels, homes and living spaces.",
-    "website": "https://www.oyorooms.com",
-    "founded_year": 2012,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Oyo_Rooms", "note": "Headquartered in Gurugram; founded 2012", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/blink-commerce-private-limited-06AAFCG9846E1ZF/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "cars24",
-    "name": "Cars24",
-    "kind": "company",
-    "sectors": ["commerce-marketplaces", "logistics-mobility"],
-    "status": "active",
-    "one_liner": "Online marketplace for used cars, with paperwork, financing and physical branches.",
-    "website": "https://www.cars24.com",
-    "founded_year": 2015,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Cars24", "note": "Headquartered in Gurugram; founded 2015", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "makemytrip",
+  "name": "MakeMyTrip",
+  "kind": "company",
+  "sectors": [
+   "travel-hospitality"
+  ],
+  "status": "active",
+  "one_liner": "Online travel company for flights, hotels, holiday packages, buses, trains and cabs.",
+  "website": "https://www.makemytrip.com",
+  "founded_year": 2000,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "dlf-cyber-city",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "urban-company",
-    "name": "Urban Company",
-    "kind": "company",
-    "sectors": ["consumer-services"],
-    "status": "active",
-    "one_liner": "Home-services platform matching customers with trained service professionals. Formerly UrbanClap.",
-    "website": "https://www.urbancompany.com",
-    "founded_year": 2014,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Urban_Company", "note": "Headquartered in Gurugram; founded 2014", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "mobikwik",
-    "name": "MobiKwik",
-    "kind": "company",
-    "sectors": ["fintech"],
-    "status": "active",
-    "one_liner": "Mobile payments and digital wallet, plus lending, insurance and other financial services.",
-    "website": "https://www.mobikwik.com",
-    "founded_year": 2009,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/MobiKwik", "note": "Headquartered in Gurugram; founded April 2009", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/make-my-trip-india-pvt-ltd-06AADCM5146R1ZZ/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "ixigo",
-    "name": "ixigo",
-    "kind": "company",
-    "sectors": ["travel-hospitality"],
-    "status": "active",
-    "one_liner": "Travel app that compares and books flights, trains, buses and hotels.",
-    "website": "https://www.ixigo.com",
-    "founded_year": 2007,
-    "municipality": "Gurugram",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://en.wikipedia.org/wiki/Ixigo", "note": "Headquartered in Gurugram; founded June 2007", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "oyo",
+  "name": "OYO",
+  "kind": "company",
+  "sectors": [
+   "travel-hospitality"
+  ],
+  "status": "active",
+  "one_liner": "Hospitality platform that leases, franchises and operates budget hotels and homes.",
+  "website": "https://www.oyorooms.com",
+  "founded_year": 2012,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "golf-course-road-53",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  },
-  {
-    "slug": "startup-haryana",
-    "name": "Startup Haryana",
-    "kind": "government_program",
-    "sectors": [],
-    "status": "active",
-    "one_liner": "Haryana government startup portal: registration, incubator directory, state incentives, mentors and scheme information.",
-    "website": "https://startupharyana.gov.in",
-    "founded_year": null,
-    "municipality": "Chandigarh (serves all of Haryana)",
-    "area": null,
-    "location_precision": "municipality",
-    "connected_to": [],
-    "hiring": null,
-    "job_board": null,
-    "verification": "unverified",
-    "sources": [
-      { "url": "https://startupharyana.gov.in/", "note": "Run by Industries and Commerce, Haryana; contact office in Sector 17-C, Chandigarh", "fields": ["name", "summary", "municipality"], "retrieved": "2026-10-08" }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
     ],
-    "updated_at": "2026-10-08"
-  }
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/oravel-stays-limited-06AABCO6063D1ZQ/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "lenskart",
+  "name": "Lenskart",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Omnichannel eyewear retailer selling glasses and contact lenses online and through its own stores.",
+  "website": "https://www.lenskart.com",
+  "founded_year": 2008,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "snapdeal",
+  "name": "Snapdeal",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Value-focused online marketplace for fashion, home and general merchandise.",
+  "website": "https://www.snapdeal.com",
+  "founded_year": 2010,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-59",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/snapdeal-private-limited-06AABCJ8820B1ZY/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "delhivery",
+  "name": "Delhivery",
+  "kind": "company",
+  "sectors": [
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Logistics network for parcel delivery, freight, warehousing and supply-chain services.",
+  "website": "https://www.delhivery.com",
+  "founded_year": 2011,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/delhivery-limited-06AAPCS9575E2ZQ",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "cars24",
+  "name": "Cars24",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Platform for buying and selling used cars, with inspection, financing and paperwork.",
+  "website": "https://www.cars24.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-39",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.zaubacorp.com/CARS24-SERVICES-PRIVATE-LIMITED-U74999HR2015FTC056386",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "policybazaar",
+  "name": "Policybazaar",
+  "kind": "company",
+  "sectors": [
+   "insurtech",
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Online marketplace to compare and buy insurance; flagship business of PB Fintech.",
+  "website": "https://www.policybazaar.com",
+  "founded_year": 2008,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Policybazaar",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "ofbusiness",
+  "name": "OfBusiness",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "B2B platform supplying raw materials such as steel and chemicals to SMEs, with embedded credit.",
+  "website": "https://www.ofbusiness.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "mg-road",
+  "location_precision": "area",
+  "connected_to": [
+   "oxyzo"
+  ],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/ofb-tech-private-limited-06AACCO1867C1ZP/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "oxyzo",
+  "name": "Oxyzo",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "B2B lender to small and mid-sized businesses; the lending arm of OfBusiness.",
+  "website": "https://www.oxyzo.in",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "mg-road",
+  "location_precision": "area",
+  "connected_to": [
+   "ofbusiness"
+  ],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/oxyzo-financial-services-private-limited-06AACCO3836B1ZU/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "bharatpe",
+  "name": "BharatPe",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Payments and lending for small merchants: UPI QR codes, card machines and business loans.",
+  "website": "https://www.bharatpe.com",
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "dlf-cyber-city",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/resilient-innovations-private-limited-06AAICR8311G1ZF/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "spinny",
+  "name": "Spinny",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Full-stack used-car retailer selling inspected cars with home test drives and financing.",
+  "website": "https://www.spinny.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sohna-road",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.spinny.com/contact-us/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "urban-company",
+  "name": "Urban Company",
+  "kind": "company",
+  "sectors": [
+   "consumer-services"
+  ],
+  "status": "active",
+  "one_liner": "Marketplace for at-home services such as cleaning, repairs and beauty, delivered by trained professionals.",
+  "website": "https://www.urbancompany.com",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/urbancompany-06AABCU7755Q1ZK/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "aye-finance",
+  "name": "Aye Finance",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Lender providing business loans to micro and small enterprises.",
+  "website": "https://www.ayefinance.com",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "greyorange",
+  "name": "GreyOrange",
+  "kind": "company",
+  "sectors": [
+   "hardware-robotics",
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Warehouse robotics and fulfilment-orchestration software for retailers and logistics companies.",
+  "website": "https://www.greyorange.com",
+  "founded_year": 2012,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-34",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/grey-orange-india-pvt-ltd-06AAFCG6416L1ZG/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "insurancedekho",
+  "name": "InsuranceDekho",
+  "kind": "company",
+  "sectors": [
+   "insurtech"
+  ],
+  "status": "active",
+  "one_liner": "Insurance distribution platform selling motor, health and life policies online and through agents.",
+  "website": "https://www.insurancedekho.com",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "healthkart",
+  "name": "HealthKart",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Online store and brand house for sports nutrition and wellness supplements.",
+  "website": "https://www.healthkart.com",
+  "founded_year": 2011,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-14",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/bright-lifecare-pvt-ltd-06AAECB5311J1ZY/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "mobikwik",
+  "name": "MobiKwik",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Digital wallet and payments app, plus credit, investments and insurance.",
+  "website": "https://www.mobikwik.com",
+  "founded_year": 2009,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "golf-course-road-53",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/one-mobikwik-systems-limited-06AABCO0442Q1ZC/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "ixigo",
+  "name": "ixigo",
+  "kind": "company",
+  "sectors": [
+   "travel-hospitality"
+  ],
+  "status": "active",
+  "one_liner": "Travel app to compare and book trains, flights, buses and hotels.",
+  "website": "https://www.ixigo.com",
+  "founded_year": 2007,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "golf-course-road-53",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ixigo",
+    "note": "Wikipedia: headquartered in Gurugram; founded June 2007",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/le-travenues-technology-limited-06AABCL1932G1C6/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "square-yards",
+  "name": "Square Yards",
+  "kind": "company",
+  "sectors": [
+   "proptech-construction"
+  ],
+  "status": "active",
+  "one_liner": "Real-estate platform for buying, selling, renting and financing property, with data and agent tools.",
+  "website": "https://www.squareyards.com",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/square-yards-consulting-private-limited-06AASCS4409C1ZD/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "zupee",
+  "name": "Zupee",
+  "kind": "company",
+  "sectors": [
+   "gaming"
+  ],
+  "status": "active",
+  "one_liner": "Skill-based online gaming app built around board games like Ludo.",
+  "website": "https://www.zupee.com",
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups ranked by revenue",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/cashgrail-private-limited-06AAICC4974E1ZL/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "magicpin",
+  "name": "magicpin",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "food-quick-commerce"
+  ],
+  "status": "active",
+  "one_liner": "Local discovery and food-ordering app with deals from neighbourhood stores and restaurants.",
+  "website": "https://magicpin.in",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-29-iffco-chowk",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups ranked by revenue",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/samast-technologies-private-limited-06AAVCS7907C2Z0/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "stanza-living",
+  "name": "Stanza Living",
+  "kind": "company",
+  "sectors": [
+   "proptech-construction"
+  ],
+  "status": "active",
+  "one_liner": "Operator of furnished, managed shared housing for students and young professionals.",
+  "website": "https://www.stanzaliving.com",
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups ranked by revenue",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/dtwelve-spaces-private-limited-06AAGCD0417P1ZL/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "country-delight",
+  "name": "Country Delight",
+  "kind": "company",
+  "sectors": [
+   "food-quick-commerce"
+  ],
+  "status": "active",
+  "one_liner": "Subscription app delivering milk, dairy and daily essentials to homes each morning.",
+  "website": "https://www.countrydelight.in",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "citymall",
+  "name": "CityMall",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Social commerce platform selling groceries and essentials to smaller-town shoppers via community leaders.",
+  "website": "https://www.citymall.live",
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "cashify",
+  "name": "Cashify",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Re-commerce platform to sell, buy and repair used phones and gadgets.",
+  "website": "https://www.cashify.in",
+  "founded_year": 2009,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/cashify-06AAGCM0328J3ZK/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "droom",
+  "name": "Droom",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces",
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Online marketplace for buying and selling used vehicles.",
+  "website": "https://droom.in",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "shopclues",
+  "name": "ShopClues",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Online marketplace for value-priced products.",
+  "website": "https://www.shopclues.com",
+  "founded_year": 2011,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "power2sme",
+  "name": "Power2SME",
+  "kind": "company",
+  "sectors": [
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "B2B marketplace for industrial raw materials for small manufacturers.",
+  "website": "https://www.power2sme.com",
+  "founded_year": 2012,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-ecommerce-d2c-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded ecommerce startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/power2sme-private-limited-06AAECB9468N1Z0/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "rivigo",
+  "name": "Rivigo",
+  "kind": "company",
+  "sectors": [
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Tech-enabled trucking and freight logistics company.",
+  "website": "https://rivigo.com",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/rivigo-services-private-limited-06AAFCT0838F2ZH/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "vvdn",
+  "name": "VVDN Technologies",
+  "kind": "company",
+  "sectors": [
+   "hardware-robotics"
+  ],
+  "status": "active",
+  "one_liner": "Electronics product engineering and manufacturing company (design, firmware and devices).",
+  "website": "https://www.vvdntech.com",
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-34",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/vvdn-technologies-pvt-ltd-06AABCE7582R1ZX/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "renew",
+  "name": "ReNew",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Renewable energy company developing and operating wind, solar and storage projects.",
+  "website": "https://www.renew.com",
+  "founded_year": 2011,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "dlf-phase-5",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/renew-power-private-limited-06AAFCR1111D1Z4/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "acme-solar",
+  "name": "ACME Solar",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Solar and renewable power project developer.",
+  "website": "https://www.acmesolar.in",
+  "founded_year": 2003,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/acme-solar-holdings-limited-06AANCA4988R1ZL/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "juniper-green",
+  "name": "Juniper Green Energy",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Renewable energy developer working on wind and solar projects.",
+  "website": null,
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "serentica",
+  "name": "Serentica Renewables",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Renewable energy company building clean power for industrial customers.",
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "blupine",
+  "name": "BluPine Energy",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Renewable energy platform.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "o2-power",
+  "name": "O2 Power",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Clean energy company.",
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "statiq",
+  "name": "Statiq",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Electric-vehicle charging network.",
+  "website": "https://www.statiq.in",
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "battery-smart",
+  "name": "Battery Smart",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech",
+   "logistics-mobility"
+  ],
+  "status": "active",
+  "one_liner": "Battery-swapping network for electric two- and three-wheelers.",
+  "website": "https://www.batterysmart.in",
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "batx-energies",
+  "name": "BatX Energies",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": "Lithium-ion battery recycling and materials recovery.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "varaha",
+  "name": "Varaha",
+  "kind": "company",
+  "sectors": [
+   "agri-climate"
+  ],
+  "status": "active",
+  "one_liner": "Carbon-removal projects with farmers, such as regenerative agriculture and biochar.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/varaha-climateag-private-limited-06AAICV5458Q1ZG/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "zenergize",
+  "name": "Zenergize",
+  "kind": "company",
+  "sectors": [
+   "ev-cleantech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://www.ipoplatform.com/Funding-news/zenergize-raises-funding",
+    "note": "News: Gurugram startup Zenergize raises $4M",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "clix-capital",
+  "name": "Clix Capital",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Lending platform for consumers and small businesses.",
+  "website": "https://www.clix.capital",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-42-43",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/clix-capital-services-private-limited-06AAACC0642F1ZA/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "freecharge",
+  "name": "FreeCharge",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Payments app for UPI, recharges and bill payments.",
+  "website": "https://www.freecharge.in",
+  "founded_year": 2010,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "true-balance",
+  "name": "True Balance",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Digital lending app offering small personal loans.",
+  "website": null,
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "renewbuy",
+  "name": "RenewBuy",
+  "kind": "company",
+  "sectors": [
+   "insurtech"
+  ],
+  "status": "active",
+  "one_liner": "Insurance distribution platform that equips agents to sell policies digitally.",
+  "website": "https://www.renewbuy.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-32",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/d2c-insurance-broking-private-limited-06AAECD5771A1ZZ/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "indmoney",
+  "name": "INDmoney",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Investing and personal-finance app for Indian and US stocks, mutual funds and more.",
+  "website": "https://www.indmoney.com",
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-65",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/indmoney-private-limited-06AAGCI3750E1ZT/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "indifi",
+  "name": "Indifi Technologies",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Online lending platform for small businesses.",
+  "website": "https://www.indifi.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sector-44",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/indifi-technologies-private-limited-06AANCA4785E1ZH/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "payu",
+  "name": "PayU India",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Online payments processing for businesses, plus consumer credit.",
+  "website": "https://payu.in",
+  "founded_year": 2011,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sohna-road",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/payu-payments-private-limited-06AAJCS9091D1Z4/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "triotech",
+  "name": "Triotech",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2009,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "fincfriends",
+  "name": "FincFriends",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "strideone",
+  "name": "StrideOne",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Supply-chain financing for businesses.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "m1xchange",
+  "name": "M1xchange",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Invoice-discounting (TReDS) exchange for MSME receivables.",
+  "website": "https://www.m1xchange.com",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "udyog-vihar",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/mynd-solutions-pvt-ltd-06AADCM1046J1ZO/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "univest",
+  "name": "Univest",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "credenc",
+  "name": "Credenc",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "indiagold",
+  "name": "IndiaGold",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Digital gold-loan business.",
+  "website": null,
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "basic-home-loan",
+  "name": "BASIC Home Loan",
+  "kind": "company",
+  "sectors": [
+   "fintech",
+   "proptech-construction"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "seeds-fincap",
+  "name": "Seeds Fincap",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "indialends",
+  "name": "IndiaLends",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "ambak",
+  "name": "Ambak",
+  "kind": "company",
+  "sectors": [
+   "fintech",
+   "proptech-construction"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2023,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded fintech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "centricity",
+  "name": "Centricity",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": "Digital private-wealth platform.",
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "salaryse",
+  "name": "SalarySe",
+  "kind": "company",
+  "sectors": [
+   "fintech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "fstc",
+  "name": "FSTC",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Flight simulation and aviation training.",
+  "website": null,
+  "founded_year": 2012,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/list-of-startups-in-gurugram/",
+    "note": "Inc42: list of startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "collegedekho",
+  "name": "CollegeDekho",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "College discovery and admissions guidance platform for students.",
+  "website": "https://www.collegedekho.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": "$106M",
+  "municipality": "Gurugram",
+  "area": "sector-62",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/girnarsoft-education-services-private-limited-06AAFCG9583Q6ZJ/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "sunstone",
+  "name": "Sunstone",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Higher-education company running degree programmes with partner universities.",
+  "website": null,
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": "$86M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "adda247",
+  "name": "Adda247",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Test prep for government, banking, SSC, railway and teaching exams in several Indian languages.",
+  "website": "https://www.adda247.com",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "doubtnut",
+  "name": "Doubtnut",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "App that answers school maths and science doubts with short video solutions.",
+  "website": "https://doubtnut.com",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": "$52M",
+  "municipality": "Gurugram",
+  "area": "sushant-lok",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/doubtnut-06AAGCC5347M1ZD/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "seekho",
+  "name": "Seekho",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Short-video learning app.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": "$39M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "uolo",
+  "name": "Uolo",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "School platform with coding, maths and English programmes and parent-teacher tools.",
+  "website": "https://uolo.com",
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "dlf-phase-5",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/uolo-edtech-private-limited-06AACCU5559R1ZJ/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "planetspark",
+  "name": "PlanetSpark",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Live online classes in communication and public speaking for children.",
+  "website": "https://www.planetspark.in",
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": "$31M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "virohan",
+  "name": "Virohan",
+  "kind": "company",
+  "sectors": [
+   "edtech",
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Training for healthcare jobs.",
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": "$28M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "splashlearn",
+  "name": "SplashLearn",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Game-based maths and reading app for young children.",
+  "website": "https://www.splashlearn.com",
+  "founded_year": 2010,
+  "acquired_by": null,
+  "funding_note": "$25M",
+  "municipality": "Gurugram",
+  "area": "sohna-road",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/studypad-india-private-limited-06AAHCM1084C1ZT/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "filo",
+  "name": "Filo",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Instant one-on-one live tutoring app.",
+  "website": "https://askfilo.com",
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": "$25M",
+  "municipality": "Gurugram",
+  "area": "sector-39",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/filo-edtech-private-limited-06AAECF3133C1Z9/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "speakx",
+  "name": "speakX",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Spoken-English learning app that grew out of Yellow Class.",
+  "website": null,
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "meritnation",
+  "name": "Meritnation",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": "Online study material and classes for school students.",
+  "website": "https://www.meritnation.com",
+  "founded_year": 2008,
+  "acquired_by": null,
+  "funding_note": "$15M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "genleap",
+  "name": "GenLeap",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": "$11M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "airblack",
+  "name": "Airblack",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$11M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "footprints",
+  "name": "Footprints Childcare",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2012,
+  "acquired_by": null,
+  "funding_note": "$8M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "suraasa",
+  "name": "Suraasa",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": "$7M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "onlinetyari",
+  "name": "OnlineTyari",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": "$6M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "digiaccel",
+  "name": "Digiaccel Learning",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": "$3.6M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "stones2milestones",
+  "name": "Stones2Milestones",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2008,
+  "acquired_by": null,
+  "funding_note": "$3M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "swiflearn",
+  "name": "Swiflearn",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$3M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "lecturenotes",
+  "name": "LectureNotes",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": "$3M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "vidyakul",
+  "name": "Vidyakul",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$2.6M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "dhurina",
+  "name": "Dhurina",
+  "kind": "company",
+  "sectors": [
+   "edtech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$2.5M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-edtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded edtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "yolearn",
+  "name": "YoLearn.ai",
+  "kind": "company",
+  "sectors": [
+   "edtech",
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://www.ipoplatform.com/Funding-news/yolearnai-raises-funding-1",
+    "note": "News: Gurugram startup YoLearn.ai raises funding",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "spyne",
+  "name": "Spyne",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": "AI that turns phone photos of cars and products into studio-quality catalogue images.",
+  "website": "https://www.spyne.ai",
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": "$24.2M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "intello-labs",
+  "name": "Intello Labs",
+  "kind": "company",
+  "sectors": [
+   "ai-ml",
+   "agri-climate"
+  ],
+  "status": "active",
+  "one_liner": "Computer vision for grading the quality of fruit, vegetables and grains.",
+  "website": "https://www.intellolabs.com",
+  "founded_year": 2016,
+  "acquired_by": null,
+  "funding_note": "$20.9M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "awiros",
+  "name": "Awiros",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": "Video-analytics platform with an app marketplace for computer-vision use cases.",
+  "website": "https://www.awiros.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": "$7M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "phot-ai",
+  "name": "Phot.ai",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": "$3.7M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "hirebound",
+  "name": "HireBound",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2024,
+  "acquired_by": null,
+  "funding_note": "$2M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "febi-ai",
+  "name": "Febi.ai",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": "$2M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "vibrium",
+  "name": "Vibrium",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2025,
+  "acquired_by": null,
+  "funding_note": "$1M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "mynzo-carbon",
+  "name": "Mynzo Carbon",
+  "kind": "company",
+  "sectors": [
+   "ai-ml",
+   "agri-climate"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "dubverse",
+  "name": "Dubverse",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": "AI dubbing and voice-over for video in many languages.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "wyzard-ai",
+  "name": "Wyzard.ai",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2024,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-10-funded-ai-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded AI startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "neurosensum",
+  "name": "Neurosensum",
+  "kind": "company",
+  "sectors": [
+   "ai-ml",
+   "enterprise-saas"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/enterprise-tech-startups-in-gurugram/",
+    "note": "Inc42: enterprise tech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "fleetx",
+  "name": "Fleetx",
+  "kind": "company",
+  "sectors": [
+   "logistics-mobility",
+   "enterprise-saas"
+  ],
+  "status": "active",
+  "one_liner": "Fleet-management software for trucking and logistics operators.",
+  "website": "https://www.fleetx.io",
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": "sohna-road",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/fleetx-technologies-private-limited-06AADCF1601L1ZY/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "neogeoinfo",
+  "name": "NeoGeoInfo Technologies",
+  "kind": "company",
+  "sectors": [
+   "enterprise-saas"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "pb-healthcare",
+  "name": "PB Healthcare",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2025,
+  "acquired_by": null,
+  "funding_note": "$218M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "tata-1mg",
+  "name": "Tata 1mg",
+  "kind": "company",
+  "sectors": [
+   "health-biotech",
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "Online pharmacy, lab tests and teleconsultations.",
+  "website": "https://www.1mg.com",
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": "$200M",
+  "municipality": "Gurugram",
+  "area": "sector-14",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/1mg-technologies-private-limited-06AAACZ8318D1ZE/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "pristyn-care",
+  "name": "Pristyn Care",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Network of clinics and partner hospitals for elective surgeries, with end-to-end patient support.",
+  "website": "https://www.pristyncare.com",
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": "$181M",
+  "municipality": "Gurugram",
+  "area": "sector-66",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.zaubacorp.com/GHV-ADVANCED-CARE-PRIVATE-LIMITED-U85300HR2018PTC075460",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "temple",
+  "name": "Temple",
+  "kind": "company",
+  "sectors": [
+   "health-biotech",
+   "hardware-robotics"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2024,
+  "acquired_by": null,
+  "funding_note": "$54M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "docprime",
+  "name": "DocPrime",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "vetic",
+  "name": "Vetic",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Chain of tech-enabled veterinary clinics for pets.",
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": "$43.7M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "hexahealth",
+  "name": "HexaHealth",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Surgery-care platform that guides patients to hospitals and handles the process.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": "$23.5M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "boon",
+  "name": "Boon",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "emoha",
+  "name": "Emoha Elder Care",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Elder-care services and community for older adults.",
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$21.2M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "healthians",
+  "name": "Healthians",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "At-home diagnostic tests and health check-ups.",
+  "website": "https://www.healthians.com",
+  "founded_year": 2014,
+  "acquired_by": null,
+  "funding_note": "$15.2M",
+  "municipality": "Gurugram",
+  "area": "sector-34",
+  "location_precision": "area",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.knowyourgst.com/gst-number-search/expedient-healthcare-marketing-private-limited-06AADCE5479M1Z5/",
+    "note": "Office address on public record, used to place the pin at sector level",
+    "fields": [
+     "area"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "sukoon-health",
+  "name": "Sukoon Health",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": "$15M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "breathe-well-being",
+  "name": "Breathe Well-being",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2020,
+  "acquired_by": null,
+  "funding_note": "$12.7M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "meddo",
+  "name": "Meddo",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2018,
+  "acquired_by": null,
+  "funding_note": "$12M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "gabit",
+  "name": "Gabit",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2023,
+  "acquired_by": null,
+  "funding_note": "$9.5M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "shyft",
+  "name": "Shyft",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2019,
+  "acquired_by": null,
+  "funding_note": "$8M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "lissun",
+  "name": "Lissun",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": "Mental-health and child-development care, with child development centres.",
+  "website": null,
+  "founded_year": 2021,
+  "acquired_by": null,
+  "funding_note": "$7.8M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "zoplar",
+  "name": "Zoplar",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2022,
+  "acquired_by": null,
+  "funding_note": "$6.8M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "myhealthcare",
+  "name": "MyHealthcare",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2017,
+  "acquired_by": null,
+  "funding_note": "$5M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "medecube",
+  "name": "medECUBE Healthcare",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": "$4M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "oncare",
+  "name": "Oncare",
+  "kind": "company",
+  "sectors": [
+   "health-biotech"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2023,
+  "acquired_by": null,
+  "funding_note": "$4M",
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://inc42.com/lists/top-30-funded-healthtech-startups-in-gurugram-2026/",
+    "note": "Inc42: top funded healthtech startups in Gurugram",
+    "fields": [
+     "listing",
+     "sector",
+     "founded_year"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "elivaas",
+  "name": "Elivaas",
+  "kind": "company",
+  "sectors": [
+   "travel-hospitality"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "30-sundays",
+  "name": "30 Sundays",
+  "kind": "company",
+  "sectors": [
+   "travel-hospitality"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "quick-clean",
+  "name": "Quick Clean",
+  "kind": "company",
+  "sectors": [
+   "consumer-services"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://seedtable.com/best-startups-in-gurgaon",
+    "note": "Seedtable: best startups in Gurugram",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "bijak",
+  "name": "Bijak",
+  "kind": "company",
+  "sectors": [
+   "agri-climate",
+   "commerce-marketplaces"
+  ],
+  "status": "active",
+  "one_liner": "B2B marketplace for agricultural produce trade.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "farmart",
+  "name": "FarMart",
+  "kind": "company",
+  "sectors": [
+   "agri-climate"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": 2015,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups ranked by revenue",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "salescode-ai",
+  "name": "SalesCode.ai",
+  "kind": "company",
+  "sectors": [
+   "ai-ml",
+   "enterprise-saas"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "adyogi",
+  "name": "Adyogi",
+  "kind": "company",
+  "sectors": [
+   "enterprise-saas"
+  ],
+  "status": "active",
+  "one_liner": "Marketing automation software.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "bobble-ai",
+  "name": "Bobble AI",
+  "kind": "company",
+  "sectors": [
+   "ai-ml"
+  ],
+  "status": "active",
+  "one_liner": "Keyboard app with stickers, GIFs and AI-powered typing tools.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://fliarbi.com/companies/top-startups-in-gurugram/",
+    "note": "Fliarbi: Gurugram startups",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "scrubsy",
+  "name": "Scrubsy",
+  "kind": "company",
+  "sectors": [
+   "consumer-services"
+  ],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://www.ipoplatform.com/Funding-news/scrubsy-raises-funding",
+    "note": "News: Gurugram startup Scrubsy raises $3M",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "startup-haryana",
+  "name": "Startup Haryana",
+  "kind": "government_program",
+  "sectors": [],
+  "status": "active",
+  "one_liner": "Haryana government startup portal: registration, incubator directory, state incentives, mentors and schemes.",
+  "website": "https://startupharyana.gov.in",
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Chandigarh (serves all of Haryana)",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://startupharyana.gov.in/",
+    "note": "Run by Industries and Commerce, Haryana",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "mdi-gurgaon",
+  "name": "Management Development Institute (MDI)",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": "Business school in Gurugram.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gurgaon",
+    "note": "Wikipedia's Gurgaon article lists it among the city's institutions",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "bml-munjal-university",
+  "name": "BML Munjal University",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gurgaon",
+    "note": "Wikipedia's Gurgaon article lists it among the city's institutions",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "amity-university-gurgaon",
+  "name": "Amity University Gurugram",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gurgaon",
+    "note": "Wikipedia's Gurgaon article lists it among the city's institutions",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "northcap-university",
+  "name": "The NorthCap University",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gurgaon",
+    "note": "Wikipedia's Gurgaon article lists it among the city's institutions",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "gurugram-university",
+  "name": "Gurugram University",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": null,
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Gurgaon",
+    "note": "Wikipedia's Gurgaon article lists it among the city's institutions",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ },
+ {
+  "slug": "masters-union",
+  "name": "Masters' Union",
+  "kind": "university_research",
+  "sectors": [],
+  "status": "active",
+  "one_liner": "Business school offering practitioner-led management programmes.",
+  "website": null,
+  "founded_year": null,
+  "acquired_by": null,
+  "funding_note": null,
+  "municipality": "Gurugram",
+  "area": null,
+  "location_precision": "municipality",
+  "connected_to": [],
+  "hiring": null,
+  "job_board": null,
+  "verification": "unverified",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Masters%27_Union",
+    "note": "Wikipedia article on the school",
+    "fields": [
+     "listing"
+    ],
+    "retrieved": "2026-10-08"
+   }
+  ],
+  "updated_at": "2026-10-08"
+ }
 ]

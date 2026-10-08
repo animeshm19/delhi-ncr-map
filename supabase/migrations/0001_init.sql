@@ -2,7 +2,7 @@
 -- Mirrors what the Edmonton map publishes (organizations, relationships,
 -- funding rounds, sources) plus the private review queue behind it.
 
-create extension if not exists postgis;
+create extension if not exists postgis with schema extensions;
 
 create type org_kind as enum ('company','accelerator','investor','coworking','university_research','government_program','community_group');
 create type org_status as enum ('active','acquired','closed','unknown');
@@ -12,9 +12,9 @@ create type verification as enum ('unverified','community_verified','company_cla
 create table areas (
   slug       text primary key,
   name       text not null,
-  center     geography(point, 4326) not null,
+  center     extensions.geography(point, 4326) not null,
   radius_m   integer not null default 1000,
-  boundary   geography(multipolygon, 4326)        -- optional, e.g. HSVP sector polygons from OSM
+  boundary   extensions.geography(multipolygon, 4326)        -- optional, e.g. HSVP sector polygons from OSM
 );
 
 create table organizations (
@@ -33,8 +33,9 @@ create table organizations (
   area               text references areas(slug),
   location_precision loc_precision not null default 'municipality',
   address            text,                         -- exact/building only; never a home
-  location           geography(point, 4326),       -- the pin (address) or null; area pins come from areas.center
+  location           extensions.geography(point, 4326),       -- the pin (address) or null; area pins come from areas.center
   land_use           text,                         -- OSM landuse/building tag that justified an exact pin
+  funding_note       text,                         -- total disclosed funding as reported by a cited list
   hiring             boolean,
   job_board_provider text check (job_board_provider in ('greenhouse','lever','ashby')),
   job_board_handle   text,
@@ -49,6 +50,8 @@ create table organizations (
 );
 create index on organizations using gist (location);
 create index on organizations using gin (sectors);
+create index on organizations (area);
+create index on organizations (acquired_by);
 
 -- Every fact links to the page it came from.
 create table sources (
@@ -71,6 +74,7 @@ create table relationships (
   source_url text not null,
   unique (from_slug, to_slug, relation)
 );
+create index on relationships (to_slug);
 
 create table funding_rounds (
   id          bigint generated always as identity primary key,
@@ -82,6 +86,7 @@ create table funding_rounds (
   investors   text[],
   source_url  text not null           -- only publicly announced rounds, each with its source
 );
+create index on funding_rounds (org_slug);
 
 create table jobs (
   id         bigint generated always as identity primary key,
@@ -93,6 +98,7 @@ create table jobs (
   posted     date,
   seen_at    timestamptz not null default now()
 );
+create index on jobs (org_slug);
 
 create table events (
   id         bigint generated always as identity primary key,
@@ -103,6 +109,7 @@ create table events (
   url        text not null,
   published  boolean not null default false
 );
+create index on events (area);
 
 -- Private: submissions, edit suggestions, claims, removal requests.
 create table review_queue (
@@ -114,6 +121,7 @@ create table review_queue (
   status      text not null default 'pending' check (status in ('pending','approved','rejected')),
   created_at  timestamptz not null default now()
 );
+create index on review_queue (org_slug);
 
 -- Public read model, shaped like lib/types.ts Org.
 create view organizations_public with (security_invoker = true) as
@@ -121,17 +129,22 @@ select
   o.slug, o.name, o.kind, o.sectors, o.status, o.one_liner, o.website,
   o.founded_year, o.acquired_by, o.municipality, o.area, o.location_precision,
   case when o.location_precision in ('exact','building') then o.address end as address,
-  st_x(o.location::geometry) as lng,
-  st_y(o.location::geometry) as lat,
+  -- exact/building: the address pin; area: the sector centroid; municipality: no pin
+  case when o.location_precision in ('exact','building') then extensions.st_x(o.location::extensions.geometry)
+       when o.location_precision = 'area' then extensions.st_x(a.center::extensions.geometry) end as lng,
+  case when o.location_precision in ('exact','building') then extensions.st_y(o.location::extensions.geometry)
+       when o.location_precision = 'area' then extensions.st_y(a.center::extensions.geometry) end as lat,
+  o.funding_note,
   coalesce((select array_agg(r.to_slug) from relationships r where r.from_slug = o.slug), '{}') as connected_to,
   o.hiring,
   case when o.job_board_provider is not null
        then jsonb_build_object('provider', o.job_board_provider, 'handle', o.job_board_handle) end as job_board,
   o.verification,
-  coalesce((select jsonb_agg(jsonb_build_object('url', s.url, 'note', s.note, 'fields', s.fields, 'retrieved', s.retrieved) order by s.retrieved desc)
+  coalesce((select jsonb_agg(jsonb_build_object('url', s.url, 'note', s.note, 'fields', s.fields, 'retrieved', s.retrieved) order by s.id)
             from sources s where s.org_slug = o.slug), '[]') as sources,
   to_char(o.updated_at, 'YYYY-MM-DD') as updated_at
 from organizations o
+left join areas a on a.slug = o.area
 where o.published;
 
 -- Row-level security: the public can read published data and submit to the queue. Nothing else.
@@ -151,6 +164,7 @@ create policy "public read" on relationships  for select using (true);
 create policy "public read" on funding_rounds for select using (true);
 create policy "public read" on jobs           for select using (true);
 create policy "public read" on events         for select using (published);
-create policy "public submit" on review_queue for insert with check (status = 'pending');
+-- review_queue has no public policy yet: submissions go through a server route
+-- (or mailto) until the forms ship, so nobody can write to it with the anon key.
 
 grant select on organizations_public to anon, authenticated;

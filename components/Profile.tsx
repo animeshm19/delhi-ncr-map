@@ -11,10 +11,12 @@ const VERIFICATION_LABEL: Record<Org["verification"], string> = {
   admin_verified: "Verified",
 };
 
+const CONTACT = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+
 const PRECISION_LABEL: Record<Org["location_precision"], string> = {
   exact: "Office",
   building: "Shared building",
-  area: "Approximate area",
+  area: "Approximate: pinned to the sector, not the street address",
   municipality: "City only, not on the map",
 };
 
@@ -32,7 +34,7 @@ export default async function Profile({ org }: { org: Org }) {
     <main id="main" className="page">
       <nav className="crumbs">
         <Link href="/">Map</Link>/
-        {org.sectors[0] ? <span>{sectorLabel(org.sectors[0])}</span> : <span>{KINDS[org.kind].label}</span>}/
+        {org.sectors[0] ? <Link href={`/sector/${org.sectors[0]}`}>{sectorLabel(org.sectors[0])}</Link> : <span>{KINDS[org.kind].label}</span>}/
         <span>{org.name}</span>
       </nav>
 
@@ -52,7 +54,7 @@ export default async function Profile({ org }: { org: Org }) {
       <dl className="details">
         <dt>Location</dt>
         <dd>
-          {org.address ?? (area ? `${area.name}, ${org.municipality}` : org.municipality)}
+          {org.address ?? (area ? <><Link href={`/area/${area.slug}`}>{area.name}</Link>, {org.municipality}</> : org.municipality)}
           <br />
           <small className="muted">{PRECISION_LABEL[org.location_precision]}</small>
         </dd>
@@ -65,12 +67,29 @@ export default async function Profile({ org }: { org: Org }) {
             <> by <Link href={profilePath(bySlug.get(org.acquired_by)!)}>{bySlug.get(org.acquired_by)!.name}</Link></>
           )}
         </dd>
+        {org.funding_note && (
+          <>
+            <dt>Funding</dt>
+            <dd>
+              {org.funding_note}
+              <br />
+              <small className="muted">Total disclosed funding as reported by Inc42 (see sources)</small>
+            </dd>
+          </>
+        )}
         <dt>Hiring</dt>
         <dd>{org.hiring == null ? <span className="muted">Unknown</span> : org.hiring ? "Yes" : "No open roles"}</dd>
         {org.sectors.length > 0 && (
           <>
             <dt>Sectors</dt>
-            <dd>{org.sectors.map(sectorLabel).join(", ")}</dd>
+            <dd>
+              {org.sectors.map((s, i) => (
+                <span key={s}>
+                  {i > 0 && ", "}
+                  <Link href={`/sector/${s}`}>{sectorLabel(s)}</Link>
+                </span>
+              ))}
+            </dd>
           </>
         )}
       </dl>
@@ -111,11 +130,15 @@ export default async function Profile({ org }: { org: Org }) {
       <p className="muted">
         This profile is compiled from public sources and was last updated {org.updated_at}.
       </p>
-      <div className="actions">
-        <a href={`mailto:corrections@example.com?subject=${editSubject}`}>Suggest an edit →</a>
-        <a href={`mailto:corrections@example.com?subject=${encodeURIComponent(`Claim: ${org.slug}`)}`}>Claim this profile →</a>
-        <a href={`mailto:corrections@example.com?subject=${encodeURIComponent(`Removal: ${org.slug}`)}`}>Request removal →</a>
-      </div>
+      {CONTACT ? (
+        <div className="actions">
+          <a href={`mailto:${CONTACT}?subject=${editSubject}`}>Suggest an edit →</a>
+          <a href={`mailto:${CONTACT}?subject=${encodeURIComponent(`Claim: ${org.slug}`)}`}>Claim this profile →</a>
+          <a href={`mailto:${CONTACT}?subject=${encodeURIComponent(`Removal: ${org.slug}`)}`}>Request removal →</a>
+        </div>
+      ) : (
+        <p className="muted">Corrections and removal requests open soon.</p>
+      )}
       <SiteFooter />
     </main>
   );

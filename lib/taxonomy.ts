@@ -15,6 +15,7 @@ export const SECTORS: Record<string, { label: string; color: string }> = {
   "proptech-construction": { label: "Proptech & Construction", color: "#c08552" },
   "hardware-robotics": { label: "Hardware & Robotics", color: "#adb5bd" },
   "ev-cleantech": { label: "EV & Cleantech", color: "#52b788" },
+  "agri-climate": { label: "Agritech & Climate", color: "#a7c957" },
   gaming: { label: "Gaming & Interactive", color: "#e76f51" },
 };
 
