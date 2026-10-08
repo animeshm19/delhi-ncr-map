@@ -13,7 +13,7 @@ export function getArea(slug?: string | null) {
   return slug ? areaBySlug.get(slug) ?? null : null;
 }
 
-const supabase =
+export const supabase =
   process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY
     ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
         auth: { persistSession: false },

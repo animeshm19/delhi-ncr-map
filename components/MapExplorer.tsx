@@ -268,6 +268,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
           <div className="brand">
             <h1>{SITE_NAME}</h1>
             <nav>
+              <Link href="/submit">Submit</Link>
               <Link href="/directory">Directory</Link>
               <Link href="/about">About</Link>
               <Link href="/data">Data</Link>

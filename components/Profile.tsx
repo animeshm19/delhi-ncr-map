@@ -11,8 +11,6 @@ const VERIFICATION_LABEL: Record<Org["verification"], string> = {
   admin_verified: "Verified",
 };
 
-const CONTACT = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
-
 const PRECISION_LABEL: Record<Org["location_precision"], string> = {
   exact: "Office",
   building: "Shared building",
@@ -28,7 +26,6 @@ export default async function Profile({ org }: { org: Org }) {
   const similar = all
     .filter((o) => o.slug !== org.slug && o.kind === org.kind && o.sectors.some((s) => org.sectors.includes(s)))
     .slice(0, 6);
-  const editSubject = encodeURIComponent(`Edit: ${org.name} (${org.slug})`);
 
   return (
     <main id="main" className="page">
@@ -130,15 +127,11 @@ export default async function Profile({ org }: { org: Org }) {
       <p className="muted">
         This profile is compiled from public sources and was last updated {org.updated_at}.
       </p>
-      {CONTACT ? (
-        <div className="actions">
-          <a href={`mailto:${CONTACT}?subject=${editSubject}`}>Suggest an edit →</a>
-          <a href={`mailto:${CONTACT}?subject=${encodeURIComponent(`Claim: ${org.slug}`)}`}>Claim this profile →</a>
-          <a href={`mailto:${CONTACT}?subject=${encodeURIComponent(`Removal: ${org.slug}`)}`}>Request removal →</a>
-        </div>
-      ) : (
-        <p className="muted">Corrections and removal requests open soon.</p>
-      )}
+      <div className="actions">
+        <Link href={`/edit/${org.slug}`}>Suggest an edit →</Link>
+        <Link href={`/claim/${org.slug}`}>Claim this profile →</Link>
+        <Link href={`/removal/${org.slug}`}>Request removal →</Link>
+      </div>
       <SiteFooter />
     </main>
   );

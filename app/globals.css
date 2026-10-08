@@ -102,3 +102,16 @@ a.chip { color: var(--text); text-decoration: none; }
 a.chip:hover { border-color: var(--muted); }
 .dot { display: inline-block; border-radius: 50%; vertical-align: middle; }
 .chip.soon { opacity: 0.55; cursor: default; }
+
+/* ---------- Forms ---------- */
+.form { display: grid; gap: 16px; margin-top: 20px; }
+.form label { display: grid; gap: 6px; }
+.form label > span { font-weight: 600; font-size: 14px; }
+.form .req { color: #ff8a8a; }
+.form input, .form textarea, .form select { width: 100%; padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--panel-2); color: var(--text); font: inherit; }
+.form input:focus, .form textarea:focus, .form select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.form small { font-size: 12px; }
+.form .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.btn { justify-self: start; background: var(--accent); color: #0a0b0d; border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+.btn:disabled { opacity: 0.6; cursor: wait; }
+.error { color: #ff8a8a; margin: 0; }
