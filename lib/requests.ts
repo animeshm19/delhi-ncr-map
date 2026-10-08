@@ -1,3 +1,5 @@
+import { EMAIL_RE } from "./auth-shared";
+
 /**
  * Validation for public requests (edit / claim / removal / submit).
  * Pure functions so they can be unit-tested; the database re-checks everything.
@@ -11,7 +13,6 @@ export const MAX_FIELDS = 12;
 export const MIN_FILL_MS = 3000;
 const SLUG_RE = /^[a-z0-9-]{1,80}$/;
 const KEY_RE = /^[a-z_]{1,32}$/;
-const EMAIL_RE = /^[a-z0-9._%+'-]{1,64}@[a-z0-9-]{1,63}(\.[a-z0-9-]{1,63})*\.[a-z]{2,24}$/;
 
 export type ParsedRequest = {
   type: RequestType;

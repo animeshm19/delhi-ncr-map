@@ -15,6 +15,7 @@ export default function SiteFooter() {
         <Link href="/submit">Submit a company</Link>
         <Link href="/about">About and methodology</Link>
         <Link href="/data">Open data</Link>
+        <Link href="/account">Sign in</Link>
       </p>
       <p>
         Data CC BY 4.0 · Code MIT · Map data ©{" "}
