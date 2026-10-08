@@ -189,6 +189,13 @@ export function startGateway({ port, postgrestUrl, databaseUrl, jwtSecret, stora
       if (url.pathname.startsWith("/storage/v1")) return await storage(req, res, url);
       if (url.pathname === "/__e2e/last-link") return json(res, 200, { link: outbox.get(String(url.searchParams.get("email")).toLowerCase()) ?? null });
       if (url.pathname === "/__e2e/health") return json(res, 200, { ok: true });
+      // A page on another origin that frames the app's embed, for the embed test.
+      if (url.pathname === "/__e2e/frame") {
+        const src = url.searchParams.get("src") ?? "";
+        if (!/^\/embed(\?[\w=&%-]*)?$/.test(src)) return json(res, 400, { error: "bad src" });
+        res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
+        return res.end(`<!doctype html><title>Someone's blog</title><iframe src="http://localhost:3100${src.replace(/&/g, "&amp;")}" width="800" height="500"></iframe>`);
+      }
       if (url.pathname === "/__e2e/boards" && req.method === "POST") {
         const { provider, handle, status = 200, body } = JSON.parse((await readBody(req)).toString() || "{}");
         boards.set(`${provider}/${handle}`, { status, body });
