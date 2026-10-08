@@ -1,5 +1,8 @@
 import { expect, test } from "./fixtures";
-import { watchConsole } from "./helpers";
+import { sql, watchConsole } from "./helpers";
+
+const count = async (q: string) => Number((await sql<{ n: string }>(q))[0].n);
+const PINNED = "select count(*) as n from organizations_public where kind = 'company' and lng is not null";
 
 test.describe("public pages", () => {
   test("map loads with pins and a working list, with no console or CSP errors", async ({ page }) => {
@@ -7,13 +10,13 @@ test.describe("public pages", () => {
     await page.goto("/");
     await expect(page.getByRole("heading", { name: "Delhi NCR Map" })).toBeVisible();
     await expect(page.locator(".maplibregl-canvas")).toBeVisible();
-    await expect(page.getByText(/43 on the map/)).toBeVisible();
+    await expect(page.getByText(`${await count(PINNED)} on the map`)).toBeVisible();
     await page.getByRole("searchbox", { name: "Search" }).fill("spinny");
     await expect(page.locator(".list .item")).toHaveCount(1);
     await expect(page.locator(".list .item").first()).toContainText("Spinny");
     await page.getByRole("searchbox", { name: "Search" }).fill("");
     await page.getByLabel("Sector").selectOption("edtech");
-    await expect(page.locator(".list .item")).toHaveCount(25);
+    await expect(page.locator(".list .item")).toHaveCount(await count("select count(*) as n from organizations_public where kind = 'company' and 'edtech' = any(sectors)"));
     await page.waitForTimeout(1500);
     expect(errors.filter((e) => !/favicon/.test(e))).toEqual([]);
   });
@@ -38,9 +41,10 @@ test.describe("public pages", () => {
 
   test("directory, sector and area pages list organisations", async ({ page }) => {
     await page.goto("/directory");
-    await expect(page.getByText("130 companies and 7 support organisations")).toBeVisible();
+    const companies = await count("select count(*) as n from organizations_public where kind = 'company'");
+    await expect(page.getByText(`${companies} companies and 7 support organisations`)).toBeVisible();
     await page.goto("/sector/fintech");
-    await expect(page.locator("table.orgs tbody tr")).toHaveCount(25);
+    await expect(page.locator("table.orgs tbody tr")).toHaveCount(await count("select count(*) as n from organizations_public where 'fintech' = any(sectors)"));
     await page.goto("/area/sector-44");
     await expect(page.locator("table.orgs tbody tr").first()).toBeVisible();
   });
@@ -55,6 +59,6 @@ test.describe("public pages", () => {
     expect(csv.headers()["content-type"]).toContain("text/csv");
     expect((await csv.text()).split("\n")[0]).toContain("slug,name,kind");
     const geo = await request.get("/data/organizations.geojson");
-    expect((await geo.json()).features).toHaveLength(43);
+    expect((await geo.json()).features).toHaveLength(await count("select count(*) as n from organizations_public where lng is not null"));
   });
 });
