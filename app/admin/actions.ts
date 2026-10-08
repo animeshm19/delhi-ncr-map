@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
 import { runJobSync } from "@/lib/job-sync";
 import { isHttpUrl } from "@/lib/requests";
+import { istLocalToIso } from "@/lib/time";
 
 const id = (f: FormData) => {
   const n = Number(f.get("id"));
@@ -16,10 +17,12 @@ const str = (f: FormData, k: string) => String(f.get(k) ?? "").trim();
 function done(result: { error: { message: string } | null }, ok: string) {
   if (result.error) {
     const m = result.error.message;
-    const safe = /^(invalid slug|slug already exists|unknown area|request already reviewed|a source is required for this change|invalid url|field \w+ cannot be edited|wrong request type|unknown organisation|unknown job board|invalid job board handle)/.exec(m);
+    const safe = /^(invalid slug|slug already exists|unknown area|request already reviewed|a source is required for this change|invalid url|field \w+ cannot be edited|wrong request type|unknown organisation|unknown job board|invalid job board handle|a title is required|a link to the event page is required|invalid date|event date is out of range|invalid end time|unknown event)/.exec(m);
     redirect(`/admin?error=${encodeURIComponent(safe ? safe[0] : "That didn't work.")}`);
   }
   revalidatePath("/", "layout");
+  // Feeds are route handlers, refreshed separately from pages.
+  for (const feed of ["/events.ics", "/feed.xml"]) revalidatePath(feed);
   redirect(`/admin?done=${encodeURIComponent(ok)}`);
 }
 
@@ -90,4 +93,30 @@ export async function syncJobsNow() {
   }
   revalidatePath("/", "layout");
   redirect(`/admin?done=${encodeURIComponent(message)}`);
+}
+
+export async function publishEvent(form: FormData) {
+  const { sb } = await requireAdmin();
+  const starts = istLocalToIso(str(form, "starts_at"));
+  if (!starts) redirect(`/admin?error=${encodeURIComponent("invalid date")}`);
+  const endsRaw = str(form, "ends_at");
+  const ends = endsRaw ? istLocalToIso(endsRaw) : "";
+  if (ends === null) redirect(`/admin?error=${encodeURIComponent("invalid end time")}`);
+  const event = {
+    title: str(form, "title"),
+    starts_at: starts,
+    ends_at: ends,
+    venue: str(form, "venue"),
+    area: str(form, "area"),
+    city: str(form, "city"),
+    url: str(form, "url"),
+    organizer: str(form, "organizer"),
+    description: str(form, "description"),
+  };
+  done(await sb.rpc("admin_publish_event", { p_request_id: id(form), p_event: event }), `Published “${event.title}”.`);
+}
+
+export async function unpublishEvent(form: FormData) {
+  const { sb } = await requireAdmin();
+  done(await sb.rpc("admin_unpublish_event", { p_event_id: id(form) }), "Event taken down.");
 }

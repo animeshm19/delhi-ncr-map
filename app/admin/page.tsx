@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 import { requireAdmin } from "@/lib/auth";
-import { AREAS, getOrgs } from "@/lib/data";
+import { AREAS, getEvents, getOrgs } from "@/lib/data";
+import { formatEventTime } from "@/lib/time";
 import { SECTORS } from "@/lib/taxonomy";
-import { approveClaim, approveSubmission, applyEdit, reject, setHiring, syncJobsNow } from "./actions";
+import { approveClaim, approveSubmission, applyEdit, publishEvent, reject, setHiring, syncJobsNow, unpublishEvent } from "./actions";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Review queue", robots: { index: false } };
@@ -70,6 +71,7 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
   const reqs = (pending ?? []) as Req[];
   const companies = (await getOrgs()).filter((o) => o.kind === "company");
   const withBoards = companies.filter((o) => o.job_board);
+  const upcoming = await getEvents({ limit: 50 });
   return (
     <main id="main" className="page wide">
       <nav className="crumbs"><Link href="/account">Account</Link>/<span>Review queue</span></nav>
@@ -137,6 +139,27 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
             </form>
           )}
 
+          {r.type === "event" && (
+            <form action={publishEvent} className="form grid2">
+              <input type="hidden" name="id" value={r.id} />
+              <label className="span2"><span>Title</span><input name="title" required maxLength={160} defaultValue={r.payload.title ?? ""} /></label>
+              <label><span>Starts (IST)</span><input name="starts_at" type="datetime-local" required defaultValue={r.payload.starts_at ?? ""} /></label>
+              <label><span>Ends (IST)</span><input name="ends_at" type="datetime-local" defaultValue={r.payload.ends_at ?? ""} /></label>
+              <label><span>Venue</span><input name="venue" maxLength={160} defaultValue={r.payload.venue ?? ""} /></label>
+              <label><span>City</span><input name="city" maxLength={60} defaultValue={r.payload.city ?? "Gurugram"} /></label>
+              <label><span>Area</span>
+                <select name="area" defaultValue="">
+                  <option value="">None</option>
+                  {AREAS.filter((a) => a.slug !== "gurugram").map((a) => <option key={a.slug} value={a.slug}>{a.name}</option>)}
+                </select>
+              </label>
+              <label><span>Organiser</span><input name="organizer" maxLength={120} defaultValue={r.payload.organizer ?? ""} /></label>
+              <label className="span2"><span>Event page (checked)</span><input name="url" type="url" required defaultValue={r.payload.url ?? ""} /></label>
+              <label className="span2"><span>Description</span><textarea name="description" maxLength={1000} rows={3} defaultValue={r.payload.description ?? ""} /></label>
+              <div className="span2 actions"><button className="btn" type="submit">Publish event</button></div>
+            </form>
+          )}
+
           {r.type === "claim" && (
             <form action={approveClaim} className="actions">
               <input type="hidden" name="id" value={r.id} />
@@ -190,11 +213,26 @@ export default async function Admin({ searchParams }: { searchParams: Promise<{ 
         </span>
       </form>
 
+      <h2 id="events">Upcoming events ({upcoming.length})</h2>
+      <ul className="sources" data-testid="admin-events">
+        {upcoming.map((e) => (
+          <li key={e.id}>
+            <a href={e.url} rel="noopener noreferrer nofollow" target="_blank">{e.title}</a>
+            <small>{formatEventTime(new Date(e.starts_at), e.ends_at ? new Date(e.ends_at) : null)} · {e.city}</small>
+            <form action={unpublishEvent} className="inline-form">
+              <input type="hidden" name="id" value={e.id} />
+              <button className="btn ghost" type="submit">Take down</button>
+            </form>
+          </li>
+        ))}
+        {upcoming.length === 0 && <li className="muted">None.</li>}
+      </ul>
+
       <h2>Recently reviewed</h2>
       <ul className="sources">
         {((recent ?? []) as Req[]).map((r) => (
           <li key={r.id}>
-            #{r.id} {r.type} {r.org_slug ?? r.payload.company_name} — <b>{r.status}</b>
+            #{r.id} {r.type} {r.org_slug ?? r.payload.company_name ?? r.payload.title} — <b>{r.status}</b>
             <small>{r.reviewed_by} · {r.reviewed_at && new Date(r.reviewed_at).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}{r.review_note ? ` · ${r.review_note}` : ""}</small>
           </li>
         ))}
