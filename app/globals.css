@@ -115,3 +115,24 @@ a.chip:hover { border-color: var(--muted); }
 .btn { justify-self: start; background: var(--accent); color: #0a0b0d; border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 600; cursor: pointer; }
 .btn:disabled { opacity: 0.6; cursor: wait; }
 .error { color: #ff8a8a; margin: 0; }
+
+/* ---------- Accounts & review ---------- */
+.success { color: #7ee2a8; margin: 0; }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+.btn.ghost:hover { border-color: var(--muted); }
+.form .check { display: flex; gap: 8px; align-items: center; }
+.form .check input { width: auto; }
+.logo-img { border-radius: 12px; background: #fff; object-fit: contain; margin-top: 8px; }
+.review { margin: 16px 0; display: grid; gap: 12px; }
+.review-head { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.badge.ok { color: #7ee2a8; border-color: #2c6e4a; }
+.badge.warn { color: #ffcf7a; border-color: #6e5a2c; }
+.details.compact { grid-template-columns: 120px 1fr; font-size: 14px; }
+.details.compact dd { overflow-wrap: anywhere; }
+.form.grid2 { grid-template-columns: 1fr 1fr; }
+.form.grid2 .span2 { grid-column: 1 / -1; }
+.inline-form { display: flex; gap: 8px; flex-wrap: wrap; }
+.inline-form input { flex: 1; min-width: 180px; padding: 8px 12px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--panel-2); color: var(--text); font: inherit; }
+@media (max-width: 640px) { .form.grid2 { grid-template-columns: 1fr; } }
+.profile-head { display: flex; gap: 14px; align-items: center; }
+.logo-photo { object-fit: contain; background: #fff; }
