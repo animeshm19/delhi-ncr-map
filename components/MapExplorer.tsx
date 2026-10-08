@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Map as MLMap, GeoJSONSource, LngLatBounds } from "maplibre-gl";
 import { KINDS, SECTORS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { CITIES, SITE_NAME } from "@/lib/site";
+import { circlePolygon } from "@/lib/geo";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -394,16 +395,4 @@ function initials(name: string) {
 
 function emptyFC(): GeoJSON.FeatureCollection {
   return { type: "FeatureCollection", features: [] };
-}
-
-/** A 64-sided polygon approximating a circle of `radius` metres. */
-function circlePolygon([lng, lat]: [number, number], radius: number): GeoJSON.Polygon {
-  const coords: [number, number][] = [];
-  const dLat = radius / 111_320;
-  const dLng = radius / (111_320 * Math.cos((lat * Math.PI) / 180));
-  for (let i = 0; i <= 64; i++) {
-    const t = (i / 64) * 2 * Math.PI;
-    coords.push([lng + dLng * Math.cos(t), lat + dLat * Math.sin(t)]);
-  }
-  return { type: "Polygon", coordinates: [coords] };
 }
