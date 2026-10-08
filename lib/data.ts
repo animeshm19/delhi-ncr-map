@@ -49,7 +49,10 @@ export function profilePath(o: Pick<Org, "slug" | "kind">) {
   return o.kind === "company" ? `/c/${o.slug}` : `/orgs/${o.slug}`;
 }
 
-/** Open roles synced from public job boards (only for published organisations; RLS enforces it). */
+/**
+ * Open roles synced from public job boards (only for published organisations; RLS enforces it).
+ * Roles are extra information, so a failure here shows no roles rather than breaking the page.
+ */
 export const getJobs = cache(async (): Promise<Job[]> => {
   if (!supabase) return [];
   const { data, error } = await supabase
@@ -57,6 +60,9 @@ export const getJobs = cache(async (): Promise<Job[]> => {
     .select("org_slug, title, team, location, url, posted, first_seen")
     .order("first_seen", { ascending: false })
     .limit(2000);
-  if (error) throw new Error(`Supabase: ${error.message}`);
+  if (error) {
+    console.error("jobs unavailable:", error.message);
+    return [];
+  }
   return (data ?? []) as Job[];
 });

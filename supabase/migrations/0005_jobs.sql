@@ -22,8 +22,7 @@ alter table jobs add constraint jobs_url_https check (url ~* '^https://[^\s<>"]+
 alter table jobs add constraint jobs_title_len check (length(title) between 1 and 200);
 
 -- Only roles at published organisations are public.
-drop policy if exists "public read" on jobs;
-create policy "public read" on jobs for select
+alter policy "public read" on jobs
   using (exists (select 1 from organizations o where o.slug = jobs.org_slug and o.published));
 
 -- Host part of a URL, lower-cased, without "www.".
