@@ -24,12 +24,7 @@ cleanup() { "${PSQL[@]}" "$ADMIN_URL" -c "drop database if exists $DB" >/dev/nul
 trap cleanup EXIT
 
 "${PSQL[@]}" "$ADMIN_URL" -c "create database $DB" >/dev/null
-"${PSQL[@]}" "$TEST_URL" -f "$ROOT/supabase/tests/supabase_shim.sql" >/dev/null
-for f in "$ROOT"/supabase/migrations/*.sql; do
-  "${PSQL[@]}" "$TEST_URL" -f "$f" >/dev/null 2>"$ROOT/.db-test.log" || { echo "Migration failed: $f"; cat "$ROOT/.db-test.log"; exit 1; }
-done
-"${PSQL[@]}" "$TEST_URL" -f "$ROOT/supabase/seed.sql" >/dev/null 2>"$ROOT/.db-test.log" || { echo "Seed failed"; cat "$ROOT/.db-test.log"; exit 1; }
-rm -f "$ROOT/.db-test.log"
+bash "$ROOT/scripts/db-build.sh" "$TEST_URL"
 
 pass=0; fail=0
 for t in "$ROOT"/supabase/tests/*.test.sql; do

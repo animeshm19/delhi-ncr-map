@@ -8,4 +8,6 @@ next-env.d.ts
 test-results
 playwright-report
 coverage
+.e2e
+.cache
 public/maplibre
