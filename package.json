@@ -11,7 +11,8 @@
     "sync:jobs": "node --experimental-strip-types scripts/sync-jobs.ts",
     "geocode": "node --experimental-strip-types scripts/geocode.ts",
     "seed:supabase": "node --experimental-strip-types scripts/seed-supabase.ts",
-    "test:db": "bash scripts/test-db.sh"
+    "test:db": "bash scripts/test-db.sh",
+    "test": "vitest run"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.117.3",
