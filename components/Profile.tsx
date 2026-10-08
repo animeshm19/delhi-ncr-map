@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getArea, getJobs, getOrgs, profilePath } from "@/lib/data";
+import { anchorOf, getArea, getJobs, getOrgs, profilePath } from "@/lib/data";
+import { formatDistance, lineOf, stationsByDistance, walkMinutes } from "@/lib/metro";
 import { KINDS, sectorLabel } from "@/lib/taxonomy";
 import type { Org } from "@/lib/types";
 import { logoUrl } from "@/lib/logos";
@@ -22,6 +23,8 @@ const PRECISION_LABEL: Record<Org["location_precision"], string> = {
 export default async function Profile({ org }: { org: Org }) {
   const [all, allJobs] = await Promise.all([getOrgs(), getJobs()]);
   const roles = allJobs.filter((j) => j.org_slug === org.slug);
+  const anchor = anchorOf(org);
+  const nearby = anchor ? stationsByDistance(anchor[0], anchor[1]).filter((n) => n.meters <= 3000).slice(0, 2) : [];
   const bySlug = new Map(all.map((o) => [o.slug, o]));
   const area = getArea(org.area);
   const connections = org.connected_to.map((s) => bySlug.get(s)).filter(Boolean) as Org[];
@@ -63,6 +66,26 @@ export default async function Profile({ org }: { org: Org }) {
           <br />
           <small className="muted">{PRECISION_LABEL[org.location_precision]}</small>
         </dd>
+        {nearby.length > 0 && (
+          <>
+            <dt>Nearest metro</dt>
+            <dd data-testid="nearest-metro">
+              {nearby.map((n, i) => (
+                <span key={n.station.id}>
+                  {i > 0 && <br />}
+                  <Link href={`/?station=${n.station.id}&r=1000`}>{n.station.name}</Link>{" "}
+                  <span className="muted">
+                    ({n.station.lines.map((l) => lineOf(l)?.name).join(", ")}) · {formatDistance(n.meters)}, about {walkMinutes(n.meters)} min walk
+                  </span>
+                </span>
+              ))}
+              <br />
+              <small className="muted">
+                Straight-line distance from {org.location_precision === "area" ? "the centre of the sector" : "the office"}; walking time is an estimate.
+              </small>
+            </dd>
+          </>
+        )}
         <dt>Founded</dt>
         <dd>{org.founded_year ?? <span className="muted">Not published</span>}</dd>
         <dt>Status</dt>

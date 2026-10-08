@@ -13,6 +13,7 @@ export default function SiteFooter() {
         <Link href="/">Map</Link>
         <Link href="/directory">Directory</Link>
         <Link href="/hiring">Hiring</Link>
+        <Link href="/metro">By metro</Link>
         <Link href="/submit">Submit a company</Link>
         <Link href="/about">About and methodology</Link>
         <Link href="/data">Open data</Link>
