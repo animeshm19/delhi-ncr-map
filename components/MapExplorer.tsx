@@ -88,6 +88,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
     (async () => {
       const maplibregl = await import("maplibre-gl");
       if (cancelled || !mapEl.current) return;
+      maplibregl.setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
       const map = new maplibregl.Map({
         container: mapEl.current,
