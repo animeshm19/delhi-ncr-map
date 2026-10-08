@@ -162,3 +162,21 @@ a.chip:hover { border-color: var(--muted); }
 .role.event { align-items: flex-start; }
 .event-desc { margin: 6px 0 0; color: var(--text); opacity: 0.85; font-size: 14px; white-space: pre-line; }
 .role .chip { white-space: nowrap; align-self: center; text-decoration: none; }
+
+/* ---------- Stats ---------- */
+.stats.big { grid-template-columns: repeat(4, 1fr); margin: 16px 0; }
+.stats.big b { font-size: 28px; }
+.chart { margin: 8px 0 24px; }
+.chart svg { width: 100%; height: auto; max-width: 760px; display: block; }
+.chart-label { fill: var(--muted); font-size: 13px; }
+.chart-label.small { font-size: 11px; }
+.chart-value { fill: var(--text); font-size: 12px; font-weight: 600; }
+.chart-data summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Embed and snippets ---------- */
+.explorer.embedded { grid-template-columns: 1fr; }
+.embed-head { position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; gap: 10px; align-items: baseline; padding: 6px 12px; border-radius: 999px; background: rgba(17, 19, 23, 0.92); border: 1px solid var(--line); font-size: 13px; }
+.embed-head a { font-weight: 700; color: var(--text); }
+.snippet { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto; font-size: 13px; white-space: pre; }
+code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
