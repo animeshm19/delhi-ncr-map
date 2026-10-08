@@ -77,15 +77,17 @@ export function orgsToGeoJson(orgs: Org[]) {
   };
 }
 
-function toCsv(rows: (string | number)[][]) {
-  return rows
-    .map((r) =>
-      r
-        .map((v) => {
-          const s = String(v);
-          return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-        })
-        .join(","),
-    )
-    .join("\n") + "\n";
+/**
+ * One CSV cell. Text that a spreadsheet would treat as a formula (=, +, -, @,
+ * tab, CR) is prefixed with an apostrophe so opening the file can't run it;
+ * plain numbers (including negative ones) are left alone.
+ */
+export function csvCell(v: string | number) {
+  let s = String(v);
+  if (typeof v !== "number" && /^[=+\-@\t\r]/.test(s) && !/^-?\d+(\.\d+)?$/.test(s)) s = `'${s}`;
+  return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+export function toCsv(rows: (string | number)[][]) {
+  return rows.map((r) => r.map(csvCell).join(",")).join("\n") + "\n";
 }
