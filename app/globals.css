@@ -156,3 +156,9 @@ a.chip:hover { border-color: var(--muted); }
 .line-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -1px; }
 .metro-table td:first-child { white-space: nowrap; }
 .metro-table .badge { margin-left: 6px; }
+
+/* ---------- Events ---------- */
+.event-day { margin: 20px 0 6px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.role.event { align-items: flex-start; }
+.event-desc { margin: 6px 0 0; color: var(--text); opacity: 0.85; font-size: 14px; white-space: pre-line; }
+.role .chip { white-space: nowrap; align-self: center; text-decoration: none; }

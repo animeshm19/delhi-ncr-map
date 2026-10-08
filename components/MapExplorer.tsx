@@ -383,6 +383,7 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
               <Link href="/submit">Submit</Link>
               <Link href="/directory">Directory</Link>
               <Link href="/hiring">Hiring</Link>
+              <Link href="/events">Events</Link>
               <Link href="/about">About</Link>
               <Link href="/data">Data</Link>
             </nav>

@@ -98,3 +98,17 @@ export interface Job {
   posted: string | null;
   first_seen: string;
 }
+
+export interface EventItem {
+  id: number;
+  title: string;
+  starts_at: string;
+  ends_at: string | null;
+  venue: string | null;
+  area: string | null;
+  city: string;
+  url: string;
+  organizer: string | null;
+  description: string | null;
+  created_at: string;
+}

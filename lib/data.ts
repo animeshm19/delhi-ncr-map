@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import areasJson from "@/data/areas.json";
-import type { Area, Job, Org } from "./types";
+import type { Area, EventItem, Job, Org } from "./types";
 import { spreadAreaPins } from "./geo";
 
 export const AREAS = areasJson as Area[];
@@ -73,3 +73,24 @@ export const getJobs = cache(async (): Promise<Job[]> => {
   }
   return (data ?? []) as Job[];
 });
+
+/**
+ * Published events from `fromIso` on (default: started up to 6 hours ago), soonest first.
+ * Like roles, events are extra: a failure shows none rather than breaking the page.
+ */
+export async function getEvents(opts: { fromIso?: string; toIso?: string; limit?: number } = {}): Promise<EventItem[]> {
+  if (!supabase) return [];
+  let q = supabase
+    .from("events")
+    .select("id, title, starts_at, ends_at, venue, area, city, url, organizer, description, created_at")
+    .gte("starts_at", opts.fromIso ?? new Date(Date.now() - 6 * 3600_000).toISOString())
+    .order("starts_at")
+    .limit(opts.limit ?? 200);
+  if (opts.toIso) q = q.lt("starts_at", opts.toIso);
+  const { data, error } = await q;
+  if (error) {
+    console.error("events unavailable:", error.message);
+    return [];
+  }
+  return (data ?? []) as EventItem[];
+}
