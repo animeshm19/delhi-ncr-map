@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "eternal",
+    "name": "Eternal (Zomato)",
+    "kind": "company",
+    "sectors": ["food-quick-commerce", "commerce-marketplaces"],
+    "status": "active",
+    "one_liner": "Holding company behind Zomato food delivery, Blinkit quick commerce, Hyperpure B2B supplies and the District events app.",
+    "website": "https://www.eternal.com",
+    "founded_year": null,
+    "municipality": "Gurugram",
+    "area": "golf-course-extension-road",
+    "location_precision": "area",
+    "connected_to": ["blinkit"],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Eternal_Limited", "note": "Headquartered in Gurugram; founding year given inconsistently (2008 vs 2010), so left empty", "fields": ["name", "municipality", "summary", "connections"], "retrieved": "2026-10-08" },
+      { "url": "https://nz.finance.yahoo.com/quote/ZOMATO.BO/profile", "note": "Exchange profile lists the Pioneer Square building as its address", "fields": ["area"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "blinkit",
+    "name": "Blinkit",
+    "kind": "company",
+    "sectors": ["food-quick-commerce"],
+    "status": "acquired",
+    "acquired_by": "eternal",
+    "one_liner": "Quick-commerce app delivering groceries and essentials in minutes from dark stores. Started as Grofers.",
+    "website": "https://blinkit.com",
+    "founded_year": 2013,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": ["eternal"],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Blinkit", "note": "Headquartered in Gurugram, founded December 2013 as Grofers, owned by Eternal", "fields": ["municipality", "founded_year", "status", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "policybazaar",
+    "name": "Policybazaar",
+    "kind": "company",
+    "sectors": ["insurtech", "fintech"],
+    "status": "active",
+    "one_liner": "Online marketplace to compare and buy insurance; flagship business of PB Fintech.",
+    "website": "https://www.policybazaar.com",
+    "founded_year": 2008,
+    "municipality": "Gurugram",
+    "area": "sector-44",
+    "location_precision": "area",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Policybazaar", "note": "Headquarters at Plot No. 119, Sector 44, Gurugram; founded 2008", "fields": ["area", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "makemytrip",
+    "name": "MakeMyTrip",
+    "kind": "company",
+    "sectors": ["travel-hospitality"],
+    "status": "active",
+    "one_liner": "Online travel company selling flights, hotels, holidays, buses, trains and cabs.",
+    "website": "https://www.makemytrip.com",
+    "founded_year": 2000,
+    "municipality": "Gurugram",
+    "area": "dlf-cyber-city",
+    "location_precision": "area",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/MakeMyTrip", "note": "Headquartered in Gurugram; founded 2000", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" },
+      { "url": "https://hk.finance.yahoo.com/quote/MMYT/profile", "note": "Exchange profile lists DLF Building No. 5 as its address", "fields": ["area"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "delhivery",
+    "name": "Delhivery",
+    "kind": "company",
+    "sectors": ["logistics-mobility"],
+    "status": "active",
+    "one_liner": "Logistics and supply-chain company: parcel delivery, freight and warehousing.",
+    "website": "https://www.delhivery.com",
+    "founded_year": 2011,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Delhivery", "note": "Headquartered in Gurugram; founded May 2011", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "oyo",
+    "name": "OYO",
+    "kind": "company",
+    "sectors": ["travel-hospitality"],
+    "status": "active",
+    "one_liner": "Hospitality company that leases and operates hotels, homes and living spaces.",
+    "website": "https://www.oyorooms.com",
+    "founded_year": 2012,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Oyo_Rooms", "note": "Headquartered in Gurugram; founded 2012", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "cars24",
+    "name": "Cars24",
+    "kind": "company",
+    "sectors": ["commerce-marketplaces", "logistics-mobility"],
+    "status": "active",
+    "one_liner": "Online marketplace for used cars, with paperwork, financing and physical branches.",
+    "website": "https://www.cars24.com",
+    "founded_year": 2015,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Cars24", "note": "Headquartered in Gurugram; founded 2015", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "urban-company",
+    "name": "Urban Company",
+    "kind": "company",
+    "sectors": ["consumer-services"],
+    "status": "active",
+    "one_liner": "Home-services platform matching customers with trained service professionals. Formerly UrbanClap.",
+    "website": "https://www.urbancompany.com",
+    "founded_year": 2014,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Urban_Company", "note": "Headquartered in Gurugram; founded 2014", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "mobikwik",
+    "name": "MobiKwik",
+    "kind": "company",
+    "sectors": ["fintech"],
+    "status": "active",
+    "one_liner": "Mobile payments and digital wallet, plus lending, insurance and other financial services.",
+    "website": "https://www.mobikwik.com",
+    "founded_year": 2009,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/MobiKwik", "note": "Headquartered in Gurugram; founded April 2009", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "ixigo",
+    "name": "ixigo",
+    "kind": "company",
+    "sectors": ["travel-hospitality"],
+    "status": "active",
+    "one_liner": "Travel app that compares and books flights, trains, buses and hotels.",
+    "website": "https://www.ixigo.com",
+    "founded_year": 2007,
+    "municipality": "Gurugram",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Ixigo", "note": "Headquartered in Gurugram; founded June 2007", "fields": ["municipality", "founded_year", "summary"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  },
+  {
+    "slug": "startup-haryana",
+    "name": "Startup Haryana",
+    "kind": "government_program",
+    "sectors": [],
+    "status": "active",
+    "one_liner": "Haryana government startup portal: registration, incubator directory, state incentives, mentors and scheme information.",
+    "website": "https://startupharyana.gov.in",
+    "founded_year": null,
+    "municipality": "Chandigarh (serves all of Haryana)",
+    "area": null,
+    "location_precision": "municipality",
+    "connected_to": [],
+    "hiring": null,
+    "job_board": null,
+    "verification": "unverified",
+    "sources": [
+      { "url": "https://startupharyana.gov.in/", "note": "Run by Industries and Commerce, Haryana; contact office in Sector 17-C, Chandigarh", "fields": ["name", "summary", "municipality"], "retrieved": "2026-10-08" }
+    ],
+    "updated_at": "2026-10-08"
+  }
+]

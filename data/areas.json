@@ -1,0 +1,11 @@
+[
+  { "slug": "gurugram", "name": "Gurugram", "center": [77.0266, 28.4595], "radius_m": 9000 },
+  { "slug": "dlf-cyber-city", "name": "DLF Cyber City", "center": [77.0890, 28.4950], "radius_m": 700 },
+  { "slug": "udyog-vihar", "name": "Udyog Vihar", "center": [77.0820, 28.5010], "radius_m": 1500 },
+  { "slug": "sector-44", "name": "Sector 44", "center": [77.0700, 28.4505], "radius_m": 900 },
+  { "slug": "golf-course-road", "name": "Golf Course Road", "center": [77.1000, 28.4600], "radius_m": 1800 },
+  { "slug": "golf-course-extension-road", "name": "Golf Course Extension Road (Sector 62 and around)", "center": [77.0870, 28.4075], "radius_m": 1800 },
+  { "slug": "sohna-road", "name": "Sohna Road", "center": [77.0400, 28.4150], "radius_m": 2200 },
+  { "slug": "mg-road", "name": "MG Road", "center": [77.0830, 28.4800], "radius_m": 1200 },
+  { "slug": "sector-18-iffco-chowk", "name": "Sector 18 / IFFCO Chowk", "center": [77.0700, 28.4730], "radius_m": 1000 }
+]
