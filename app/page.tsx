@@ -1,5 +1,5 @@
 import MapExplorer, { type ExplorerOrg } from "@/components/MapExplorer";
-import { AREAS, getArea, getOrgs, profilePath } from "@/lib/data";
+import { AREAS, anchorOf, getArea, getOrgs, profilePath } from "@/lib/data";
 import { logoUrl } from "@/lib/logos";
 
 export const revalidate = 3600;
@@ -26,6 +26,7 @@ export default async function Home() {
     hiring: o.hiring ?? null,
     href: profilePath(o),
     logo: logoUrl(o.logo_path),
+    anchor: anchorOf(o),
   }));
 
   return (

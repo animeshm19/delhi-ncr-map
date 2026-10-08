@@ -149,3 +149,10 @@ a.chip:hover { border-color: var(--muted); }
 .role-title { font-weight: 600; color: var(--text); }
 .role time { white-space: nowrap; font-size: 13px; }
 .also-hiring { columns: 2 220px; padding-left: 18px; }
+
+/* ---------- Metro ---------- */
+.tabs.near select.chip { max-width: 220px; }
+.dist { color: var(--accent); }
+.line-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -1px; }
+.metro-table td:first-child { white-space: nowrap; }
+.metro-table .badge { margin-left: 6px; }

@@ -45,6 +45,13 @@ export async function getOrg(slug: string) {
   return orgs.find((o) => o.slug === slug) ?? null;
 }
 
+/** Where to measure distances from: the office for exact/building pins, the sector centre for approximate ones. */
+export function anchorOf(o: Pick<Org, "location_precision" | "lng" | "lat" | "area">): [number, number] | null {
+  if ((o.location_precision === "exact" || o.location_precision === "building") && o.lng != null && o.lat != null) return [o.lng, o.lat];
+  if (o.location_precision === "area") return getArea(o.area)?.center ?? null;
+  return null;
+}
+
 export function profilePath(o: Pick<Org, "slug" | "kind">) {
   return o.kind === "company" ? `/c/${o.slug}` : `/orgs/${o.slug}`;
 }
