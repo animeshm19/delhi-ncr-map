@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getArea, getOrgs, profilePath } from "@/lib/data";
 import { KINDS, sectorLabel } from "@/lib/taxonomy";
 import type { Org } from "@/lib/types";
+import { logoUrl } from "@/lib/logos";
 import SiteFooter from "./SiteFooter";
 
 const VERIFICATION_LABEL: Record<Org["verification"], string> = {
@@ -38,7 +39,13 @@ export default async function Profile({ org }: { org: Org }) {
       <p className="muted" style={{ marginTop: 16 }}>
         {KINDS[org.kind].label} · {org.municipality} · <span className="badge">{VERIFICATION_LABEL[org.verification]}</span>
       </p>
-      <h1>{org.name}</h1>
+      <div className="profile-head">
+        {logoUrl(org.logo_path) && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={logoUrl(org.logo_path)!} alt="" width={56} height={56} className="logo-img" />
+        )}
+        <h1>{org.name}</h1>
+      </div>
       {org.one_liner && <p className="lede">{org.one_liner}</p>}
       <div className="actions">
         {org.website && (

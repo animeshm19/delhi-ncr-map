@@ -67,6 +67,9 @@ export interface Org {
   verification: Verification;
   sources: Source[];
   updated_at: string;
+  /** Storage path of an uploaded logo, e.g. "spinny/logo.png?v=1" */
+  logo_path?: string | null;
+  created_at?: string | null;
 }
 
 export interface Area {

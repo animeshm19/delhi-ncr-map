@@ -25,6 +25,7 @@ export interface ExplorerOrg {
   radius_m: number | null;
   hiring: boolean | null;
   href: string;
+  logo: string | null;
 }
 
 // OpenFreeMap serves OpenMapTiles vector tiles from OSM data, free and keyless.
@@ -344,13 +345,18 @@ export default function MapExplorer({ orgs, areas }: { orgs: ExplorerOrg[]; area
                   }
                 }}
               >
-                <span
-                  className="logo"
-                  style={{ background: o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color }}
-                  aria-hidden
-                >
-                  {initials(o.name)}
-                </span>
+                {o.logo ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img className="logo logo-photo" src={o.logo} alt="" width={40} height={40} loading="lazy" />
+                ) : (
+                  <span
+                    className="logo"
+                    style={{ background: o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color }}
+                    aria-hidden
+                  >
+                    {initials(o.name)}
+                  </span>
+                )}
                 <span>
                   <h3>
                     {o.name}

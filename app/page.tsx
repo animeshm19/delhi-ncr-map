@@ -1,5 +1,6 @@
 import MapExplorer, { type ExplorerOrg } from "@/components/MapExplorer";
 import { AREAS, getArea, getOrgs, profilePath } from "@/lib/data";
+import { logoUrl } from "@/lib/logos";
 
 export const revalidate = 3600;
 
@@ -24,6 +25,7 @@ export default async function Home() {
     radius_m: o.location_precision === "area" ? getArea(o.area)?.radius_m ?? null : null,
     hiring: o.hiring ?? null,
     href: profilePath(o),
+    logo: logoUrl(o.logo_path),
   }));
 
   return (
