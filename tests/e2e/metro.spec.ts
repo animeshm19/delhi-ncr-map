@@ -54,6 +54,18 @@ test.describe("metro", () => {
     await expect(page.locator(".listmeta span").first()).toContainText("on the map");
   });
 
+  test("a shared link filters the list even if the map never loads", async ({ page }) => {
+    // The tile server hangs: the map can't finish loading, but the list must still follow the link.
+    await page.route("https://tiles.openfreemap.org/**", () => {});
+    await page.goto("/?station=cyber-city&r=1000&sector=fintech");
+    await expect(page.locator(".listmeta span").first()).toContainText("within 1.0 km of Cyber City");
+    await expect(page.getByLabel("Sector")).toHaveValue("fintech");
+    await expect(page).toHaveURL(/station=cyber-city&r=1000/);
+    const sectors = await page.locator(".list .item .meta-sector").allTextContents();
+    expect(sectors.length).toBeGreaterThan(0);
+    expect(sectors.filter((t) => t === "Fintech").length).toBe(await page.locator(".list .item").count());
+  });
+
   test("the station page agrees with the map", async ({ page }) => {
     await page.goto("/metro");
     await expect(page.getByRole("heading", { name: /Rapid Metro/ })).toBeVisible();
