@@ -34,4 +34,33 @@ test.describe("layout and keyboard", () => {
     await expect(first).toHaveAttribute("data-selected", "true");
     expect(await first.evaluate((el) => getComputedStyle(el, "::before").opacity)).toBe("1");
   });
+
+  for (const scheme of ["dark", "light"] as const) {
+    test(`dropdowns are dark, not white, with the system in ${scheme} mode`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme: scheme });
+      for (const path of ["/", "/events/submit"]) {
+        await page.goto(path);
+        const selects = await page.locator("select").evaluateAll((els) =>
+          els.map((el) => {
+            const cs = getComputedStyle(el);
+            const opt = el.querySelector("option");
+            return {
+              label: el.getAttribute("aria-label") ?? el.getAttribute("name"),
+              bg: cs.backgroundColor,
+              appearance: cs.appearance,
+              optionBg: opt ? getComputedStyle(opt).backgroundColor : null,
+            };
+          }),
+        );
+        expect(selects.length, path).toBeGreaterThan(0);
+        // Dark means every colour channel is low; white or transparent fails.
+        const dark = (c: string | null) => !!c && /^rgb\((\d+), (\d+), (\d+)\)$/.test(c) && c.match(/\d+/g)!.every((n) => Number(n) < 60);
+        for (const s of selects) {
+          expect(s.appearance, `${path} ${s.label}`).toBe("none");
+          expect(dark(s.bg), `${path} ${s.label} background ${s.bg}`).toBe(true);
+          expect(dark(s.optionBg), `${path} ${s.label} options ${s.optionBg}`).toBe(true);
+        }
+      }
+    });
+  }
 });
