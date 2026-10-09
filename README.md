@@ -25,7 +25,9 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
 ## What it does
 
 **The map** (`/`)
-- MapLibre with OpenFreeMap's dark vector tiles; 2D and 3D (extruded buildings).
+- MapLibre with OpenFreeMap's dark vector tiles; 2D and 3D (extruded buildings). Every visit opens flat and
+  top-down, then glides into 3D once the map has loaded (skipped for shared company/station links and for
+  reduced-motion visitors).
 - **Logo pins.** Each organisation is its logo on a white tile (or a name tag when there's no logo). Nearby
   pins group into one, shown by the best-known member (has a logo, then most funded) with a **+N** badge;
   clicking a group zooms in.
