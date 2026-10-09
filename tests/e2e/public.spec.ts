@@ -61,4 +61,20 @@ test.describe("public pages", () => {
     const geo = await request.get("/data/organizations.geojson");
     expect((await geo.json()).features).toHaveLength(await count("select count(*) as n from organizations_public where lng is not null"));
   });
+
+  test("each live city filters the list to its companies", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator(".list .item").first()).toBeVisible();
+    for (const city of ["Gurugram", "Noida", "Greater Noida"]) {
+      await page.getByRole("button", { name: city, exact: true }).click();
+      const total = await count(`select count(*) as n from organizations_public where kind = 'company' and municipality = '${city}'`);
+      const pinned = await count(`select count(*) as n from organizations_public where kind = 'company' and municipality = '${city}' and lng is not null`);
+      expect(total, city).toBeGreaterThan(0);
+      await expect(page.locator(".list .item")).toHaveCount(total);
+      await expect(page.locator(".listmeta span").first()).toContainText(`${pinned} on the map`);
+    }
+    // Delhi isn't live yet.
+    await expect(page.getByRole("button", { name: "Delhi", exact: true })).toHaveCount(0);
+    await expect(page.getByText("soon")).toBeVisible();
+  });
 });
