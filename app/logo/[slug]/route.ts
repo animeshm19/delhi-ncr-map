@@ -3,7 +3,7 @@ import { logoUrl, websiteHost } from "@/lib/logos";
 
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const MAX_BYTES = 200_000;
-const MIN_SIZE = 48; // smaller icons look blurry as logos: show initials instead
+const MIN_SIZE = 32; // smaller icons (16 px, the "no icon" globe) look blurry as logos: show initials instead
 
 // "No logo" is a 1×1 transparent PNG rather than a 404, so pages don't fill the console with
 // errors; the logo component sees the 1-pixel image and shows initials instead.
