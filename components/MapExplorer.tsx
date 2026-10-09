@@ -275,7 +275,8 @@ export default function MapExplorer({
             type: "symbol",
             source: "metro-stations",
             minzoom: 12,
-            layout: { "text-field": ["get", "name"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top" },
+            // Noto Sans is what OpenFreeMap serves; the MapLibre default font isn't there (404s).
+            layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top" },
             paint: { "text-color": "#d0d4da", "text-halo-color": "#0a0b0d", "text-halo-width": 1.5 },
           });
         }
