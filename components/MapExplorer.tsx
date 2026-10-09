@@ -291,7 +291,7 @@ export default function MapExplorer({
           if (mapEl.current) mapEl.current.dataset.zoom = map.getZoom().toFixed(1);
         });
 
-        // Frame whatever is pinned (Gurugram today; Noida and Delhi as they're added).
+        // Frame whatever is pinned (Gurugram, Noida and Greater Noida today; Delhi as it's added).
         const pts = orgs.filter((o) => o.lng != null && o.lat != null);
         if (pts.length > 1) {
           const lngs = pts.map((o) => o.lng!);
@@ -575,7 +575,7 @@ export default function MapExplorer({
                     )}
                     <span>
                       {o.place}
-                      {o.precision !== "exact" && o.precision !== "building" ? " (approx.)" : ""}
+                      {o.precision === "area" ? " (approx.)" : ""}
                     </span>
                     {o.founded && <span>est. {o.founded}</span>}
                     {stationObj && distance.has(o.slug) && (
