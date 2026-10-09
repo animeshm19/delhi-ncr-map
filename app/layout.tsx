@@ -32,7 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a className="skip" href="#main">Skip to content</a>
         {children}
-        <Analytics />
+        {/* The script is served by Vercel itself, so only load it there. */}
+        {process.env.VERCEL === "1" && <Analytics />}
       </body>
     </html>
   );
