@@ -17,11 +17,22 @@ export type MetroLine = {
   /** false while some stations' locations aren't sourced yet: show stations, don't draw the line */
   complete: boolean;
   note: string;
+  /** Every station on the line, in running order (main line first, then any branch) */
   stations: string[];
-  source: string;
+  /** Each route in running order: the main line and any branches */
+  branches: string[][];
+  /** The OpenStreetMap route relations the line is read from */
+  source: string[];
 };
 
-export const METRO = metroJson as { lines: MetroLine[]; stations: MetroStation[] };
+export const METRO = metroJson as {
+  meta: { source: string; license: string; retrieved: string };
+  lines: MetroLine[];
+  stations: MetroStation[];
+};
+
+/** Real track shapes for every line, served as a static file so they stay out of the page's JavaScript. */
+export const METRO_TRACKS_URL = "/metro-tracks.json";
 const byId = new Map(METRO.stations.map((s) => [s.id, s]));
 
 export function getStation(id: string | null | undefined) {
@@ -57,13 +68,19 @@ export function walkMinutes(m: number) {
   return Math.max(1, Math.round((m * 1.3) / 80));
 }
 
-/** GeoJSON for the map: one LineString per complete line, one Point per station. */
+/**
+ * GeoJSON for the map: one Point per station, and a schematic line (station to station) per route.
+ * The map draws the real track shapes from METRO_TRACKS_URL; the schematic lines are the fallback.
+ */
 export function metroGeoJSON() {
   const lines = METRO.lines
     .filter((l) => l.complete)
     .map((l) => ({
       type: "Feature" as const,
-      geometry: { type: "LineString" as const, coordinates: l.stations.map((id) => [byId.get(id)!.lng, byId.get(id)!.lat]) },
+      geometry: {
+        type: "MultiLineString" as const,
+        coordinates: l.branches.map((b) => b.map((id) => [byId.get(id)!.lng, byId.get(id)!.lat])),
+      },
       properties: { line: l.slug, name: l.name, color: l.color },
     }));
   const stations = METRO.stations.map((s) => ({

@@ -79,7 +79,7 @@ const TOOLS = [
   {
     name: "near_metro_station",
     title: "Companies near a metro station",
-    description: "Companies within a straight-line distance of a Yellow Line, Rapid Metro or Aqua Line station, nearest first.",
+    description: "Companies within a straight-line distance of any Delhi NCR metro or Namo Bharat station, nearest first.",
     inputSchema: {
       type: "object",
       properties: {
