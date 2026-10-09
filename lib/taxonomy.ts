@@ -17,6 +17,7 @@ export const SECTORS: Record<string, { label: string; color: string }> = {
   "ev-cleantech": { label: "EV & Cleantech", color: "#52b788" },
   "agri-climate": { label: "Agritech & Climate", color: "#a7c957" },
   gaming: { label: "Gaming & Interactive", color: "#e76f51" },
+  "media-content": { label: "Media & Content", color: "#ff99c8" },
 };
 
 export const KINDS: Record<Kind, { label: string; plural: string; color: string }> = {

@@ -87,6 +87,8 @@ export interface Area {
   center: [number, number];
   /** Rough radius in metres, for the faint "somewhere in here" circle */
   radius_m: number;
+  /** The cited landmark the centre is anchored on (areas added from October 2026 onwards) */
+  anchor?: { note: string; url: string; retrieved: string };
 }
 
 export interface Job {
