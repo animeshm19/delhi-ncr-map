@@ -52,6 +52,21 @@
         "aqua-depot"
       ],
       "source": "https://en.wikipedia.org/wiki/Aqua_Line_(Noida_Metro)"
+    },
+    {
+      "slug": "blue",
+      "name": "Blue Line",
+      "operator": "Delhi Metro",
+      "color": "#2f6fde",
+      "complete": false,
+      "note": "Noida section (Sector 15 to Electronic City). Only stations with a published location are shown so far; the line is drawn once the rest are sourced.",
+      "stations": [
+        "noida-sector-16",
+        "noida-sector-18",
+        "noida-sector-59",
+        "noida-sector-62"
+      ],
+      "source": "https://en.wikipedia.org/wiki/Blue_Line_(Delhi_Metro)"
     }
   ],
   "stations": [
@@ -288,6 +303,58 @@
       "source": {
         "url": "https://en.wikipedia.org/wiki/Depot_Station_metro_station_(Noida)",
         "retrieved": "2026-10-08"
+      }
+    },
+    {
+      "id": "noida-sector-62",
+      "name": "Noida Sector 62",
+      "lng": 77.3736097,
+      "lat": 28.6169948,
+      "lines": [
+        "blue"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Noida_Sector_62_metro_station",
+        "retrieved": "2026-10-09"
+      }
+    },
+    {
+      "id": "noida-sector-59",
+      "name": "Noida Sector 59",
+      "lng": 77.3727259,
+      "lat": 28.606493,
+      "lines": [
+        "blue"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Noida_Sector_59_metro_station",
+        "retrieved": "2026-10-09"
+      }
+    },
+    {
+      "id": "noida-sector-16",
+      "name": "Noida Sector 16",
+      "lng": 77.317635,
+      "lat": 28.578395,
+      "lines": [
+        "blue"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Noida_Sector_16_metro_station",
+        "retrieved": "2026-10-09"
+      }
+    },
+    {
+      "id": "noida-sector-18",
+      "name": "Noida Sector 18",
+      "lng": 77.3261158,
+      "lat": 28.5708129,
+      "lines": [
+        "blue"
+      ],
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/Noida_Sector_18_metro_station",
+        "retrieved": "2026-10-09"
       }
     }
   ]
