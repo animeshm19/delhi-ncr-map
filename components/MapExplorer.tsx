@@ -116,6 +116,42 @@ export default function MapExplorer({
     [orgs],
   );
 
+  // ---- Filters from the link, applied straight away (the list doesn't wait for the map) ----
+  const [linkRead, setLinkRead] = useState(false);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    // /?c=slug selects an organisation, like the Edmonton map.
+    const c = params.get("c");
+    if (c && orgs.some((o) => o.slug === c)) setSelected(c);
+    // /?station=cyber-city&r=1000 — "companies near this station".
+    const st = params.get("station");
+    if (st && getStation(st)) setStation(st);
+    const r = Number(params.get("r"));
+    if (RADII.includes(r)) setRadius(r);
+    // Filters for shared links and embeds: ?sector=fintech&city=Gurugram&hiring=1&layer=support
+    const sec = params.get("sector");
+    if (sec && SECTORS[sec]) setSector(sec);
+    const cty = params.get("city");
+    if (cty && CITIES.some((x) => x.live && x.name === cty)) setCity(cty);
+    if (params.get("hiring") === "1") setHiringOnly(true);
+    if (params.get("layer") === "support") setLayer("support");
+    setLinkRead(true);
+  }, [orgs]);
+
+  // Keep the station in the URL so the view can be shared (only after the link has been read).
+  useEffect(() => {
+    if (!linkRead) return;
+    const url = new URL(window.location.href);
+    if (stationObj) {
+      url.searchParams.set("station", stationObj.id);
+      url.searchParams.set("r", String(radius));
+    } else {
+      url.searchParams.delete("station");
+      url.searchParams.delete("r");
+    }
+    window.history.replaceState(null, "", url);
+  }, [stationObj, radius, linkRead]);
+
   // ---- Create the map once ----
   useEffect(() => {
     let cancelled = false;
@@ -264,22 +300,6 @@ export default function MapExplorer({
         setBounds(map.getBounds());
         setReady(true);
 
-        // Deep link: /?c=slug selects an organisation, like the Edmonton map.
-        const params = new URLSearchParams(window.location.search);
-        const c = params.get("c");
-        if (c) setSelected(c);
-        // /?station=cyber-city&r=1000 — "companies near this station".
-        const st = params.get("station");
-        if (st && getStation(st)) setStation(st);
-        const r = Number(params.get("r"));
-        if (RADII.includes(r)) setRadius(r);
-        // Filters for shared links and embeds: ?sector=fintech&city=Gurugram&hiring=1
-        const sec = params.get("sector");
-        if (sec && SECTORS[sec]) setSector(sec);
-        const cty = params.get("city");
-        if (cty && CITIES.some((x) => x.live && x.name === cty)) setCity(cty);
-        if (params.get("hiring") === "1") setHiringOnly(true);
-        if (params.get("layer") === "support") setLayer("support");
       });
     })();
     return () => {
@@ -375,16 +395,6 @@ export default function MapExplorer({
       map.easeTo({ center: [stationObj.lng, stationObj.lat], zoom });
       setShowMetro(true);
     }
-    // Keep the URL shareable.
-    const url = new URL(window.location.href);
-    if (stationObj) {
-      url.searchParams.set("station", stationObj.id);
-      url.searchParams.set("r", String(radius));
-    } else {
-      url.searchParams.delete("station");
-      url.searchParams.delete("r");
-    }
-    window.history.replaceState(null, "", url);
   }, [stationObj, radius, ready]);
 
   // ---- 2D / 3D ----
