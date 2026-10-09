@@ -6,7 +6,8 @@ import type { Map as MLMap, GeoJSONSource, LngLatBounds } from "maplibre-gl";
 import { KINDS, SECTORS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { CITIES, SITE_NAME } from "@/lib/site";
 import { circlePolygon, haversineMeters } from "@/lib/geo";
-import { METRO, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
+import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
+import OrgPanel, { initials } from "./OrgPanel";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -32,6 +33,8 @@ export interface ExplorerOrg {
 }
 
 const RADII = [500, 1000, 2000];
+/** Width of the side panel on wide screens (matches .org-panel in globals.css). */
+const PANEL_WIDTH = 400;
 
 // OpenFreeMap serves OpenMapTiles vector tiles from OSM data, free and keyless.
 // It's what the Edmonton map uses.
@@ -63,6 +66,8 @@ export default function MapExplorer({
   const [followMap, setFollowMap] = useState(false);
   const [bounds, setBounds] = useState<LngLatBounds | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  // The side panel plays a short exit animation before it unmounts.
+  const [closing, setClosing] = useState(false);
   const [is3d, setIs3d] = useState(false);
   const [showMetro, setShowMetro] = useState(true);
   const [station, setStation] = useState("");
@@ -152,6 +157,41 @@ export default function MapExplorer({
     window.history.replaceState(null, "", url);
   }, [stationObj, radius, linkRead]);
 
+  // Keep the open organisation in the URL (?c=slug), like the Edmonton map, so the view can be shared.
+  useEffect(() => {
+    if (!linkRead || embedded) return;
+    const url = new URL(window.location.href);
+    if (selected) url.searchParams.set("c", selected);
+    else url.searchParams.delete("c");
+    if (url.href !== window.location.href) window.history.replaceState(null, "", url);
+  }, [selected, linkRead, embedded]);
+
+  const closePanel = () => {
+    if (!selected || closing) return;
+    setClosing(true);
+    window.setTimeout(() => {
+      setSelected(null);
+      setClosing(false);
+    }, 180);
+  };
+  const choose = (slug: string) => {
+    setClosing(false);
+    setSelected(slug);
+  };
+
+  // Esc closes the panel (unless you're typing in the search box).
+  useEffect(() => {
+    if (!selected || embedded) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      const el = document.activeElement as HTMLElement | null;
+      if (el && (el.tagName === "INPUT" || el.tagName === "SELECT" || el.tagName === "TEXTAREA")) return;
+      closePanel();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
+
   // ---- Create the map once ----
   useEffect(() => {
     let cancelled = false;
@@ -169,7 +209,8 @@ export default function MapExplorer({
         cooperativeGestures: false,
       });
       mapRef.current = map;
-      map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+      // Bottom right, like the Edmonton map, so the side panel never covers the zoom buttons.
+      map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
 
       map.on("load", () => {
         map.addSource("halos", { type: "geojson", data: emptyFC() });
@@ -195,13 +236,25 @@ export default function MapExplorer({
           source: "radius",
           paint: { "line-color": "#ffffff", "line-opacity": 0.5, "line-width": 1.5, "line-dasharray": [3, 2] },
         });
+        // Real track shapes (OpenStreetMap), loaded as a separate file; schematic lines until it arrives.
         map.addSource("metro-lines", { type: "geojson", data: metro.lines });
+        fetch(METRO_TRACKS_URL)
+          .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+          .then((fc: GeoJSON.FeatureCollection) => (map.getSource("metro-lines") as GeoJSONSource | undefined)?.setData(fc))
+          .catch(() => {});
+        map.addLayer({
+          id: "metro-casing",
+          type: "line",
+          source: "metro-lines",
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": "#0a0b0d", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 3.5, 14, 8], "line-opacity": 0.7 },
+        });
         map.addLayer({
           id: "metro-lines",
           type: "line",
           source: "metro-lines",
           layout: { "line-cap": "round", "line-join": "round" },
-          paint: { "line-color": ["get", "color"], "line-width": ["interpolate", ["linear"], ["zoom"], 9, 2, 14, 5], "line-opacity": 0.85 },
+          paint: { "line-color": ["get", "color"], "line-width": ["interpolate", ["linear"], ["zoom"], 9, 2, 14, 5], "line-opacity": 0.9 },
         });
         map.addSource("metro-stations", { type: "geojson", data: metro.stations });
         map.addLayer({
@@ -281,7 +334,7 @@ export default function MapExplorer({
 
         map.on("click", "orgs", (e) => {
           const slug = e.features?.[0]?.properties?.slug as string | undefined;
-          if (slug) setSelected(slug);
+          if (slug) choose(slug);
         });
         map.on("mouseenter", "orgs", () => (map.getCanvas().style.cursor = "pointer"));
         map.on("mouseleave", "orgs", () => (map.getCanvas().style.cursor = ""));
@@ -345,17 +398,46 @@ export default function MapExplorer({
     });
   }, [filtered, ready, areas]);
 
-  // ---- Selection: highlight pin, fly to it, popup, scroll list ----
+  // ---- Selection: highlight the pin, fly to it, scroll the list ----
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
     map.setFilter("orgs-selected", ["==", ["get", "slug"], selected ?? ""]);
     const org = orgs.find((o) => o.slug === selected);
-    document.querySelector(`[data-slug="${selected}"]`)?.scrollIntoView({ block: "nearest" });
-    if (!org || org.lng == null || org.lat == null) return;
-    map.easeTo({ center: [org.lng, org.lat], zoom: Math.max(map.getZoom(), 13.5) });
+    document.querySelector(`[data-slug="${selected}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    const wide = window.matchMedia("(min-width: 861px)").matches;
+    // Keep the pin centred in the part of the map the panel doesn't cover.
+    const padding = { top: 0, bottom: 0, left: 0, right: !embedded && org && wide ? PANEL_WIDTH + 24 : 0 };
+    if (!org || org.lng == null || org.lat == null) {
+      // Panel closed: give the map its full width back (only if it was padded, so this never
+      // cancels another camera move, like zooming to a station from a shared link).
+      if (!org && !map.isMoving() && (map.getPadding().right ?? 0) > 0) map.easeTo({ padding: { top: 0, bottom: 0, left: 0, right: 0 }, duration: 400 });
+      return;
+    }
+    // Like the Edmonton map: a smooth zoom-out-and-in flight to the pin.
+    const target = org.precision === "area" ? 14 : 15.5;
+    map.flyTo({
+      center: [org.lng, org.lat],
+      zoom: Math.max(target, Math.min(map.getZoom(), 17)),
+      padding,
+      speed: 0.8,
+      curve: 1.6,
+      essential: false, // skipped for people who ask for reduced motion
+    });
+
+    let marker: import("maplibre-gl").Marker | null = null;
     let popup: import("maplibre-gl").Popup | null = null;
+    let cancelled = false;
     import("maplibre-gl").then((ml) => {
+      if (cancelled) return;
+      // A pulsing ring on the chosen pin.
+      const ring = document.createElement("div");
+      ring.className = "pin-pulse";
+      ring.style.setProperty("--c", org.kind === "company" ? sectorColor(org.sectors[0]) : KINDS[org.kind].color);
+      ring.setAttribute("aria-hidden", "true");
+      marker = new ml.Marker({ element: ring }).setLngLat([org.lng!, org.lat!]).addTo(map);
+      if (!embedded) return;
+      // Embeds have no side panel: a small popup that opens the profile on the main site.
       const el = document.createElement("div");
       const strong = document.createElement("strong");
       strong.textContent = org.name;
@@ -363,25 +445,25 @@ export default function MapExplorer({
       sub.className = "muted";
       sub.textContent = org.precision === "area" ? `${org.place} (approx.)` : org.place;
       const a = document.createElement("a");
-      a.href = embedded ? `${siteUrl}${org.href}` : org.href;
+      a.href = `${siteUrl}${org.href}`;
       a.textContent = "Open profile";
-      if (embedded) {
-        a.target = "_blank";
-        a.rel = "noopener";
-      }
+      a.target = "_blank";
+      a.rel = "noopener";
       el.append(strong, sub, a);
       popup = new ml.Popup({ offset: 12, closeButton: false }).setLngLat([org.lng!, org.lat!]).setDOMContent(el).addTo(map);
     });
     return () => {
+      cancelled = true;
+      marker?.remove();
       popup?.remove();
     };
-  }, [selected, ready, orgs]);
+  }, [selected, ready, orgs, embedded, siteUrl]);
 
   // ---- Metro layer and the station radius ----
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
-    for (const id of ["metro-lines", "metro-stations", "metro-labels"]) {
+    for (const id of ["metro-casing", "metro-lines", "metro-stations", "metro-labels"]) {
       if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", showMetro ? "visible" : "none");
     }
   }, [showMetro, ready]);
@@ -396,7 +478,7 @@ export default function MapExplorer({
     );
     if (stationObj) {
       const zoom = radius <= 500 ? 15 : radius <= 1000 ? 14 : 13;
-      map.easeTo({ center: [stationObj.lng, stationObj.lat], zoom });
+      map.easeTo({ center: [stationObj.lng, stationObj.lat], zoom, padding: { top: 0, bottom: 0, left: 0, right: 0 } });
       setShowMetro(true);
     }
   }, [stationObj, radius, ready]);
@@ -411,6 +493,8 @@ export default function MapExplorer({
     if (is3d) map.easeTo({ pitch: 60, bearing: -20, zoom: Math.max(map.getZoom(), 14) });
     else if (map.getPitch() !== 0 || map.getBearing() !== 0) map.easeTo({ pitch: 0, bearing: 0 });
   }, [is3d, ready]);
+
+  const selectedOrg = selected ? orgs.find((o) => o.slug === selected) ?? null : null;
 
   if (embedded) {
     return (
@@ -430,7 +514,7 @@ export default function MapExplorer({
   }
 
   return (
-    <div className="explorer">
+    <div className={`explorer${selectedOrg && !closing ? " panel-open" : ""}`}>
       <aside className="sidebar" aria-label="Search and list">
         <header>
           <div className="brand">
@@ -485,12 +569,12 @@ export default function MapExplorer({
             <select className="chip" value={station} onChange={(e) => setStation(e.target.value)} aria-label="Near metro station">
               <option value="">Near a metro station…</option>
               {METRO.lines.map((l) => (
-                <optgroup key={l.slug} label={`${l.name} (${l.operator})`}>
-                  {METRO.stations
-                    .filter((st) => st.lines[0] === l.slug)
-                    .map((st) => (
-                      <option key={st.id} value={st.id}>{st.name}</option>
-                    ))}
+                <optgroup key={l.slug} label={`${l.name} · ${l.operator}`}>
+                  {l.stations.map((id) => (
+                    <option key={id} value={id}>
+                      {getStation(id)!.name}
+                    </option>
+                  ))}
                 </optgroup>
               ))}
             </select>
@@ -535,12 +619,12 @@ export default function MapExplorer({
                 data-slug={o.slug}
                 data-selected={o.slug === selected}
                 style={{ "--c": o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color } as React.CSSProperties}
+                aria-current={o.slug === selected ? "true" : undefined}
                 onClick={(e) => {
-                  // First click selects on the map; a click on the selected item opens the profile.
-                  if (o.lng != null && o.slug !== selected) {
-                    e.preventDefault();
-                    setSelected(o.slug);
-                  }
+                  // A click opens the side panel (and flies to the pin); cmd/ctrl-click still opens the profile.
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                  e.preventDefault();
+                  choose(o.slug);
                 }}
               >
                 {o.logo ? (
@@ -596,19 +680,21 @@ export default function MapExplorer({
           <button className="chip" aria-pressed={is3d} onClick={() => setIs3d(true)}>3D</button>
         </div>
         <div ref={mapEl} className="map" role="region" aria-label="Map of Delhi NCR" />
+        {selectedOrg && (
+          <OrgPanel
+            org={selectedOrg}
+            closing={closing}
+            onClose={closePanel}
+            onSelect={choose}
+            onStation={(id) => {
+              setStation(id);
+              closePanel();
+            }}
+          />
+        )}
       </div>
     </div>
   );
-}
-
-function initials(name: string) {
-  return name
-    .replace(/\(.*?\)/g, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]!.toUpperCase())
-    .join("");
 }
 
 function emptyFC(): GeoJSON.FeatureCollection {
