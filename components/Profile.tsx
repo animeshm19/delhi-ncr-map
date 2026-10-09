@@ -146,7 +146,7 @@ export default async function Profile({ org }: { org: Org }) {
               </li>
             ))}
           </ul>
-          {roles.length > 25 && <p><Link href="/hiring">All {roles.length} roles on the hiring board →</Link></p>}
+          {roles.length > 25 && <p><Link href="/hiring">All {roles.length} roles on the hiring board</Link></p>}
         </>
       )}
 
@@ -187,9 +187,9 @@ export default async function Profile({ org }: { org: Org }) {
         This profile is compiled from public sources and was last updated {org.updated_at}.
       </p>
       <div className="actions">
-        <Link href={`/edit/${org.slug}`}>Suggest an edit →</Link>
-        <Link href={`/claim/${org.slug}`}>Claim this profile →</Link>
-        <Link href={`/removal/${org.slug}`}>Request removal →</Link>
+        <Link href={`/edit/${org.slug}`} className="btn ghost small">Suggest an edit</Link>
+        <Link href={`/claim/${org.slug}`} className="btn ghost small">Claim this profile</Link>
+        <Link href={`/removal/${org.slug}`} className="btn ghost small">Request removal</Link>
       </div>
       <SiteFooter />
     </main>

@@ -16,6 +16,7 @@ export default function SiteFooter() {
         <Link href="/metro">By metro</Link>
         <Link href="/events">Events</Link>
         <Link href="/this-week">This week</Link>
+        <Link href="/stats">Stats</Link>
         <Link href="/submit">Submit a company</Link>
         <Link href="/about">About and methodology</Link>
         <Link href="/data">Open data</Link>

@@ -21,7 +21,7 @@ export default async function Account({ searchParams }: { searchParams: Promise<
       {sp.denied && <p className="error" role="alert">That page is for reviewers only.</p>}
       {isAdmin === true && (
         <p>
-          <Link className="btn" href="/admin">Open the review queue →</Link>
+          <Link className="btn" href="/admin">Open the review queue</Link>
         </p>
       )}
       <h2>Profiles you manage</h2>

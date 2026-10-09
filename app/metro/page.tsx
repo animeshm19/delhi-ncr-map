@@ -45,39 +45,41 @@ export default async function Metro() {
           <p className="muted">
             {line.note} <a href={line.source} rel="noopener">Source</a>
           </p>
-          <table className="orgs metro-table">
-            <thead>
-              <tr>
-                <th scope="col">Station</th>
-                <th scope="col">Within {formatDistance(WALK)}</th>
-                <th scope="col">Closest</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[...new Set(line.stations)].map((id) => {
-                const s = getStation(id)!;
-                const list = near(id);
-                return (
-                  <tr key={id} data-station={id}>
-                    <td>
-                      <Link href={`/?station=${id}&r=${WALK}`}>{s.name}</Link>
-                      {s.lines.length > 1 && <span className="badge">Interchange</span>}
-                    </td>
-                    <td>{list.length}</td>
-                    <td>
-                      {list.slice(0, 4).map(({ o, m }, i) => (
-                        <span key={o.slug}>
-                          {i > 0 && ", "}
-                          <Link href={profilePath(o)}>{o.name}</Link> <span className="muted">{formatDistance(m)}</span>
-                        </span>
-                      ))}
-                      {list.length > 4 && <span className="muted"> and {list.length - 4} more</span>}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="tablewrap">
+            <table className="orgs metro-table">
+              <thead>
+                <tr>
+                  <th scope="col">Station</th>
+                  <th scope="col">Within {formatDistance(WALK)}</th>
+                  <th scope="col">Closest</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[...new Set(line.stations)].map((id) => {
+                  const s = getStation(id)!;
+                  const list = near(id);
+                  return (
+                    <tr key={id} data-station={id}>
+                      <td>
+                        <Link href={`/?station=${id}&r=${WALK}`}>{s.name}</Link>
+                        {s.lines.length > 1 && <span className="badge">Interchange</span>}
+                      </td>
+                      <td>{list.length}</td>
+                      <td>
+                        {list.slice(0, 4).map(({ o, m }, i) => (
+                          <span key={o.slug}>
+                            {i > 0 && ", "}
+                            <Link href={profilePath(o)}>{o.name}</Link> <span className="muted">{formatDistance(m)}</span>
+                          </span>
+                        ))}
+                        {list.length > 4 && <span className="muted"> and {list.length - 4} more</span>}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </section>
       ))}
 
