@@ -33,7 +33,7 @@ export function toExplorer(orgs: Org[]): ExplorerOrg[] {
  * Which organisation represents a group of pins on the map: ones with a logo first,
  * then the best funded, so a "+5" bubble shows a recognisable face.
  */
-function score(o: Org) {
+export function score(o: Org) {
   const m = /^\$([\d.]+)([KMB])$/.exec(o.funding_note ?? "");
   const usd = m ? Number(m[1]) * { K: 1e3, M: 1e6, B: 1e9 }[m[2] as "K" | "M" | "B"] : 0;
   return (orgLogo(o) ? 100 : 0) + Math.min(99, Math.round(Math.log10(usd + 1) * 9));
