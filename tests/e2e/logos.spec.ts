@@ -73,7 +73,7 @@ test.describe("logos and logo pins", () => {
   test("pins are logo tiles; nearby ones group into one with a +N badge that zooms in", async ({ page }) => {
     const errors = watchConsole(page);
     await page.goto("/");
-    await expect(page.locator(".map")).toHaveAttribute("data-zoom", /\d/, { timeout: 15_000 });
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
     await expect(page.locator(".pin").first()).toBeVisible();
 
     // Every pinned company is accounted for: each pin is one company, or a group of 1 + N.
@@ -93,7 +93,7 @@ test.describe("logos and logo pins", () => {
 
   test("clicking a single pin opens the panel, and the chosen pin is never hidden in a group", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator(".map")).toHaveAttribute("data-zoom", /\d/, { timeout: 15_000 });
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
     // Zoom into a group until single pins appear.
     for (let i = 0; i < 6 && (await page.locator(".pin:not(.group)").count()) === 0; i++) {
       await (await clearGroup(page)).click();

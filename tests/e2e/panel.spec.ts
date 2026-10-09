@@ -7,7 +7,7 @@ test.describe("side panel", () => {
   test("picking a company flies to its pin and opens the panel, with a link to the full profile", async ({ page }) => {
     const errors = watchConsole(page);
     await page.goto("/");
-    await expect(page.locator(".map")).toHaveAttribute("data-zoom", /\d/, { timeout: 15_000 });
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
 
     await page.locator(".list .item", { hasText: "Policybazaar" }).click();
     const p = panel(page);
@@ -62,7 +62,7 @@ test.describe("side panel", () => {
       "select slug, name from organizations_public where kind = 'company' and lng is null order by slug limit 1",
     );
     await page.goto("/");
-    await expect(page.locator(".map")).toHaveAttribute("data-zoom", /\d/, { timeout: 15_000 });
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
     const before = await page.locator(".map").getAttribute("data-zoom");
     await page.getByRole("searchbox", { name: "Search" }).fill(org.name);
     await page.locator(`.list .item[data-slug='${org.slug}']`).click();
