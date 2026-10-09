@@ -2131,7 +2131,7 @@
   ],
   "status": "active",
   "one_liner": "Renewable energy developer working on wind and solar projects.",
-  "website": null,
+  "website": "https://www.junipergreenenergy.com/",
   "founded_year": 2018,
   "acquired_by": null,
   "funding_note": null,
@@ -2173,6 +2173,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/juniper-green-energy-limited",
+    "note": "eChai Startup Grid profile for Juniper Green Energy, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -2186,7 +2194,7 @@
   ],
   "status": "active",
   "one_liner": "Renewable energy company building clean power for industrial customers.",
-  "website": null,
+  "website": "https://www.serenticaglobal.com/",
   "founded_year": 2022,
   "acquired_by": null,
   "funding_note": null,
@@ -2218,6 +2226,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/serentica-renewables",
+    "note": "eChai Startup Grid profile for Serentica Renewables, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -2231,7 +2247,7 @@
   ],
   "status": "active",
   "one_liner": "Renewable energy platform.",
-  "website": null,
+  "website": "https://blupineenergy.com/",
   "founded_year": 2021,
   "acquired_by": null,
   "funding_note": null,
@@ -2270,6 +2286,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/blupine-energy-pvt-ltd",
+    "note": "eChai Startup Grid profile for Blupine Energy, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -2546,7 +2570,7 @@
   ],
   "status": "active",
   "one_liner": "Silicon carbide solar inverters and EV chargers.",
-  "website": null,
+  "website": "https://www.zenergize.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -2574,6 +2598,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zenergize",
+    "note": "eChai Startup Grid profile for Zenergize, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -2675,7 +2707,7 @@
   ],
   "status": "active",
   "one_liner": "Digital lending app offering small personal loans.",
-  "website": null,
+  "website": "https://truebalance.io/",
   "founded_year": 2014,
   "acquired_by": null,
   "funding_note": null,
@@ -2715,6 +2747,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/true-balance-india-private-limited",
+    "note": "eChai Startup Grid profile for True Balance, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -3131,7 +3171,7 @@
   ],
   "status": "active",
   "one_liner": "Stock market advisory and investing.",
-  "website": null,
+  "website": "https://univest.in/",
   "founded_year": 2022,
   "acquired_by": null,
   "funding_note": "$28M",
@@ -3171,6 +3211,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/univest",
+    "note": "eChai Startup Grid profile for Univest, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -3785,7 +3833,7 @@
   ],
   "status": "active",
   "one_liner": "Short-video learning app.",
-  "website": null,
+  "website": "https://seekho.in/",
   "founded_year": 2021,
   "acquired_by": null,
   "funding_note": "$39M",
@@ -3806,6 +3854,14 @@
      "founded_year"
     ],
     "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/seekho",
+    "note": "eChai Startup Grid profile for Seekho, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -5939,7 +5995,7 @@
   ],
   "status": "active",
   "one_liner": "Food sourcing network connecting buyers and suppliers.",
-  "website": null,
+  "website": "https://www.farmart.co/",
   "founded_year": 2015,
   "acquired_by": null,
   "funding_note": "$61.9M",
@@ -5993,6 +6049,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/farmart-service-private-limited",
+    "note": "eChai Startup Grid profile for FarMart, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -6166,7 +6230,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Business school in Gurugram.",
-  "website": null,
+  "website": "https://www.mdi.ac.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -6185,6 +6249,14 @@
      "listing"
     ],
     "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q6746665",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -6196,7 +6268,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.bmu.edu.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -6215,6 +6287,14 @@
      "listing"
     ],
     "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q18355854",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -6256,7 +6336,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.ncuindia.edu/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -6275,6 +6355,14 @@
      "listing"
     ],
     "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q5974867",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -6286,7 +6374,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.gurugramuniversity.ac.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -6305,6 +6393,14 @@
      "listing"
     ],
     "retrieved": "2026-10-08"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q57517262",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-08"
@@ -6382,7 +6478,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://bluetokaicoffee.com/",
   "founded_year": 2013,
   "acquired_by": null,
   "funding_note": "$102.8M",
@@ -6401,6 +6497,14 @@
      "listing",
      "sector",
      "founded_year"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q137711807",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -6460,7 +6564,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.wingreensworld.com/",
   "founded_year": 2011,
   "acquired_by": null,
   "funding_note": "$76.5M",
@@ -6481,6 +6585,14 @@
      "founded_year"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/wingreens-farms-pvt-ltd",
+    "note": "eChai Startup Grid profile for Wingreens Farms, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -6494,7 +6606,7 @@
   ],
   "status": "unknown",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.yepme.com/",
   "founded_year": 2008,
   "acquired_by": null,
   "funding_note": "$76M",
@@ -6521,6 +6633,14 @@
     "note": "StartupTalky: Yepme closed units and was winding down in 2017",
     "fields": [
      "status"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q8052517",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -7051,7 +7171,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://slurrpfarm.com/",
   "founded_year": 2016,
   "acquired_by": null,
   "funding_note": "$17.2M",
@@ -7072,6 +7192,14 @@
      "founded_year"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/slurrp-farm-hq",
+    "note": "eChai Startup Grid profile for Slurrp Farm, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -7085,7 +7213,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://moxiebeauty.in/",
   "founded_year": 2022,
   "acquired_by": null,
   "funding_note": "$17.1M",
@@ -7114,6 +7242,14 @@
      "listing",
      "sector",
      "founded_year"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/moxie-maker",
+    "note": "eChai Startup Grid profile for Moxie Beauty, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -7667,7 +7803,7 @@
   ],
   "status": "active",
   "one_liner": "Omnichannel contact-centre software.",
-  "website": null,
+  "website": "https://www.ameyo.com/",
   "founded_year": 2003,
   "acquired_by": null,
   "funding_note": "$5M",
@@ -7697,6 +7833,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ameyo-drishti-soft-solutions-pvt-ltd",
+    "note": "eChai Startup Grid profile for Ameyo, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -7814,7 +7958,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.peoplestrong.com/",
   "founded_year": 2006,
   "acquired_by": null,
   "funding_note": null,
@@ -7844,6 +7988,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/peoplestrong",
+    "note": "eChai Startup Grid profile for PeopleStrong, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -7995,7 +8147,7 @@
   ],
   "status": "acquired",
   "one_liner": null,
-  "website": null,
+  "website": "https://knowlarity.com/",
   "founded_year": 2009,
   "acquired_by": null,
   "funding_note": "$42.5M",
@@ -8032,6 +8184,14 @@
     "note": "Entrackr: Gupshup acquires Knowlarity",
     "fields": [
      "status"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q20983870",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -8286,7 +8446,7 @@
   ],
   "status": "active",
   "one_liner": "Supply chain and product development for fashion brands.",
-  "website": null,
+  "website": "https://fashinza.com/",
   "founded_year": 2020,
   "acquired_by": null,
   "funding_note": "$155.3M",
@@ -8324,6 +8484,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fashinza",
+    "note": "eChai Startup Grid profile for Fashinza, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -8606,7 +8774,7 @@
   ],
   "status": "active",
   "one_liner": "Dairy farming platform.",
-  "website": null,
+  "website": "https://mooo.farm/",
   "founded_year": 2019,
   "acquired_by": null,
   "funding_note": "$19.4M",
@@ -8636,6 +8804,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/mooofarm",
+    "note": "eChai Startup Grid profile for MoooFarm, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -9245,7 +9421,7 @@
   ],
   "status": "active",
   "one_liner": "Language AI for Indian languages.",
-  "website": null,
+  "website": "https://devnagri.com/",
   "founded_year": 2020,
   "acquired_by": null,
   "funding_note": "$600K",
@@ -9275,6 +9451,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/devnagri-sovereign-language-ai-infrastructure-layer",
+    "note": "eChai Startup Grid profile for Devnagri, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -9358,7 +9542,7 @@
   ],
   "status": "active",
   "one_liner": "Parent company of Paytm.",
-  "website": null,
+  "website": "https://www.paytm.com/",
   "founded_year": 2009,
   "acquired_by": null,
   "funding_note": "$4.91B",
@@ -9441,6 +9625,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q19757718",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -9454,7 +9646,7 @@
   ],
   "status": "active",
   "one_liner": "Merchant payments platform with financial services.",
-  "website": null,
+  "website": "https://www.pinelabs.com/",
   "founded_year": 1998,
   "acquired_by": null,
   "funding_note": "$1.79B",
@@ -9515,6 +9707,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/pine-labs",
+    "note": "eChai Startup Grid profile for Pine Labs, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -9530,7 +9730,7 @@
   ],
   "status": "active",
   "one_liner": "Insurance distribution platform.",
-  "website": null,
+  "website": "https://www.zopper.com/",
   "founded_year": 2011,
   "acquired_by": null,
   "funding_note": "$125M",
@@ -9624,6 +9824,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zopper",
+    "note": "eChai Startup Grid profile for Zopper, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -9637,7 +9845,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://credgenics.com/",
   "founded_year": 2018,
   "acquired_by": null,
   "funding_note": "$103.3M",
@@ -9676,6 +9884,14 @@
      "listing",
      "sector",
      "founded_year"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/credgenics",
+    "note": "eChai Startup Grid profile for Credgenics, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -10492,7 +10708,7 @@
   ],
   "status": "active",
   "one_liner": "Healthcare data platform and AI agents.",
-  "website": null,
+  "website": "https://innovaccer.com/",
   "founded_year": 2014,
   "acquired_by": null,
   "funding_note": "$650.6M",
@@ -10534,6 +10750,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/innovaccer",
+    "note": "eChai Startup Grid profile for Innovaccer, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -10547,7 +10771,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.pw.live/",
   "founded_year": 2016,
   "acquired_by": null,
   "funding_note": "$486.4M",
@@ -10586,6 +10810,14 @@
      "sector"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q111487437",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -10599,7 +10831,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.moglix.com/",
   "founded_year": 2015,
   "acquired_by": null,
   "funding_note": "$481.5M",
@@ -10620,6 +10852,14 @@
      "founded_year"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/moglix-warehouse",
+    "note": "eChai Startup Grid profile for Moglix, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -10633,7 +10873,7 @@
   ],
   "status": "active",
   "one_liner": "Software for travel and hospitality.",
-  "website": null,
+  "website": "https://rategain.com/",
   "founded_year": 2004,
   "acquired_by": null,
   "funding_note": "$236.7M",
@@ -10672,6 +10912,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/rategain",
+    "note": "eChai Startup Grid profile for RateGain, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -10765,7 +11013,7 @@
   ],
   "status": "active",
   "one_liner": "News app with short summaries.",
-  "website": null,
+  "website": "https://www.inshorts.com/",
   "founded_year": 2013,
   "acquired_by": null,
   "funding_note": "$165M",
@@ -10824,6 +11072,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/inshorts-india-advertising-and-services-private-limited",
+    "note": "eChai Startup Grid profile for Inshorts, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -10838,7 +11094,7 @@
   ],
   "status": "active",
   "one_liner": "Software for private coaching institutes.",
-  "website": null,
+  "website": "https://classplusapp.com/",
   "founded_year": 2018,
   "acquired_by": null,
   "funding_note": "$158.3M",
@@ -10941,6 +11197,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/classplus",
+    "note": "eChai Startup Grid profile for Classplus, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -10954,7 +11218,7 @@
   ],
   "status": "active",
   "one_liner": "Last-mile delivery software.",
-  "website": null,
+  "website": "https://fareye.com/",
   "founded_year": 2013,
   "acquired_by": null,
   "funding_note": "$151.8M",
@@ -10995,6 +11259,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fareye-technologies-pvt-ltd-india",
+    "note": "eChai Startup Grid profile for FarEye, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -11008,7 +11280,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://addverb.com/",
   "founded_year": 2016,
   "acquired_by": null,
   "funding_note": "$132M",
@@ -11027,6 +11299,14 @@
      "listing",
      "sector",
      "founded_year"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/addverb-bot-valley",
+    "note": "eChai Startup Grid profile for Addverb Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -11311,7 +11591,7 @@
   ],
   "status": "active",
   "one_liner": "Dry fruits and healthy snacks.",
-  "website": null,
+  "website": "https://www.farmley.com/",
   "founded_year": 2017,
   "acquired_by": null,
   "funding_note": "$54.7M",
@@ -11367,6 +11647,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/farmley",
+    "note": "eChai Startup Grid profile for Farmley, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -11461,7 +11749,7 @@
   ],
   "status": "active",
   "one_liner": "Wellness and outpatient care for employers.",
-  "website": null,
+  "website": "https://getvisitapp.com/",
   "founded_year": 2016,
   "acquired_by": null,
   "funding_note": "$37.5M",
@@ -11491,6 +11779,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/visit-health-pvt-ltd",
+    "note": "eChai Startup Grid profile for Visit Health, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -11963,7 +12259,7 @@
   ],
   "status": "active",
   "one_liner": "AI and immersive solutions.",
-  "website": null,
+  "website": "https://constems-ai.com/",
   "founded_year": 2017,
   "acquired_by": null,
   "funding_note": "$2M",
@@ -11993,6 +12289,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/constems-ai",
+    "note": "eChai Startup Grid profile for Constems-AI, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -12141,7 +12445,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Prediction market for India.",
-  "website": null,
+  "website": "https://betteropinions.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12161,6 +12465,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12172,7 +12484,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Mobile-first office suite for businesses in India.",
-  "website": null,
+  "website": "https://kaagaz.app/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12190,6 +12502,14 @@
     "fields": [
      "listing",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -12205,7 +12525,7 @@
   ],
   "status": "active",
   "one_liner": "AI-powered construction management software.",
-  "website": null,
+  "website": "https://www.rdash.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12233,6 +12553,14 @@
      "listing"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12246,7 +12574,7 @@
   ],
   "status": "acquired",
   "one_liner": "Consumer finance for India.",
-  "website": null,
+  "website": "https://buenofinanceinc.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12274,6 +12602,14 @@
      "listing"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12287,7 +12623,7 @@
   ],
   "status": "active",
   "one_liner": "App for independent agents selling financial products.",
-  "website": null,
+  "website": "https://www.gromo.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12325,6 +12661,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12336,7 +12680,7 @@
   "sectors": [],
   "status": "closed",
   "one_liner": "Identity verification workflow builder.",
-  "website": null,
+  "website": "https://www.invoid.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12364,6 +12708,14 @@
      "listing"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12377,7 +12729,7 @@
   ],
   "status": "closed",
   "one_liner": "White-label community platform.",
-  "website": null,
+  "website": "https://pensil.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12395,6 +12747,14 @@
     "fields": [
      "listing",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -12410,7 +12770,7 @@
   ],
   "status": "active",
   "one_liner": "Bus travel booking across Indian cities.",
-  "website": null,
+  "website": "https://www.zingbus.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12430,6 +12790,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12443,7 +12811,7 @@
   ],
   "status": "active",
   "one_liner": "Microfinance platform.",
-  "website": null,
+  "website": "https://getkosh.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12471,6 +12839,14 @@
      "listing"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12482,7 +12858,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Upskilling bootcamp.",
-  "website": null,
+  "website": "https://acciojob.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12510,6 +12886,14 @@
      "listing"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/acciojob-skill-centre-noida",
+    "note": "eChai Startup Grid profile for AccioJob, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12523,7 +12907,7 @@
   ],
   "status": "closed",
   "one_liner": "Agri produce supply chain.",
-  "website": null,
+  "website": "https://kisannetwork.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12554,6 +12938,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/kisan-network",
+    "note": "eChai Startup Grid profile for Kisan Network, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12567,7 +12959,7 @@
   ],
   "status": "active",
   "one_liner": "Managed procurement and inventory for hardware teams.",
-  "website": null,
+  "website": "https://www.waybill.to/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12587,6 +12979,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12600,7 +13000,7 @@
   ],
   "status": "active",
   "one_liner": "Global equity investing for users in India.",
-  "website": null,
+  "website": "https://paasa.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12638,6 +13038,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12651,7 +13059,7 @@
   ],
   "status": "active",
   "one_liner": "Telemedicine and online pharmacy for dermatology.",
-  "website": null,
+  "website": "https://www.clinikally.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12689,6 +13097,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12702,7 +13118,7 @@
   ],
   "status": "active",
   "one_liner": "Employee engagement and flexible benefits platform.",
-  "website": null,
+  "website": "https://www.advantageclub.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12733,6 +13149,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12744,7 +13168,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Online cohort-based courses for architects, engineers and designers.",
-  "website": null,
+  "website": "https://www.novatr.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12764,6 +13188,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12777,7 +13209,7 @@
   ],
   "status": "active",
   "one_liner": "Payroll and HR software.",
-  "website": null,
+  "website": "https://www.salarybox.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12834,6 +13266,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/salarybox",
+    "note": "eChai Startup Grid profile for SalaryBox, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -12847,7 +13287,7 @@
   ],
   "status": "active",
   "one_liner": "Medicine delivery in about 30 minutes.",
-  "website": null,
+  "website": "https://farmako.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -12865,6 +13305,14 @@
     "fields": [
      "listing",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.vcbacked.co/yc/location/gurugram",
+    "note": "Y Combinator companies in Gurugram (vcbacked.co), with each company's site",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -13036,7 +13484,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.fabhotels.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -13053,6 +13501,14 @@
     "note": "Seedtable: best ecommerce startups in Gurugram",
     "fields": [
      "listing"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q55611387",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -13204,7 +13660,7 @@
   ],
   "status": "active",
   "one_liner": "Instant credit and personal loans.",
-  "website": null,
+  "website": "https://www.stashfin.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -13239,6 +13695,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/stashfin",
+    "note": "eChai Startup Grid profile for Stashfin, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -13440,7 +13904,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.iyogi.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -13457,6 +13921,14 @@
     "note": "Seedtable: best SaaS startups in Gurugram",
     "fields": [
      "listing"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q1050649",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -14344,7 +14816,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.lavamobiles.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -14361,6 +14833,14 @@
     "note": "Seedtable: best startups in Noida",
     "fields": [
      "listing"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q18127147",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -14436,7 +14916,7 @@
   ],
   "status": "active",
   "one_liner": "Online real estate listings.",
-  "website": null,
+  "website": "https://housing.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -14457,6 +14937,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q18125739",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -14470,7 +14958,7 @@
   ],
   "status": "active",
   "one_liner": "Online flight, hotel and holiday booking.",
-  "website": null,
+  "website": "https://www.yatra.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -14489,6 +14977,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q16968189",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -14581,7 +15077,7 @@
   ],
   "status": "active",
   "one_liner": "Real estate marketplace for buyers and sellers.",
-  "website": null,
+  "website": "https://www.magicbricks.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -14611,6 +15107,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/magicbricks-reality-services-ltd",
+    "note": "eChai Startup Grid profile for MagicBricks, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -15367,7 +15871,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://lohum.com/",
   "founded_year": 2018,
   "acquired_by": null,
   "funding_note": "$87.7M",
@@ -15386,6 +15890,14 @@
      "listing",
      "sector",
      "founded_year"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/lohum-cleantech-private-limited",
+    "note": "eChai Startup Grid profile for Lohum Cleantech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16121,7 +16633,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://beebom.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16139,6 +16651,14 @@
     "fields": [
      "listing",
      "sector"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q106623037",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16542,7 +17062,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.vishvasnews.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16560,6 +17080,14 @@
     "fields": [
      "listing",
      "sector"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q140560072",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16778,7 +17306,7 @@
   ],
   "status": "active",
   "one_liner": "Solar power plants.",
-  "website": null,
+  "website": "https://www.azurepower.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16798,6 +17326,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/azure-power",
+    "note": "eChai Startup Grid profile for Azure Power, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16813,7 +17349,7 @@
   ],
   "status": "active",
   "one_liner": "Renewable energy solutions.",
-  "website": null,
+  "website": "https://www.optenpower.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16833,6 +17369,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/opten-power",
+    "note": "eChai Startup Grid profile for Opten Power, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16848,7 +17392,7 @@
   ],
   "status": "active",
   "one_liner": "Supply chain software for quick commerce and omnichannel retail.",
-  "website": null,
+  "website": "https://www.prozo.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16870,6 +17414,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/prozo-corporate-office",
+    "note": "eChai Startup Grid profile for Prozo, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -16883,7 +17435,7 @@
   ],
   "status": "active",
   "one_liner": "Market intelligence software.",
-  "website": null,
+  "website": "https://www.contify.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16903,6 +17455,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/contify",
+    "note": "eChai Startup Grid profile for Contify, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16918,7 +17478,7 @@
   ],
   "status": "active",
   "one_liner": "Web design, development and digital marketing.",
-  "website": null,
+  "website": "https://honeyshatech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16938,6 +17498,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/honeysha-technologies",
+    "note": "eChai Startup Grid profile for Honeysha Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -16953,7 +17521,7 @@
   ],
   "status": "active",
   "one_liner": "Generative AI for enterprise operations.",
-  "website": null,
+  "website": "https://www.shorthills.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -16975,6 +17543,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/shorthills-ai",
+    "note": "eChai Startup Grid profile for Shorthills AI, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -16988,7 +17564,7 @@
   ],
   "status": "active",
   "one_liner": "AI agents for RNA-Seq analysis.",
-  "website": null,
+  "website": "https://www.edgenebiomed.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17008,6 +17584,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/edgene-biomed-private-limited",
+    "note": "eChai Startup Grid profile for EdGene BioMed, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17023,7 +17607,7 @@
   ],
   "status": "active",
   "one_liner": "Credit infrastructure and risk intelligence for lenders.",
-  "website": null,
+  "website": "https://www.finbox.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17043,6 +17627,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/finbox-2",
+    "note": "eChai Startup Grid profile for FinBox, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17058,7 +17650,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.hotelivate.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17078,6 +17670,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/hotelivate-savills",
+    "note": "eChai Startup Grid profile for Hotelivate, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17093,7 +17693,7 @@
   ],
   "status": "active",
   "one_liner": "AI and automation consulting.",
-  "website": null,
+  "website": "https://rpatech.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17113,6 +17713,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/rpatech",
+    "note": "eChai Startup Grid profile for RPATech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17128,7 +17736,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.whizhack.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17148,6 +17756,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/whizhack-technologies",
+    "note": "eChai Startup Grid profile for WhizHack Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17163,7 +17779,7 @@
   ],
   "status": "active",
   "one_liner": "Software for building and running energy systems.",
-  "website": null,
+  "website": "https://www.gozircle.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17185,6 +17801,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zircle",
+    "note": "eChai Startup Grid profile for Zircle, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -17198,7 +17822,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.ev-motors.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17218,6 +17842,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ev-motors-india-pvt-ltd",
+    "note": "eChai Startup Grid profile for EV Motors India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17233,7 +17865,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://gpaarogya.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17253,6 +17885,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gp-aarogya-healthcare-technology-private-limited",
+    "note": "eChai Startup Grid profile for GP AAROGYA Healthcare Technology, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17268,7 +17908,7 @@
   ],
   "status": "active",
   "one_liner": "Borosilicate glass water bottles.",
-  "website": null,
+  "website": "https://www.kleear.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17288,6 +17928,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/kleear",
+    "note": "eChai Startup Grid profile for Kleear, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17303,7 +17951,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.vproteomics.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17323,6 +17971,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vproteomics",
+    "note": "eChai Startup Grid profile for VPROTEOMICS, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17338,7 +17994,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.zyncworld.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17358,6 +18014,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zync",
+    "note": "eChai Startup Grid profile for Zync Global, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17373,7 +18037,7 @@
   ],
   "status": "active",
   "one_liner": "Personal branding services.",
-  "website": null,
+  "website": "https://fobetmedia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17395,6 +18059,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fobet-media",
+    "note": "eChai Startup Grid profile for Fobet Media, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -17408,7 +18080,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://alliancehealthtech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17427,6 +18099,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/alliance-worldwide-health-tech-private-limited",
+    "note": "eChai Startup Grid profile for Alliance worldwide Health-Tech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17442,7 +18122,7 @@
   ],
   "status": "active",
   "one_liner": "AI solutions for businesses.",
-  "website": null,
+  "website": "https://aihifusion.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17461,6 +18141,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/aihifusion-technologies-private-limited-sector-62-gurugram",
+    "note": "eChai Startup Grid profile for AIHIFusion Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17476,7 +18164,7 @@
   ],
   "status": "active",
   "one_liner": "Doorstep grooming for dogs and cats.",
-  "website": null,
+  "website": "https://alltails.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17495,6 +18183,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/all-tails",
+    "note": "eChai Startup Grid profile for All Tails, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17510,7 +18206,7 @@
   ],
   "status": "active",
   "one_liner": "Food and beverage.",
-  "website": null,
+  "website": "https://foodspoke.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17529,6 +18225,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/anushvi-foodspoke-pvt-ltd",
+    "note": "eChai Startup Grid profile for Anushvi Foodspoke, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17544,7 +18248,7 @@
   ],
   "status": "active",
   "one_liner": "Websites, apps and custom software.",
-  "website": null,
+  "website": "https://www.brainamaze.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17563,6 +18267,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/brainamaze",
+    "note": "eChai Startup Grid profile for Brainamaze, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17578,7 +18290,7 @@
   ],
   "status": "active",
   "one_liner": "Software asset management tools.",
-  "website": null,
+  "website": "https://www.forescribe.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17597,6 +18309,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/forescribe",
+    "note": "eChai Startup Grid profile for Forescribe, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17612,7 +18332,7 @@
   ],
   "status": "active",
   "one_liner": "Retail execution software for consumer goods brands.",
-  "website": null,
+  "website": "https://www.paralleldots.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17631,6 +18351,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/paralleldots",
+    "note": "eChai Startup Grid profile for ParallelDots, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17646,7 +18374,7 @@
   ],
   "status": "active",
   "one_liner": "Ecommerce marketing for D2C brands.",
-  "website": null,
+  "website": "https://www.upriver.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17665,6 +18393,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/upriver-ecommerce-private-limited",
+    "note": "eChai Startup Grid profile for Upriver Ecommerce, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17680,7 +18416,7 @@
   ],
   "status": "active",
   "one_liner": "Business and startup news.",
-  "website": null,
+  "website": "https://www.vccircle.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17699,6 +18435,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vccircle",
+    "note": "eChai Startup Grid profile for VCCircle, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17714,7 +18458,7 @@
   ],
   "status": "active",
   "one_liner": "Electric car services for corporate employees.",
-  "website": null,
+  "website": "https://zepaste.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17733,6 +18477,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zepaste-electric-car-for-corporate",
+    "note": "eChai Startup Grid profile for Zepaste, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17748,7 +18500,7 @@
   ],
   "status": "active",
   "one_liner": "Software and automation.",
-  "website": null,
+  "website": "https://zucol.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17769,6 +18521,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zucol-services-pvt-ltd",
+    "note": "eChai Startup Grid profile for Zucol Services, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -17782,7 +18542,7 @@
   ],
   "status": "active",
   "one_liner": "Connects patients with doctors and hospitals.",
-  "website": null,
+  "website": "https://www.credihealth.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17802,6 +18562,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/credihealth",
+    "note": "eChai Startup Grid profile for Credihealth, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17817,7 +18585,7 @@
   ],
   "status": "active",
   "one_liner": "Writing tool for founders.",
-  "website": null,
+  "website": "https://www.superpen.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17837,6 +18605,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/superpen",
+    "note": "eChai Startup Grid profile for SuperPen, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17852,7 +18628,7 @@
   ],
   "status": "active",
   "one_liner": "Homemade foods from home chefs.",
-  "website": null,
+  "website": "https://tummyandmummy.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17874,6 +18650,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/tummy-and-mummy",
+    "note": "eChai Startup Grid profile for Tummy & Mummy, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -17887,7 +18671,7 @@
   ],
   "status": "active",
   "one_liner": "Flowers and gifting.",
-  "website": null,
+  "website": "https://arvyam.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17908,6 +18692,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/arvyam",
+    "note": "eChai Startup Grid profile for ARVYAM, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -17921,7 +18713,6 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17955,7 +18746,7 @@
   ],
   "status": "active",
   "one_liner": "Mobility intelligence and GPS tracking.",
-  "website": null,
+  "website": "https://eva2z.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -17974,6 +18765,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/eva2z-electric-hub",
+    "note": "eChai Startup Grid profile for EVA2Z Electric, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -17989,7 +18788,7 @@
   ],
   "status": "active",
   "one_liner": "Agentic AI and automation for enterprise workflows.",
-  "website": null,
+  "website": "https://ibotix.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18010,6 +18809,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ibotix-pvt-ltd",
+    "note": "eChai Startup Grid profile for Ibotix, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18023,7 +18830,6 @@
   ],
   "status": "active",
   "one_liner": "Tax debt resolution services for Canadians.",
-  "website": null,
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18057,7 +18863,7 @@
   ],
   "status": "active",
   "one_liner": "Personal care brand platform.",
-  "website": null,
+  "website": "https://www.mybrandplease.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18076,6 +18882,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/mybrandplease-com",
+    "note": "eChai Startup Grid profile for mybrandplease.com, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18091,7 +18905,7 @@
   ],
   "status": "active",
   "one_liner": "Electric scooters, e-rickshaws and cargo EVs.",
-  "website": null,
+  "website": "https://nxtemobility.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18110,6 +18924,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/nxtmobility-energy-pvt-ltd",
+    "note": "eChai Startup Grid profile for NXTMobility Energy, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18125,7 +18947,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.sokudoindia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18144,6 +18966,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sokudo-electric-india-greater-noida",
+    "note": "eChai Startup Grid profile for Sokudo Electric India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18159,7 +18989,7 @@
   ],
   "status": "active",
   "one_liner": "MLM software development.",
-  "website": null,
+  "website": "https://technanziainfotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18178,6 +19008,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/technanzia-infotech-private-limited-mlm-software-company",
+    "note": "eChai Startup Grid profile for Technanzia Infotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18193,7 +19031,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.zenomixbiolab.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18214,6 +19052,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zenomix-biolab-pvt-ltd",
+    "note": "eChai Startup Grid profile for Zenomix BioLab, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18227,7 +19073,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.saveer.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18246,6 +19092,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/saveer-biotech-limited",
+    "note": "eChai Startup Grid profile for Saveer Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18261,7 +19115,7 @@
   ],
   "status": "active",
   "one_liner": "Booking skilled freelancers in design, video, AI and marketing.",
-  "website": null,
+  "website": "https://unjob.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18282,6 +19136,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/unjob-ai",
+    "note": "eChai Startup Grid profile for Unjob.ai, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18295,7 +19157,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://techfinad.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18316,6 +19178,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/techfinad-private-limited",
+    "note": "eChai Startup Grid profile for Techfinad, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18329,7 +19199,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.chimeragentec.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18350,6 +19220,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/chimera-gentec-pvt-ltd",
+    "note": "eChai Startup Grid profile for Chimera Gentec, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18361,7 +19239,7 @@
   "sectors": [],
   "status": "active",
   "one_liner": "Research and development.",
-  "website": null,
+  "website": "https://www.idrrnd.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18379,6 +19257,14 @@
     "fields": [
      "listing",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/idr-research-and-development-pvt-ltd",
+    "note": "eChai Startup Grid profile for IDR Research and Development, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18394,7 +19280,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://seemaxbiotech.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18413,6 +19299,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/seemax-biotech-private-limited",
+    "note": "eChai Startup Grid profile for Seemax Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18428,7 +19322,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://vymanikaero.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18449,6 +19343,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vymanik-aerospace",
+    "note": "eChai Startup Grid profile for Vymanik Aerospace, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18462,7 +19364,7 @@
   ],
   "status": "active",
   "one_liner": "Zero-waste and recycling.",
-  "website": null,
+  "website": "https://www.0waste.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18482,6 +19384,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/3r-zerowaste",
+    "note": "eChai Startup Grid profile for 3R ZeroWaste, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18497,7 +19407,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://magna.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18519,6 +19429,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/magna-rico-powertrain-pvt-ltd",
+    "note": "eChai Startup Grid profile for Magna Rico, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18532,7 +19450,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.premasbiotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18552,6 +19470,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/premas-biotech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Premas Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18602,7 +19528,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.aeronoma.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18621,6 +19547,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/aeronoma-robotics-private-limited",
+    "note": "eChai Startup Grid profile for Aeronoma Robotics, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18636,7 +19570,7 @@
   ],
   "status": "active",
   "one_liner": "Satellite earth stations and video systems.",
-  "website": null,
+  "website": "https://www.svssatcom.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18657,6 +19591,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/svs-satellite-communications-pvt-ltd",
+    "note": "eChai Startup Grid profile for SVS Satellite Communications, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18670,7 +19612,7 @@
   ],
   "status": "active",
   "one_liner": "Warehouse and intralogistics automation.",
-  "website": null,
+  "website": "https://www.falconautotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18689,6 +19631,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/falcon-autotech-headquarters",
+    "note": "eChai Startup Grid profile for Falcon Autotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18704,7 +19654,7 @@
   ],
   "status": "active",
   "one_liner": "Cybersecurity, AI and cloud services.",
-  "website": null,
+  "website": "https://jethat.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18723,6 +19673,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/jethat-cyber-security-pvt-ltd",
+    "note": "eChai Startup Grid profile for JetHat Cyber Security, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18738,7 +19696,7 @@
   ],
   "status": "active",
   "one_liner": "Digital learning products.",
-  "website": null,
+  "website": "https://www.magicedtech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18757,6 +19715,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/magic-edtech",
+    "note": "eChai Startup Grid profile for Magic EdTech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18772,7 +19738,7 @@
   ],
   "status": "active",
   "one_liner": "AI cybersecurity platform.",
-  "website": null,
+  "website": "https://prudentbit.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18791,6 +19757,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/prudentbit",
+    "note": "eChai Startup Grid profile for PrudentBit, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18806,7 +19780,7 @@
   ],
   "status": "active",
   "one_liner": "Weather forecasts and services.",
-  "website": null,
+  "website": "https://www.skymetweather.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18825,6 +19799,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/skymet-weather-services-pvt-ltd",
+    "note": "eChai Startup Grid profile for Skymet Weather Services, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18840,7 +19822,7 @@
   ],
   "status": "active",
   "one_liner": "Streaming of regional films and shows.",
-  "website": null,
+  "website": "https://www.stage.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18861,6 +19843,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/stage-headquarters-boliyonkikranti",
+    "note": "eChai Startup Grid profile for Stage, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18874,7 +19864,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.gensavepower.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18893,6 +19883,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gensave-electric-power-pvt-ltd",
+    "note": "eChai Startup Grid profile for Gensave Electric Power, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18908,7 +19906,7 @@
   ],
   "status": "active",
   "one_liner": "Warehouse leasing and management, plus bulk sourcing.",
-  "website": null,
+  "website": "https://hyphenscs.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18927,6 +19925,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/hyphen-scs",
+    "note": "eChai Startup Grid profile for Hyphen SCS, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -18942,7 +19948,7 @@
   ],
   "status": "active",
   "one_liner": "Digital marketing: SEO, ads, social media and websites.",
-  "website": null,
+  "website": "https://marfleads.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18963,6 +19969,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/marfleads-media",
+    "note": "eChai Startup Grid profile for Marfleads Media, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -18976,7 +19990,7 @@
   ],
   "status": "active",
   "one_liner": "eLearning apps for educators.",
-  "website": null,
+  "website": "https://educrypt.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -18995,6 +20009,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/educrypt-software-pvt-ltd",
+    "note": "eChai Startup Grid profile for EduCrypt Software, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19010,7 +20032,7 @@
   ],
   "status": "active",
   "one_liner": "Marketplace for tiffin services, caterers and home chefs.",
-  "website": null,
+  "website": "https://www.homefoodi.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19029,6 +20051,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/homefoodi-home-food-delivery",
+    "note": "eChai Startup Grid profile for Homefoodi, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19044,7 +20074,7 @@
   ],
   "status": "active",
   "one_liner": "Media and creator studio.",
-  "website": null,
+  "website": "https://observenow.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19063,6 +20093,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/observenow-media",
+    "note": "eChai Startup Grid profile for ObserveNow Media, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19078,7 +20116,7 @@
   ],
   "status": "active",
   "one_liner": "Autonomous delivery robots.",
-  "website": null,
+  "website": "https://ottonomy.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19097,6 +20135,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ottonomy",
+    "note": "eChai Startup Grid profile for Ottonomy.IO, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19112,7 +20158,7 @@
   ],
   "status": "active",
   "one_liner": "AI tools for lesson planning and quizzes.",
-  "website": null,
+  "website": "https://www.smartschoolonline.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19131,6 +20177,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/smartschool-education-limited",
+    "note": "eChai Startup Grid profile for SmartSchool Education, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19146,7 +20200,7 @@
   ],
   "status": "active",
   "one_liner": "Sports nutrition products.",
-  "website": null,
+  "website": "https://www.steadfastnutrition.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19167,6 +20221,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/steadfast-nutrition",
+    "note": "eChai Startup Grid profile for Steadfast Nutrition, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19180,7 +20242,7 @@
   ],
   "status": "active",
   "one_liner": "Connects farmers to suppliers and buyers.",
-  "website": null,
+  "website": "https://agrevolution.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19200,6 +20262,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/dehaat",
+    "note": "eChai Startup Grid profile for DeHaat, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19215,7 +20285,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.hindidesignstudios.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19235,6 +20305,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/hindi-design-studio",
+    "note": "eChai Startup Grid profile for Hindi Design Studio, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19250,7 +20328,7 @@
   ],
   "status": "active",
   "one_liner": "Cloud security and data services.",
-  "website": null,
+  "website": "https://www.seesec.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19272,6 +20350,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/seesec-infotech-private-limited",
+    "note": "eChai Startup Grid profile for Seesec Infotech, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19285,7 +20371,7 @@
   ],
   "status": "active",
   "one_liner": "Gaming platforms for lottery and casino operators.",
-  "website": null,
+  "website": "https://www.ingenuitygaming.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19304,6 +20390,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ingenuity-gaming-pvt-ltd",
+    "note": "eChai Startup Grid profile for Ingenuity Gaming, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19319,7 +20413,7 @@
   ],
   "status": "active",
   "one_liner": "Electronics and software for electric vehicles and energy storage.",
-  "website": null,
+  "website": "https://www.vecmocon.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19340,6 +20434,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vecmocon-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for Vecmocon Technologies, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19353,7 +20455,7 @@
   ],
   "status": "active",
   "one_liner": "AI and machine learning for industry.",
-  "website": null,
+  "website": "https://algo8.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19373,6 +20475,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/algo8-ai",
+    "note": "eChai Startup Grid profile for Algo8 AI, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19388,7 +20498,7 @@
   ],
   "status": "active",
   "one_liner": "Food and beverage.",
-  "website": null,
+  "website": "https://hvragrofoods.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19408,6 +20518,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/hvr-foods",
+    "note": "eChai Startup Grid profile for HVR Foods, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19423,7 +20541,7 @@
   ],
   "status": "active",
   "one_liner": "Generative AI and BI dashboards.",
-  "website": null,
+  "website": "https://lets-viz.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19443,6 +20561,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/lets-viz-technologies",
+    "note": "eChai Startup Grid profile for Lets Viz Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19458,7 +20584,7 @@
   ],
   "status": "active",
   "one_liner": "Accounting and inventory software for businesses.",
-  "website": null,
+  "website": "https://margcompusoft.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19478,6 +20604,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/marg-erp-limited",
+    "note": "eChai Startup Grid profile for Marg ERP, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19493,7 +20627,7 @@
   ],
   "status": "active",
   "one_liner": "Brand and product studio.",
-  "website": null,
+  "website": "https://methodborne.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19513,6 +20647,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/methodborne-digital-pvt-ltd",
+    "note": "eChai Startup Grid profile for Methodborne, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19528,7 +20670,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.octro.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19548,6 +20690,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/octro-inc-2nd-building",
+    "note": "eChai Startup Grid profile for Octro, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19563,7 +20713,7 @@
   ],
   "status": "active",
   "one_liner": "Menu optimisation for food delivery apps.",
-  "website": null,
+  "website": "https://shadoweats.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19583,6 +20733,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/shadow-eats",
+    "note": "eChai Startup Grid profile for Shadow Eats, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19598,7 +20756,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://techwarezen.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19620,6 +20778,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/techwarezen-pvt-ltd",
+    "note": "eChai Startup Grid profile for Techwarezen, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19633,7 +20799,7 @@
   ],
   "status": "active",
   "one_liner": "Platform for buying and selling unlisted and pre-IPO shares.",
-  "website": null,
+  "website": "https://www.planify.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19654,6 +20820,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/planify-capital-limited",
+    "note": "eChai Startup Grid profile for Planify Capital, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19667,7 +20841,7 @@
   ],
   "status": "active",
   "one_liner": "Mobile apps and websites.",
-  "website": null,
+  "website": "https://www.zealthhealthtech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19689,6 +20863,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zealth-healthtech-mobile-app-website-development-company-in-noida",
+    "note": "eChai Startup Grid profile for Zealth Healthtech, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19702,7 +20884,7 @@
   ],
   "status": "active",
   "one_liner": "Drones for LiDAR surveying and aerial mapping.",
-  "website": null,
+  "website": "https://aerosysaviation.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19721,6 +20903,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/aerosys-aviation-india-private-limited",
+    "note": "eChai Startup Grid profile for Aerosys Aviation India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19736,7 +20926,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://agrotechindia.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19755,6 +20945,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/agrotech-risk-private-limited",
+    "note": "eChai Startup Grid profile for Agrotech Risk, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19770,7 +20968,7 @@
   ],
   "status": "active",
   "one_liner": "Low-code OTT streaming platform.",
-  "website": null,
+  "website": "https://www.enveu.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19789,6 +20987,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/enveu",
+    "note": "eChai Startup Grid profile for Enveu, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19804,7 +21010,7 @@
   ],
   "status": "active",
   "one_liner": "Custom software and app development.",
-  "website": null,
+  "website": "https://turtltech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19825,6 +21031,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/turtltech",
+    "note": "eChai Startup Grid profile for TURTLTECH, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19838,7 +21052,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.daffodilsw.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19858,6 +21072,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/daffodil-software",
+    "note": "eChai Startup Grid profile for Daffodil Software, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19873,7 +21095,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://metvy.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19895,6 +21117,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/metvy",
+    "note": "eChai Startup Grid profile for Metvy, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -19908,7 +21138,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://amazeecommerce.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19927,6 +21157,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/amaze-e-commerce",
+    "note": "eChai Startup Grid profile for Amaze E Commerce, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19942,7 +21180,7 @@
   ],
   "status": "active",
   "one_liner": "Cybercrime helpline and security experts.",
-  "website": null,
+  "website": "https://antihak.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19961,6 +21199,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/antihak-ai-cybersecurity-private-limited",
+    "note": "eChai Startup Grid profile for Antihak Ai Cybersecurity, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -19976,7 +21222,7 @@
   ],
   "status": "active",
   "one_liner": "Refurbished laptops and computers.",
-  "website": null,
+  "website": "https://eazypc.in/product/hp-elitebook-840-g5-intel-core-i5-8th-gen-refurbished-laptop/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -19995,6 +21241,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/eazypc-second-hand-refurbished-computers-and-laptops",
+    "note": "eChai Startup Grid profile for Eazypc, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20010,7 +21264,7 @@
   ],
   "status": "active",
   "one_liner": "Marketplace growth services for sellers.",
-  "website": null,
+  "website": "https://www.ecomadvisors.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20029,6 +21283,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ecom-advisors-india",
+    "note": "eChai Startup Grid profile for Ecom Advisors India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20044,7 +21306,7 @@
   ],
   "status": "active",
   "one_liner": "Drones and aerial surveys.",
-  "website": null,
+  "website": "https://falcorobotics.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20063,6 +21325,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/falco-robotics-private-limited",
+    "note": "eChai Startup Grid profile for Falco Robotics, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20078,7 +21348,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.fruitfal.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20099,6 +21369,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fruitfal-technologies-india-pvt-ltd",
+    "note": "eChai Startup Grid profile for Fruitfal Technologies India, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -20112,7 +21390,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.aitouch.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20132,6 +21410,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ai-touch",
+    "note": "eChai Startup Grid profile for AI Touch, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20147,7 +21433,7 @@
   ],
   "status": "active",
   "one_liner": "Data platforms, generative AI and analytics services.",
-  "website": null,
+  "website": "https://daaslabs.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20167,6 +21453,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/daaslabs",
+    "note": "eChai Startup Grid profile for Daaslabs, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20182,7 +21476,7 @@
   ],
   "status": "active",
   "one_liner": "Electronic waste recycling.",
-  "website": null,
+  "website": "https://ecoverva.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20204,6 +21498,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ecoverva",
+    "note": "eChai Startup Grid profile for Ecoverva, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -20217,7 +21519,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.gleebiotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20237,6 +21539,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/glee-biotech-ltd",
+    "note": "eChai Startup Grid profile for Glee Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20287,7 +21597,7 @@
   ],
   "status": "active",
   "one_liner": "SIEM platform and security services.",
-  "website": null,
+  "website": "https://www.invield.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20307,6 +21617,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/invield-the-invulnerable-shield",
+    "note": "eChai Startup Grid profile for Invield, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20322,7 +21640,7 @@
   ],
   "status": "active",
   "one_liner": "Agritech community app for farmers.",
-  "website": null,
+  "website": "https://krishify.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20342,6 +21660,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/krishify",
+    "note": "eChai Startup Grid profile for Krishify, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20357,7 +21683,7 @@
   ],
   "status": "active",
   "one_liner": "Unified inbox for WhatsApp, Instagram, email, SMS and voice.",
-  "website": null,
+  "website": "https://lodgestory.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20377,6 +21703,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/lodgestory",
+    "note": "eChai Startup Grid profile for Lodgestory, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20392,7 +21726,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.nanotech-softapp.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20412,6 +21746,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/nanotech-soft-app-it-solution",
+    "note": "eChai Startup Grid profile for Nanotech Soft-App IT Solution, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20427,7 +21769,7 @@
   ],
   "status": "active",
   "one_liner": "IT and AI services.",
-  "website": null,
+  "website": "https://progmattic.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20447,6 +21789,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/progmattic-ai-pvt-ltd",
+    "note": "eChai Startup Grid profile for Progmattic AI, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20462,7 +21812,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://sanimationstudios.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20482,6 +21832,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sanimation-studios",
+    "note": "eChai Startup Grid profile for Sanimation Studios, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20497,7 +21855,7 @@
   ],
   "status": "active",
   "one_liner": "Rooftop solar for homes.",
-  "website": null,
+  "website": "https://www.solarsquare.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20517,6 +21875,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/solarsquare-solar-panel-installation-for-home-gurugram",
+    "note": "eChai Startup Grid profile for SolarSquare, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20532,7 +21898,7 @@
   ],
   "status": "active",
   "one_liner": "Media and creator studio.",
-  "website": null,
+  "website": "https://www.studioimageworks.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20552,6 +21918,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/studio-image-works",
+    "note": "eChai Startup Grid profile for Studio Image Works, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20567,7 +21941,7 @@
   ],
   "status": "active",
   "one_liner": "Renewable energy for businesses.",
-  "website": null,
+  "website": "https://www.sunsure-energy.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20587,6 +21961,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sunsure-energy-pvt-ltd",
+    "note": "eChai Startup Grid profile for Sunsure Energy, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20602,7 +21984,7 @@
   ],
   "status": "active",
   "one_liner": "AI solutions and product engineering.",
-  "website": null,
+  "website": "https://www.yugasa.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20624,6 +22006,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/yugasa-software-labs",
+    "note": "eChai Startup Grid profile for Yugasa Software Labs, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -20637,7 +22027,7 @@
   ],
   "status": "active",
   "one_liner": "Design, illustration and animation.",
-  "website": null,
+  "website": "https://www.gillu.studio/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20657,6 +22047,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gillu-studio",
+    "note": "eChai Startup Grid profile for Gillu Studio, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20672,7 +22070,7 @@
   ],
   "status": "active",
   "one_liner": "Biotech for crops.",
-  "website": null,
+  "website": "https://www.inera.ag/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20692,6 +22090,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/inera-cropscience",
+    "note": "eChai Startup Grid profile for Inera CropScience, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20707,7 +22113,7 @@
   ],
   "status": "active",
   "one_liner": "Procurement platform for the metal industry.",
-  "website": null,
+  "website": "https://metalbook.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20727,6 +22133,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/metalbook",
+    "note": "eChai Startup Grid profile for Metalbook, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20742,7 +22156,7 @@
   ],
   "status": "active",
   "one_liner": "Medical travel: accredited hospitals, opinions and teleconsultation.",
-  "website": null,
+  "website": "https://www.vaidam.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20762,6 +22176,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vaidam-health-private-limited-best-medical-tourism-company-in-india",
+    "note": "eChai Startup Grid profile for Vaidam Health, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20777,7 +22199,7 @@
   ],
   "status": "active",
   "one_liner": "Unified network security platform.",
-  "website": null,
+  "website": "https://www.wijungle.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20797,6 +22219,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/wijungle",
+    "note": "eChai Startup Grid profile for WiJungle, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20812,7 +22242,7 @@
   ],
   "status": "active",
   "one_liner": "Ecommerce and retail.",
-  "website": null,
+  "website": "https://www.yocreativ.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20834,6 +22264,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/yocreativ",
+    "note": "eChai Startup Grid profile for YoCreativ, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -20847,7 +22285,7 @@
   ],
   "status": "active",
   "one_liner": "Clean beauty products.",
-  "website": null,
+  "website": "https://www.coalcleanbeauty.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20866,6 +22304,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/coal-clean-beauty",
+    "note": "eChai Startup Grid profile for COAL Clean Beauty, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20915,7 +22361,7 @@
   ],
   "status": "active",
   "one_liner": "Bonds and fixed-income investing.",
-  "website": null,
+  "website": "https://www.gripinvest.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20934,6 +22380,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/grip-invest-technologies-private-limited",
+    "note": "eChai Startup Grid profile for Grip Invest, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20949,7 +22403,7 @@
   ],
   "status": "active",
   "one_liner": "Electronic waste collection and recycling.",
-  "website": null,
+  "website": "https://www.karosambhav.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -20968,6 +22422,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/karo-sambhav-private-limited",
+    "note": "eChai Startup Grid profile for Karo Sambhav, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -20983,7 +22445,7 @@
   ],
   "status": "active",
   "one_liner": "Personal hygiene products.",
-  "website": null,
+  "website": "https://skinelements.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21002,6 +22464,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/skin-elements",
+    "note": "eChai Startup Grid profile for Skin Elements, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21017,7 +22487,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.tavrohi.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21036,6 +22506,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/tavrohi-animation-pvt-ltd",
+    "note": "eChai Startup Grid profile for Tavrohi Animation, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21051,7 +22529,7 @@
   ],
   "status": "active",
   "one_liner": "AI enterprise automation platform.",
-  "website": null,
+  "website": "https://www.unifyapps.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21070,6 +22548,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/unifyapps",
+    "note": "eChai Startup Grid profile for UnifyApps, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21085,7 +22571,7 @@
   ],
   "status": "active",
   "one_liner": "Hospitality CRM software.",
-  "website": null,
+  "website": "https://repup.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21106,6 +22592,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/xperium",
+    "note": "eChai Startup Grid profile for Xperium, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -21119,7 +22613,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.aenyvish.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21139,6 +22633,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/aenyvish-edtech-pvt-ltd-a2-learning",
+    "note": "eChai Startup Grid profile for Aenyvish Edtech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21154,7 +22656,7 @@
   ],
   "status": "active",
   "one_liner": "Electric scooters and e-rickshaws.",
-  "website": null,
+  "website": "https://ceeonindia.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21174,6 +22676,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ceeon-india-e-rickshaw-manufacturer",
+    "note": "eChai Startup Grid profile for Ceeon India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21189,7 +22699,7 @@
   ],
   "status": "active",
   "one_liner": "Biotechnology research support.",
-  "website": null,
+  "website": "https://codonbiotech.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21209,6 +22719,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/codon-biotech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Codon Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21224,7 +22742,7 @@
   ],
   "status": "active",
   "one_liner": "Consent management for data-protection compliance.",
-  "website": null,
+  "website": "https://digitalanumati.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21244,6 +22762,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/digital-anumati",
+    "note": "eChai Startup Grid profile for Digital Anumati, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21259,7 +22785,7 @@
   ],
   "status": "active",
   "one_liner": "Mobile, web and cloud development.",
-  "website": null,
+  "website": "https://e2logy.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21279,6 +22805,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/e2logy-2",
+    "note": "eChai Startup Grid profile for E2logy, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21294,7 +22828,7 @@
   ],
   "status": "active",
   "one_liner": "School administration, CRM and learning software.",
-  "website": null,
+  "website": "https://www.edtechinnovate.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21314,6 +22848,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/edtech-innovate",
+    "note": "eChai Startup Grid profile for EdTech Innovate, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21329,7 +22871,7 @@
   ],
   "status": "active",
   "one_liner": "Food processing machines.",
-  "website": null,
+  "website": "https://foodsuremachines.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21349,6 +22891,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/foodsure-machines",
+    "note": "eChai Startup Grid profile for Foodsure Machines, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21364,7 +22914,7 @@
   ],
   "status": "active",
   "one_liner": "Cybersecurity for production systems.",
-  "website": null,
+  "website": "https://www.haltdos.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21384,6 +22934,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/haltdos",
+    "note": "eChai Startup Grid profile for Haltdos, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21399,7 +22957,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://hexaviewtech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21419,6 +22977,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/hexaview-technologies-private-limited",
+    "note": "eChai Startup Grid profile for Hexaview Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21434,7 +23000,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://merkurgamingindia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21454,6 +23020,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/merkur-gaming-india",
+    "note": "eChai Startup Grid profile for Merkur Gaming India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21469,7 +23043,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://nandiniskincare.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21489,6 +23063,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/nandini-skincare-private-limited",
+    "note": "eChai Startup Grid profile for Nandini Skincare, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21504,7 +23086,7 @@
   ],
   "status": "active",
   "one_liner": "AI strategy and business automation.",
-  "website": null,
+  "website": "https://octodosolutions.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21524,6 +23106,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/octodo-sol-pvt-ltd",
+    "note": "eChai Startup Grid profile for OctoDo Sol, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21539,7 +23129,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://corp.phando.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21559,6 +23149,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/phando",
+    "note": "eChai Startup Grid profile for Phando OTT solutions, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21574,7 +23172,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://rcgdigitalsystems.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21594,6 +23192,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/rcg-digital-health-e-systems",
+    "note": "eChai Startup Grid profile for RCG Digital Health E Systems, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21609,7 +23215,7 @@
   ],
   "status": "active",
   "one_liner": "Core banking and insurance platforms.",
-  "website": null,
+  "website": "https://www.rediansoftware.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21629,6 +23235,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/redian-software",
+    "note": "eChai Startup Grid profile for Redian Software Global, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21644,7 +23258,7 @@
   ],
   "status": "active",
   "one_liner": "Game development and publishing.",
-  "website": null,
+  "website": "https://www.reingames.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21664,6 +23278,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/rein-games-private-limited",
+    "note": "eChai Startup Grid profile for Rein Games, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21679,7 +23301,7 @@
   ],
   "status": "active",
   "one_liner": "School ERP and mobile app.",
-  "website": null,
+  "website": "https://www.edunexttechnologies.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21699,6 +23321,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://www.wikidata.org/wiki/Q47461177",
+    "note": "Wikidata: official website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21714,7 +23344,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://six5six.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21734,6 +23364,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/six5six-headquarters",
+    "note": "eChai Startup Grid profile for Six5Six, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21749,7 +23387,7 @@
   ],
   "status": "active",
   "one_liner": "Talent conversation analysis.",
-  "website": null,
+  "website": "https://zeko.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21771,6 +23409,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zeko-ai",
+    "note": "eChai Startup Grid profile for Zeko AI, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -21784,7 +23430,7 @@
   ],
   "status": "active",
   "one_liner": "Web and mobile app development.",
-  "website": null,
+  "website": "https://www.akswebsoft.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21804,6 +23450,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/aks-websoft",
+    "note": "eChai Startup Grid profile for AKS WebSoft, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21819,7 +23473,7 @@
   ],
   "status": "active",
   "one_liner": "AI growth tools for brands.",
-  "website": null,
+  "website": "https://www.thedigitaltriangle.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21839,6 +23493,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/digital-triangle",
+    "note": "eChai Startup Grid profile for Digital Triangle, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21854,7 +23516,7 @@
   ],
   "status": "active",
   "one_liner": "School management system and learning platform.",
-  "website": null,
+  "website": "https://edneed.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21874,6 +23536,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/edneed-technology-pvt-ltd",
+    "note": "eChai Startup Grid profile for Edneed Technology, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21889,7 +23559,7 @@
   ],
   "status": "active",
   "one_liner": "Financial statement analysis software.",
-  "website": null,
+  "website": "https://www.fintechlabs.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21909,6 +23579,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fintechlabs",
+    "note": "eChai Startup Grid profile for FinTechLabs, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21924,7 +23602,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://gamemano.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21944,6 +23622,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gamemano-private-limited",
+    "note": "eChai Startup Grid profile for Gamemano, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -21959,7 +23645,7 @@
   ],
   "status": "active",
   "one_liner": "Lending and banking software.",
-  "website": null,
+  "website": "https://www.nucleussoftware.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -21981,6 +23667,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/nucleus-software-exports-ltd",
+    "note": "eChai Startup Grid profile for Nucleus Software Exports, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -21994,7 +23688,7 @@
   ],
   "status": "active",
   "one_liner": "Solar plant efficiency.",
-  "website": null,
+  "website": "https://www.skilancersolar.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22014,6 +23708,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/skilancer-solar-private-limited",
+    "note": "eChai Startup Grid profile for Skilancer Solar, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22064,7 +23766,7 @@
   ],
   "status": "active",
   "one_liner": "Loyalty platform for dealer and retailer networks.",
-  "website": null,
+  "website": "https://zeapl.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22086,6 +23788,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/zeapl-ai",
+    "note": "eChai Startup Grid profile for Zeapl.ai, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -22099,7 +23809,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.alicebiotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22118,6 +23828,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/alice-biotech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Alice Biotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22133,7 +23851,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://cloudgyataedtech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22152,6 +23870,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/cloudgyata-edtech-private-limited",
+    "note": "eChai Startup Grid profile for Cloudgyata Edtech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22167,7 +23893,7 @@
   ],
   "status": "active",
   "one_liner": "Ecommerce store development.",
-  "website": null,
+  "website": "https://ecarter.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22186,6 +23912,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ecarter-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for Ecarter Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22201,7 +23935,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.emediateq.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22220,6 +23954,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/emediateq-ecommerce-marketing-agency-in-noida",
+    "note": "eChai Startup Grid profile for eMediaTeq, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22235,7 +23977,7 @@
   ],
   "status": "active",
   "one_liner": "Slot game development.",
-  "website": null,
+  "website": "https://www.gamixlabs.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22254,6 +23996,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gamix-labs",
+    "note": "eChai Startup Grid profile for Gamix Labs, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22269,7 +24019,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://igdefence.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22288,6 +24038,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ig-drones",
+    "note": "eChai Startup Grid profile for IG Drones, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22303,7 +24061,7 @@
   ],
   "status": "active",
   "one_liner": "Batteries for mobility and energy storage.",
-  "website": null,
+  "website": "https://inverted.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22322,6 +24080,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/inverted-energy-pvt-ltd",
+    "note": "eChai Startup Grid profile for Inverted Energy, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22337,7 +24103,7 @@
   ],
   "status": "active",
   "one_liner": "Learning management software.",
-  "website": null,
+  "website": "https://www.melimu.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22356,6 +24122,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/melimu-edutech-pvt-ltd",
+    "note": "eChai Startup Grid profile for mElimu Edutech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22371,7 +24145,7 @@
   ],
   "status": "active",
   "one_liner": "Digital marketing and advertising.",
-  "website": null,
+  "website": "https://www.magnondesignory.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22392,6 +24166,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/magnon-designory",
+    "note": "eChai Startup Grid profile for Magnon Solutions, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -22405,7 +24187,7 @@
   ],
   "status": "active",
   "one_liner": "3D game art studio.",
-  "website": null,
+  "website": "https://www.exigent3d.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22424,6 +24206,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/exigent-game-art-pvt-ltd",
+    "note": "eChai Startup Grid profile for Exigent Game Art, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22507,7 +24297,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.sstechnoloopindia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22526,6 +24316,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/s-s-technoloop-india",
+    "note": "eChai Startup Grid profile for S.S. Technoloop India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22541,7 +24339,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://therewiredthought.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22562,6 +24360,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/the-rewired-thought",
+    "note": "eChai Startup Grid profile for The Rewired Thought, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -22575,7 +24381,7 @@
   ],
   "status": "active",
   "one_liner": "Wellness and sports events.",
-  "website": null,
+  "website": "https://findyourfit.club/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22595,6 +24401,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/findyourfit",
+    "note": "eChai Startup Grid profile for FindYourFit, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22610,7 +24424,7 @@
   ],
   "status": "active",
   "one_liner": "Online retailer of luxury skin and hair care.",
-  "website": null,
+  "website": "https://iberiaskinbrands.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22630,6 +24444,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/iberia-skinbrands-india-pvt-ltd",
+    "note": "eChai Startup Grid profile for Iberia Skinbrands India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22645,7 +24467,7 @@
   ],
   "status": "active",
   "one_liner": "AI video analytics software.",
-  "website": null,
+  "website": "https://www.staqu.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22667,6 +24489,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/staqu-technologies",
+    "note": "eChai Startup Grid profile for Staqu Technologies, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -22680,7 +24510,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://abhayhealth.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22700,6 +24530,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/abhay-healthtech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Abhay HealthTech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22715,7 +24553,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.advantaltechnologies.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22735,6 +24573,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/advantal-technologies-ltd",
+    "note": "eChai Startup Grid profile for Advantal Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22750,7 +24596,7 @@
   ],
   "status": "active",
   "one_liner": "Agentic AI development for autonomous services.",
-  "website": null,
+  "website": "https://agenticindia.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22770,6 +24616,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/agentic-india-ai-development-company",
+    "note": "eChai Startup Grid profile for Agentic India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22785,7 +24639,7 @@
   ],
   "status": "active",
   "one_liner": "AI integration services for businesses.",
-  "website": null,
+  "website": "https://aiintegrator.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22805,6 +24659,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ai-integrator-ai-integration-company",
+    "note": "eChai Startup Grid profile for AI Integrator, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22820,7 +24682,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://anzocontrols.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22840,6 +24702,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/anzo-controls-pvt-ltd",
+    "note": "eChai Startup Grid profile for Anzo Controls, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22855,7 +24725,7 @@
   ],
   "status": "active",
   "one_liner": "Cloud-native custom software development.",
-  "website": null,
+  "website": "https://www.bigsteptech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22875,6 +24745,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/bigstep-technologies",
+    "note": "eChai Startup Grid profile for BigStep Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22890,7 +24768,7 @@
   ],
   "status": "active",
   "one_liner": "Food and beverage.",
-  "website": null,
+  "website": "https://www.eatnfitfoods.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22910,6 +24788,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/eat-n-fit-agro-foods-pvt-ltd",
+    "note": "eChai Startup Grid profile for EAT N FIT Agro Foods, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22925,7 +24811,7 @@
   ],
   "status": "active",
   "one_liner": "Ecommerce design and development.",
-  "website": null,
+  "website": "https://www.ecommercedesign.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22945,6 +24831,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ecommerce-design-ecommerce-design-and-development-company-india",
+    "note": "eChai Startup Grid profile for eCommerce Design, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22960,7 +24854,7 @@
   ],
   "status": "active",
   "one_liner": "Instant credit for kirana and retail stores.",
-  "website": null,
+  "website": "https://epaylater.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -22980,6 +24874,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/epaylater",
+    "note": "eChai Startup Grid profile for ePayLater, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -22995,7 +24897,7 @@
   ],
   "status": "active",
   "one_liner": "Animated explainer videos.",
-  "website": null,
+  "website": "https://www.essencestudios.net/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23015,6 +24917,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/essence-studios",
+    "note": "eChai Startup Grid profile for Essence Studios, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23030,7 +24940,7 @@
   ],
   "status": "active",
   "one_liner": "Electric vehicles and mobility.",
-  "website": null,
+  "website": "https://evcartindia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23050,6 +24960,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/ev-cart-india",
+    "note": "eChai Startup Grid profile for EV Cart India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23065,7 +24983,7 @@
   ],
   "status": "active",
   "one_liner": "Go-to-market strategy and operations for software companies.",
-  "website": null,
+  "website": "https://www.thefliphq.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23085,6 +25003,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/fliphq",
+    "note": "eChai Startup Grid profile for FlipHQ, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23100,7 +25026,7 @@
   ],
   "status": "active",
   "one_liner": "Food and beverage.",
-  "website": null,
+  "website": "https://foodplanetonline.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23120,6 +25046,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/food-planet",
+    "note": "eChai Startup Grid profile for Food Planet, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23135,7 +25069,7 @@
   ],
   "status": "active",
   "one_liner": "Artificial intelligence services.",
-  "website": null,
+  "website": "https://futureaitechnology.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23157,6 +25091,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/futureai-tech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Futureai Tech, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -23170,7 +25112,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.gonukkad.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23190,6 +25132,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/gonukkad-com",
+    "note": "eChai Startup Grid profile for Gonukkad.com, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23240,7 +25190,7 @@
   ],
   "status": "active",
   "one_liner": "Automation, IoT and AI for uptime and safety.",
-  "website": null,
+  "website": "https://iiiot-infotech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23260,6 +25210,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/iiiot-infotech",
+    "note": "eChai Startup Grid profile for IIIOT Infotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23275,7 +25233,7 @@
   ],
   "status": "active",
   "one_liner": "Software and web development.",
-  "website": null,
+  "website": "https://www.imensosoftware.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23295,6 +25253,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/imenso-software",
+    "note": "eChai Startup Grid profile for Imenso Software, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23310,7 +25276,7 @@
   ],
   "status": "active",
   "one_liner": "Computer-vision video analytics for security.",
-  "website": null,
+  "website": "https://www.intozi.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23330,6 +25296,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/intozi-tech-pvt-ltd",
+    "note": "eChai Startup Grid profile for Intozi Tech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23345,7 +25319,7 @@
   ],
   "status": "active",
   "one_liner": "Clinician-supervised Ayurvedic programmes delivered on WhatsApp.",
-  "website": null,
+  "website": "https://laiqa.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23365,6 +25339,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/laiqa",
+    "note": "eChai Startup Grid profile for Laiqa Wellness, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23380,7 +25362,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://lifecareinnovations.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23400,6 +25382,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/lifecare-innovations-pvt-ltd",
+    "note": "eChai Startup Grid profile for Lifecare Innovations, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23415,7 +25405,7 @@
   ],
   "status": "active",
   "one_liner": "Supply chain and logistics automation.",
-  "website": null,
+  "website": "https://logixgrid.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23435,6 +25425,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/logixgrid-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for LogixGRID Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23450,7 +25448,7 @@
   ],
   "status": "active",
   "one_liner": "Electric scooter manufacturer.",
-  "website": null,
+  "website": "https://okinawascooters.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23470,6 +25468,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/okinawa-autotech-private-limited",
+    "note": "eChai Startup Grid profile for Okinawa Autotech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23485,7 +25491,7 @@
   ],
   "status": "active",
   "one_liner": "Payroll banking and personal finance management.",
-  "website": null,
+  "website": "https://onebanc.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23505,6 +25511,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/onebanc-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for OneBanc Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23520,7 +25534,7 @@
   ],
   "status": "active",
   "one_liner": "3D, VR/AR and OTT platform development.",
-  "website": null,
+  "website": "https://img.oodles.io/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23540,6 +25554,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/oodles-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for Oodles Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23555,7 +25577,7 @@
   ],
   "status": "active",
   "one_liner": "Gurugram real estate.",
-  "website": null,
+  "website": "https://realbetter.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23575,6 +25597,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/realbetter",
+    "note": "eChai Startup Grid profile for RealBetter, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23590,7 +25620,7 @@
   ],
   "status": "active",
   "one_liner": "AI and machine learning.",
-  "website": null,
+  "website": "https://scryai.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23610,6 +25640,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/scry-ai",
+    "note": "eChai Startup Grid profile for Scry AI, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23625,7 +25663,7 @@
   ],
   "status": "active",
   "one_liner": "Cybersecurity and penetration testing.",
-  "website": null,
+  "website": "https://secureminds.pro/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23645,6 +25683,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/secure-minds",
+    "note": "eChai Startup Grid profile for Secure Minds, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23660,7 +25706,7 @@
   ],
   "status": "active",
   "one_liner": "Brand launch support for skincare.",
-  "website": null,
+  "website": "https://www.skinovationsciences.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23680,6 +25726,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/skinovation-sciences",
+    "note": "eChai Startup Grid profile for Skinovation Sciences, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23695,7 +25749,7 @@
   ],
   "status": "active",
   "one_liner": "Sports media and creator content.",
-  "website": null,
+  "website": "https://www.sportsdunia.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23715,6 +25769,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sportsdunia",
+    "note": "eChai Startup Grid profile for Sportsdunia, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23730,7 +25792,7 @@
   ],
   "status": "active",
   "one_liner": "IT software development.",
-  "website": null,
+  "website": "https://www.syansoft.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23750,6 +25812,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/syansoft-technologies",
+    "note": "eChai Startup Grid profile for SyanSoft Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23765,7 +25835,7 @@
   ],
   "status": "active",
   "one_liner": "Car research platform.",
-  "website": null,
+  "website": "https://www.v3cars.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23785,6 +25855,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/v3cars",
+    "note": "eChai Startup Grid profile for V3Cars, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23800,7 +25878,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.vmgpharmaceuticals.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23820,6 +25898,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/vmg-pharmaceuticals-pvt-ltd",
+    "note": "eChai Startup Grid profile for VMG Pharmaceuticals, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23835,7 +25921,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.d2csale.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23855,6 +25941,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/d2cecommerce-india-private-limited",
+    "note": "eChai Startup Grid profile for D2cecommerce India, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23870,7 +25964,7 @@
   ],
   "status": "active",
   "one_liner": "Custom AI agents and generative AI development.",
-  "website": null,
+  "website": "https://digitalissimple.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23892,6 +25986,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/digital-is-simple",
+    "note": "eChai Startup Grid profile for Digital is Simple, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -23905,7 +26007,7 @@
   ],
   "status": "active",
   "one_liner": "Microsoft data and AI consulting.",
-  "website": null,
+  "website": "https://digisurface.co/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23924,6 +26026,14 @@
      "listing",
      "sector",
      "description"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/digisurface-consulting-private-limited",
+    "note": "eChai Startup Grid profile for DigiSurface, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -23939,7 +26049,7 @@
   ],
   "status": "active",
   "one_liner": "Accounting and billing software.",
-  "website": null,
+  "website": "https://www.onestop.global/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23960,6 +26070,14 @@
      "description"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/onestop-best-erp-software-company",
+    "note": "eChai Startup Grid profile for Onestop, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -23973,7 +26091,7 @@
   ],
   "status": "active",
   "one_liner": "AI cybersecurity and digital identity protection.",
-  "website": null,
+  "website": "https://atheniantech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -23993,6 +26111,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/athenian-tech-private-limited",
+    "note": "eChai Startup Grid profile for Athenian Tech, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24008,7 +26134,7 @@
   ],
   "status": "active",
   "one_liner": "Insurance, credit and surety bonds for businesses.",
-  "website": null,
+  "website": "https://www.rakshati.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24028,6 +26154,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/rakshati-finserv",
+    "note": "eChai Startup Grid profile for Rakshati FinServ, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24043,7 +26177,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://smarden.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24063,6 +26197,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/smarden-home-automation-company-in-india",
+    "note": "eChai Startup Grid profile for SmarDen, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24078,7 +26220,7 @@
   ],
   "status": "active",
   "one_liner": "Energy platform for commercial and industrial businesses.",
-  "website": null,
+  "website": "https://sustainableoasis.green/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24098,6 +26240,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sustainable-oasis",
+    "note": "eChai Startup Grid profile for Sustainable Oasis, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24113,7 +26263,7 @@
   ],
   "status": "active",
   "one_liner": "Semiconductors and electronics.",
-  "website": null,
+  "website": "https://xelec.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24135,6 +26285,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/xelec",
+    "note": "eChai Startup Grid profile for Xelec, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -24148,7 +26306,7 @@
   ],
   "status": "active",
   "one_liner": "Natural skincare and haircare.",
-  "website": null,
+  "website": "https://7daysnatural.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24168,6 +26326,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/7daysnatural",
+    "note": "eChai Startup Grid profile for 7DaysNatural, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24183,7 +26349,7 @@
   ],
   "status": "active",
   "one_liner": "Stationary energy systems.",
-  "website": null,
+  "website": "https://www.appliedenergytechnologies.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24203,6 +26369,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/applied-energy-technologies-private-limited",
+    "note": "eChai Startup Grid profile for Applied Energy Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24218,7 +26392,7 @@
   ],
   "status": "active",
   "one_liner": "Cleantech for emissions control.",
-  "website": null,
+  "website": "https://www.chakr.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24238,6 +26412,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/chakr-innovation-pvt-ltd",
+    "note": "eChai Startup Grid profile for Chakr Innovation, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24253,7 +26435,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.earthrhythm.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24273,6 +26455,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/earth-rhythm",
+    "note": "eChai Startup Grid profile for Earth Rhythm, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24288,7 +26478,7 @@
   ],
   "status": "active",
   "one_liner": "AI, IoT and RF mesh lighting for cities.",
-  "website": null,
+  "website": "https://www.eigen.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24308,6 +26498,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/eigen-technologies-pvt-ltd-sensenuts",
+    "note": "eChai Startup Grid profile for EIGEN Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24323,7 +26521,7 @@
   ],
   "status": "active",
   "one_liner": "IT infrastructure security services.",
-  "website": null,
+  "website": "https://eonconnects.net/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24343,6 +26541,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/eon-networks-pvt-ltd",
+    "note": "eChai Startup Grid profile for Eon Networks, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24358,7 +26564,7 @@
   ],
   "status": "active",
   "one_liner": "Personal finance and investing app.",
-  "website": null,
+  "website": "https://www.etmoney.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24378,6 +26584,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/et-money",
+    "note": "eChai Startup Grid profile for ET Money, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24393,7 +26607,7 @@
   ],
   "status": "active",
   "one_liner": "Deployment-ready AI for institutional automation.",
-  "website": null,
+  "website": "https://www.factacy.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24413,6 +26627,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/factacy-ai",
+    "note": "eChai Startup Grid profile for Factacy.Ai, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24428,7 +26650,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://framengine.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24448,6 +26670,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/framengine-animation-studio",
+    "note": "eChai Startup Grid profile for Framengine Animation Studio, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24463,7 +26693,7 @@
   ],
   "status": "active",
   "one_liner": "Sourcing and supply chain for fashion brands.",
-  "website": null,
+  "website": "https://www.geniemode.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24483,6 +26713,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/geniemode",
+    "note": "eChai Startup Grid profile for Geniemode, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24498,7 +26736,7 @@
   ],
   "status": "active",
   "one_liner": "AI drug discovery and computational biology.",
-  "website": null,
+  "website": "https://www.growdeatech.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24518,6 +26756,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/growdea-technologies",
+    "note": "eChai Startup Grid profile for Growdea Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24533,7 +26779,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://infosecbrigade.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24553,6 +26799,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/infosec-brigade-private-limited",
+    "note": "eChai Startup Grid profile for Infosec Brigade, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24568,7 +26822,7 @@
   ],
   "status": "active",
   "one_liner": "Agrochemical products for crop health.",
-  "website": null,
+  "website": "https://maxxgro.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24588,6 +26842,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/maxxgro-agrology-limited",
+    "note": "eChai Startup Grid profile for MaxxGro Agrology, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24603,7 +26865,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.nebularc.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24623,6 +26885,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/nebularc-technologies-private-limited",
+    "note": "eChai Startup Grid profile for NebulARC Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24638,7 +26908,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.redesys.co.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24658,6 +26928,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/redesys-innovative-pvt-ltd",
+    "note": "eChai Startup Grid profile for Redesys Innovative, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24673,7 +26951,7 @@
   ],
   "status": "active",
   "one_liner": "Ecommerce shipping and operations platform.",
-  "website": null,
+  "website": "https://www.shiprocket.in/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24693,6 +26971,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/shiprocket",
+    "note": "eChai Startup Grid profile for Shiprocket, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24708,7 +26994,7 @@
   ],
   "status": "active",
   "one_liner": "Contract management software.",
-  "website": null,
+  "website": "https://www.sirion.ai/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24728,6 +27014,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/sirion",
+    "note": "eChai Startup Grid profile for Sirion, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
@@ -24743,7 +27037,7 @@
   ],
   "status": "active",
   "one_liner": "Power backup, lithium batteries and solar products.",
-  "website": null,
+  "website": "https://www.suvastika.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24765,6 +27059,14 @@
      "area"
     ],
     "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/su-vastika-systems-private-limited-office",
+    "note": "eChai Startup Grid profile for Su-vastika Systems, with its website",
+    "fields": [
+     "website"
+    ],
+    "retrieved": "2026-10-09"
    }
   ],
   "updated_at": "2026-10-09"
@@ -24778,7 +27080,7 @@
   ],
   "status": "active",
   "one_liner": null,
-  "website": null,
+  "website": "https://www.tftus.com/",
   "founded_year": null,
   "acquired_by": null,
   "funding_note": null,
@@ -24798,6 +27100,14 @@
      "sector",
      "description",
      "area"
+    ],
+    "retrieved": "2026-10-09"
+   },
+   {
+    "url": "https://echai.ventures/grid/delhi/think-future-technologies-pvt-ltd",
+    "note": "eChai Startup Grid profile for Think Future Technologies, with its website",
+    "fields": [
+     "website"
     ],
     "retrieved": "2026-10-09"
    }
