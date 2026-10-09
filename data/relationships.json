@@ -1,0 +1,26 @@
+[
+ {
+  "from": "eternal",
+  "to": "blinkit",
+  "relation": "parent_or_subsidiary",
+  "source_url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/"
+ },
+ {
+  "from": "blinkit",
+  "to": "eternal",
+  "relation": "parent_or_subsidiary",
+  "source_url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/"
+ },
+ {
+  "from": "ofbusiness",
+  "to": "oxyzo",
+  "relation": "parent_or_subsidiary",
+  "source_url": "https://inc42.com/lists/top-30-funded-startups-in-gurugram-2026/"
+ },
+ {
+  "from": "oxyzo",
+  "to": "ofbusiness",
+  "relation": "parent_or_subsidiary",
+  "source_url": "https://inc42.com/lists/top-30-funded-fintech-startups-in-gurugram-2026/"
+ }
+]
