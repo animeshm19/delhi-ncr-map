@@ -123,7 +123,7 @@ export async function fetchBoard(
 ): Promise<BoardJob[]> {
   const url = boardApiUrl(provider, handle, opts.testOrigin);
   const res = await (opts.fetchImpl ?? fetch)(url, {
-    headers: { accept: "application/json", "user-agent": "DelhiNCRMap/1.0 (+https://delhi-ncr-map.vercel.app/about)" },
+    headers: { accept: "application/json", "user-agent": "delhincr-map/1.0 (+https://delhincr-map.vercel.app/about)" },
     signal: AbortSignal.timeout(opts.timeoutMs ?? 10_000),
     redirect: "error",
     cache: "no-store",

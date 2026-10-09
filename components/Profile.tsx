@@ -59,8 +59,8 @@ export default async function Profile({ org }: { org: Org }) {
         <ShareCard
           query={`c=${org.slug}`}
           link={profilePath(org)}
-          caption={`${org.name} is on the Delhi NCR Map 📍 ${[area?.name, org.municipality].filter(Boolean).join(", ")}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
-          fileName={`delhi-ncr-map-${org.slug}`}
+          caption={`${org.name} is on delhincr-map 📍 ${[area?.name, org.municipality].filter(Boolean).join(", ")}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
+          fileName={`delhincr-map-${org.slug}`}
           label="Share as an image"
           className="btn ghost small"
         />

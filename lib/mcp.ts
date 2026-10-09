@@ -56,7 +56,7 @@ const TOOLS = [
     name: "search_organizations",
     title: "Search organisations",
     description:
-      "Search Delhi NCR startups, tech companies and support organisations (accelerators, investors, coworking, communities) on the Delhi NCR Map. Filter by text, sector, city, kind or hiring.",
+      "Search Delhi NCR startups, tech companies and support organisations (accelerators, investors, coworking, communities) on delhincr-map. Filter by text, sector, city, kind or hiring.",
     inputSchema: {
       type: "object",
       properties: {
@@ -252,9 +252,9 @@ export async function handleMcp(msg: unknown, d: McpData): Promise<JsonRpcRespon
         result: {
           protocolVersion: MCP_PROTOCOL_VERSIONS.includes(asked) ? asked : MCP_PROTOCOL_VERSIONS[0],
           capabilities: { tools: { listChanged: false } },
-          serverInfo: { name: "delhi-ncr-map", title: "Delhi NCR Map", version: "1.0.0" },
+          serverInfo: { name: "delhincr-map", title: "delhincr-map", version: "1.0.0" },
           instructions:
-            "Read-only access to the Delhi NCR Map: startups, support organisations, metro proximity, open roles and events. All data is public and sourced; cite profile URLs.",
+            "Read-only access to delhincr-map: startups, support organisations, metro proximity, open roles and events. All data is public and sourced; cite profile URLs.",
         },
       };
     }

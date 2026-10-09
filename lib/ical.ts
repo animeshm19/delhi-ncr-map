@@ -65,7 +65,7 @@ export function buildCalendar(name: string, events: CalEvent[], now = new Date()
   const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Delhi NCR Map//Events//EN",
+    "PRODID:-//delhincr-map//Events//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     `X-WR-CALNAME:${escapeText(name)}`,

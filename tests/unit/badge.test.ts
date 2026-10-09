@@ -3,14 +3,14 @@ import { badgeSvg, textWidth } from "@/lib/badge";
 
 describe("badgeSvg", () => {
   it("escapes the name so it can't add markup", () => {
-    const svg = badgeSvg({ label: "Delhi NCR Map", value: `</text><script>alert(1)</script><text>"&'` });
+    const svg = badgeSvg({ label: "delhincr-map", value: `</text><script>alert(1)</script><text>"&'` });
     expect(svg).not.toContain("<script");
     expect(svg).toContain("&lt;/text&gt;&lt;script&gt;alert(1)&lt;/script&gt;");
     expect(svg).toContain("&quot;&amp;&apos;");
   });
 
   it("contains no scripts, links, handlers or external references", () => {
-    const svg = badgeSvg({ label: "Delhi NCR Map", value: "Spinny" });
+    const svg = badgeSvg({ label: "delhincr-map", value: "Spinny" });
     expect(svg).not.toMatch(/<script|<a\b|href=|on\w+=|<foreignObject|<image|url\(/i);
     expect(svg.startsWith("<svg ")).toBe(true);
   });
@@ -21,8 +21,8 @@ describe("badgeSvg", () => {
   });
 
   it("sizes to the text and caps long names", () => {
-    const short = badgeSvg({ label: "Delhi NCR Map", value: "OYO" });
-    const long = badgeSvg({ label: "Delhi NCR Map", value: "x".repeat(500) });
+    const short = badgeSvg({ label: "delhincr-map", value: "OYO" });
+    const long = badgeSvg({ label: "delhincr-map", value: "x".repeat(500) });
     const width = (s: string) => Number(/width="(\d+)"/.exec(s)![1]);
     expect(width(long)).toBeGreaterThan(width(short));
     expect(width(long)).toBeLessThan(500);

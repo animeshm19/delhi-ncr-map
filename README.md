@@ -1,10 +1,10 @@
-# Delhi NCR Map
+# delhincr-map
 
 A public, community-owned map and directory of Delhi NCR's startups and tech companies, and the
 organisations that support them. Every fact links to a public source. Modelled on the
 [Edmonton Startup Map](https://map.techwednesdays.ca) (Edmonton Tech Wednesdays; code MIT, data CC BY 4.0).
 
-**Live:** https://delhi-ncr-map-pink.vercel.app
+**Live:** https://delhincr-map.vercel.app
 
 | | Today |
 |---|---|

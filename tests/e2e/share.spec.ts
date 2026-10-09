@@ -60,7 +60,7 @@ test.describe("stats, sharing and reuse", () => {
     expect(res.headers()["content-security-policy"]).toContain("sandbox");
     expect(res.headers()["x-content-type-options"]).toBe("nosniff");
     const svg = await res.text();
-    expect(svg).toContain("Delhi NCR Map");
+    expect(svg).toContain("delhincr-map");
     expect(svg).not.toMatch(/<script|href=/i);
     expect((await request.get("/badge/spinny?theme=light")).status()).toBe(200);
     for (const bad of ["/badge/no-such-company", "/badge/%3Cscript%3E", "/badge/..%2F..%2Fetc"]) {
@@ -75,7 +75,7 @@ test.describe("stats, sharing and reuse", () => {
     const init = await rpc({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "e2e", version: "1" } } });
     expect(init.status()).toBe(200);
     expect(init.headers()["access-control-allow-origin"]).toBe("*");
-    expect((await init.json()).result.serverInfo.name).toBe("delhi-ncr-map");
+    expect((await init.json()).result.serverInfo.name).toBe("delhincr-map");
 
     expect((await rpc({ jsonrpc: "2.0", method: "notifications/initialized" })).status()).toBe(202);
 

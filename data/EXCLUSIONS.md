@@ -1,7 +1,7 @@
 # Data notes: who's left out, and why
 
 The map lists every company a public startup list or directory names as based in Gurugram, Noida or Greater Noida.
-These entries from those lists were left out. If one belongs on the map, [suggest it](https://delhi-ncr-map-pink.vercel.app/submit) with a source.
+These entries from those lists were left out. If one belongs on the map, [suggest it](https://delhincr-map.vercel.app/submit) with a source.
 
 ## Rules
 

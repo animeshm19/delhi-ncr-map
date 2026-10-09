@@ -1,5 +1,5 @@
 /**
- * "On Delhi NCR Map" badges as SVG, for companies to show on their own sites.
+ * "On delhincr-map" badges as SVG, for companies to show on their own sites.
  * The name is XML-escaped and the SVG has no scripts, links or external references.
  */
 

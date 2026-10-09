@@ -3,7 +3,7 @@ import { handleMcp, MAX_BODY_BYTES, type McpData } from "@/lib/mcp";
 import { SITE_URL } from "@/lib/site";
 
 // Read-only MCP endpoint (Streamable HTTP, stateless). Add it to an MCP client as
-// https://delhi-ncr-map.vercel.app/api/mcp
+// https://delhincr-map.vercel.app/api/mcp
 export const dynamic = "force-dynamic";
 
 const data: McpData = {

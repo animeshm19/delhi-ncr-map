@@ -1,7 +1,7 @@
 /**
  * Triggers the job-board sync on a deployment (the same thing Vercel Cron does each morning).
  *
- *   SITE=https://delhi-ncr-map.vercel.app CRON_SECRET=… npm run sync:jobs
+ *   SITE=https://delhincr-map.vercel.app CRON_SECRET=… npm run sync:jobs
  *
  * The sync itself lives in lib/job-sync.ts and runs on the server, where INGEST_TOKEN is.
  */

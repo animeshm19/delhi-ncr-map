@@ -44,7 +44,7 @@ test.describe("Instagram-ready share cards", () => {
     expect(caption).toContain("/?station=cyber-city&r=1000");
 
     const [download] = await Promise.all([page.waitForEvent("download"), dialog.getByRole("button", { name: "Download image" }).click()]);
-    expect(download.suggestedFilename()).toBe("delhi-ncr-map-cyber-city-story.png");
+    expect(download.suggestedFilename()).toBe("delhincr-map-cyber-city-story.png");
 
     await page.keyboard.press("Escape");
     await expect(dialog).toBeHidden();
@@ -57,7 +57,7 @@ test.describe("Instagram-ready share cards", () => {
     await panel.getByRole("button", { name: "Share Spinny as an image" }).click();
     const dialog = page.getByRole("dialog", { name: "Share as an image" });
     await expect(dialog.getByTestId("share-preview")).toHaveAttribute("src", "/card?c=spinny&format=post");
-    expect(await dialog.getByRole("textbox").inputValue()).toContain("Spinny is on the Delhi NCR Map");
+    expect(await dialog.getByRole("textbox").inputValue()).toContain("Spinny is on delhincr-map");
     await page.keyboard.press("Escape");
     await expect(dialog).toBeHidden();
     await expect(panel).toBeVisible();
