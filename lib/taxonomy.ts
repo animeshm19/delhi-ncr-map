@@ -18,6 +18,12 @@ export const SECTORS: Record<string, { label: string; color: string }> = {
   "agri-climate": { label: "Agritech & Climate", color: "#a7c957" },
   gaming: { label: "Gaming & Interactive", color: "#e76f51" },
   "media-content": { label: "Media & Content", color: "#ff99c8" },
+  "internet-platforms": { label: "Internet & Platforms", color: "#7b9cff" },
+  "it-services": { label: "IT & Business Services", color: "#64dfdf" },
+  "consulting-analytics": { label: "Consulting & Analytics", color: "#cdb4db" },
+  "financial-services": { label: "Banking & Financial Services", color: "#00b4d8" },
+  "semiconductors-electronics": { label: "Semiconductors & Electronics", color: "#e0aaff" },
+  "telecom-networking": { label: "Telecom & Networking", color: "#ffb4a2" },
 };
 
 export const KINDS: Record<Kind, { label: string; plural: string; color: string }> = {
