@@ -1,21 +1,327 @@
 [
-  {"slug": "gurugram", "name": "Gurugram", "center": [77.0266, 28.4595], "radius_m": 9000, "city": "Gurugram"},
-  {"slug": "dlf-cyber-city", "name": "DLF Cyber City", "center": [77.0885, 28.4955], "radius_m": 700, "city": "Gurugram"},
-  {"slug": "udyog-vihar", "name": "Udyog Vihar", "center": [77.082, 28.5], "radius_m": 1400, "city": "Gurugram"},
-  {"slug": "mg-road", "name": "MG Road", "center": [77.088, 28.4805], "radius_m": 1100, "city": "Gurugram"},
-  {"slug": "sector-14", "name": "Sector 14 (Old MG Road)", "center": [77.045, 28.472], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sector-29-iffco-chowk", "name": "Sector 29 / IFFCO Chowk", "center": [77.0665, 28.4695], "radius_m": 700, "city": "Gurugram"},
-  {"slug": "sushant-lok", "name": "Sushant Lok", "center": [77.08, 28.466], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sector-44", "name": "Sector 44", "center": [77.0715, 28.4535], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sector-32", "name": "Sector 32", "center": [77.056, 28.454], "radius_m": 700, "city": "Gurugram"},
-  {"slug": "sector-39", "name": "Sector 39 (Unitech Cyber Park)", "center": [77.053, 28.441], "radius_m": 700, "city": "Gurugram"},
-  {"slug": "sector-34", "name": "Sector 34 (Infocity / Hero Honda Chowk)", "center": [77.044, 28.43], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sector-42-43", "name": "Sectors 42–43 (Golf Course Road)", "center": [77.0975, 28.456], "radius_m": 700, "city": "Gurugram"},
-  {"slug": "dlf-phase-5", "name": "DLF Phase V (Golf Course Road)", "center": [77.098, 28.448], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "golf-course-road-53", "name": "Golf Course Road (Sectors 53–54)", "center": [77.099, 28.441], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sohna-road", "name": "Sohna Road (Sectors 47–49)", "center": [77.043, 28.417], "radius_m": 900, "city": "Gurugram"},
-  {"slug": "sector-59", "name": "Sector 59 (Golf Course Ext. Road)", "center": [77.101, 28.406], "radius_m": 900, "city": "Gurugram"},
-  {"slug": "sector-62", "name": "Sector 62 (Golf Course Ext. Road)", "center": [77.0865, 28.4075], "radius_m": 800, "city": "Gurugram"},
-  {"slug": "sector-65", "name": "Sector 65 (Golf Course Ext. Road)", "center": [77.0745, 28.3985], "radius_m": 900, "city": "Gurugram"},
-  {"slug": "sector-66", "name": "Sector 66 (Golf Course Ext. Road)", "center": [77.066, 28.3935], "radius_m": 900, "city": "Gurugram"}
+ {
+  "slug": "gurugram",
+  "name": "Gurugram",
+  "center": [
+   77.0266,
+   28.4595
+  ],
+  "radius_m": 9000,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "dlf-cyber-city",
+  "name": "DLF Cyber City",
+  "center": [
+   77.0885,
+   28.4955
+  ],
+  "radius_m": 700,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "udyog-vihar",
+  "name": "Udyog Vihar",
+  "center": [
+   77.082,
+   28.5
+  ],
+  "radius_m": 1400,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "mg-road",
+  "name": "MG Road",
+  "center": [
+   77.088,
+   28.4805
+  ],
+  "radius_m": 1100,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-14",
+  "name": "Sector 14 (Old MG Road)",
+  "center": [
+   77.045,
+   28.472
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-29-iffco-chowk",
+  "name": "Sector 29 / IFFCO Chowk",
+  "center": [
+   77.0665,
+   28.4695
+  ],
+  "radius_m": 700,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sushant-lok",
+  "name": "Sushant Lok",
+  "center": [
+   77.08,
+   28.466
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-44",
+  "name": "Sector 44",
+  "center": [
+   77.0715,
+   28.4535
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-32",
+  "name": "Sector 32",
+  "center": [
+   77.056,
+   28.454
+  ],
+  "radius_m": 700,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-39",
+  "name": "Sector 39 (Unitech Cyber Park)",
+  "center": [
+   77.053,
+   28.441
+  ],
+  "radius_m": 700,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-34",
+  "name": "Sector 34 (Infocity / Hero Honda Chowk)",
+  "center": [
+   77.044,
+   28.43
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-42-43",
+  "name": "Sectors 42–43 (Golf Course Road)",
+  "center": [
+   77.0975,
+   28.456
+  ],
+  "radius_m": 700,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "dlf-phase-5",
+  "name": "DLF Phase V (Golf Course Road)",
+  "center": [
+   77.098,
+   28.448
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "golf-course-road-53",
+  "name": "Golf Course Road (Sectors 53–54)",
+  "center": [
+   77.099,
+   28.441
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sohna-road",
+  "name": "Sohna Road (Sectors 47–49)",
+  "center": [
+   77.043,
+   28.417
+  ],
+  "radius_m": 900,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-59",
+  "name": "Sector 59 (Golf Course Ext. Road)",
+  "center": [
+   77.101,
+   28.406
+  ],
+  "radius_m": 900,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-62",
+  "name": "Sector 62 (Golf Course Ext. Road)",
+  "center": [
+   77.0865,
+   28.4075
+  ],
+  "radius_m": 800,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-65",
+  "name": "Sector 65 (Golf Course Ext. Road)",
+  "center": [
+   77.0745,
+   28.3985
+  ],
+  "radius_m": 900,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "sector-66",
+  "name": "Sector 66 (Golf Course Ext. Road)",
+  "center": [
+   77.066,
+   28.3935
+  ],
+  "radius_m": 900,
+  "city": "Gurugram"
+ },
+ {
+  "slug": "noida",
+  "name": "Noida",
+  "center": [
+   77.32,
+   28.57
+  ],
+  "radius_m": 9000,
+  "city": "Noida",
+  "anchor": {
+   "note": "city centre",
+   "url": "https://en.wikipedia.org/wiki/Noida",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "greater-noida",
+  "name": "Greater Noida",
+  "center": [
+   77.51,
+   28.47
+  ],
+  "radius_m": 12000,
+  "city": "Greater Noida",
+  "anchor": {
+   "note": "city centre",
+   "url": "https://en.wikipedia.org/wiki/Greater_Noida",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "dlf-phase-3",
+  "name": "DLF Phase 3",
+  "center": [
+   77.093676,
+   28.493512
+  ],
+  "radius_m": 900,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "DLF Phase 3 Rapid Metro station",
+   "url": "https://en.wikipedia.org/wiki/Phase_3_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "sikanderpur",
+  "name": "Sikanderpur",
+  "center": [
+   77.0931,
+   28.4814
+  ],
+  "radius_m": 700,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sikanderpur metro station",
+   "url": "https://en.wikipedia.org/wiki/Sikanderpur_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "manesar",
+  "name": "Manesar",
+  "center": [
+   76.9327,
+   28.3553
+  ],
+  "radius_m": 2500,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Manesar town",
+   "url": "https://en.wikipedia.org/wiki/Manesar",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "noida-sector-62",
+  "name": "Sector 62",
+  "center": [
+   77.3736097,
+   28.6169948
+  ],
+  "radius_m": 900,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 62 metro station",
+   "url": "https://en.wikipedia.org/wiki/Noida_Sector_62_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "noida-sector-59",
+  "name": "Sector 59",
+  "center": [
+   77.3727259,
+   28.606493
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 59 metro station",
+   "url": "https://en.wikipedia.org/wiki/Noida_Sector_59_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "noida-sector-16",
+  "name": "Sector 16 & Film City",
+  "center": [
+   77.317635,
+   28.578395
+  ],
+  "radius_m": 1000,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 16 metro station",
+   "url": "https://en.wikipedia.org/wiki/Noida_Sector_16_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ },
+ {
+  "slug": "noida-sector-18",
+  "name": "Sector 18",
+  "center": [
+   77.3261158,
+   28.5708129
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 18 metro station",
+   "url": "https://en.wikipedia.org/wiki/Noida_Sector_18_metro_station",
+   "retrieved": "2026-10-09"
+  }
+ }
 ]
