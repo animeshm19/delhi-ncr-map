@@ -7,7 +7,8 @@ import { KINDS, SECTORS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { CITIES, SITE_NAME } from "@/lib/site";
 import { circlePolygon, haversineMeters } from "@/lib/geo";
 import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
-import OrgPanel, { initials } from "./OrgPanel";
+import OrgPanel from "./OrgPanel";
+import OrgLogo, { isBlank } from "./OrgLogo";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -28,6 +29,8 @@ export interface ExplorerOrg {
   hiring: boolean | null;
   href: string;
   logo: string | null;
+  /** Higher = better face for a group of pins (has a logo, then funding) */
+  score: number;
   /** Unspread location used for distances: the office, or the sector centre for approximate pins */
   anchor: [number, number] | null;
 }
@@ -57,6 +60,11 @@ export default function MapExplorer({
 }) {
   const mapEl = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
+  const mlRef = useRef<typeof import("maplibre-gl") | null>(null);
+  // Logo pins on the map, keyed by what they show (a single org, or a group and its face).
+  const pinsRef = useRef(new Map<string, import("maplibre-gl").Marker>());
+  // Latest values for map event handlers created once.
+  const chooseRef = useRef<(slug: string) => void>(() => {});
   const listRef = useRef<HTMLUListElement>(null);
 
   const [layer, setLayer] = useState<Layer>("companies");
@@ -199,6 +207,7 @@ export default function MapExplorer({
       const maplibregl = await import("maplibre-gl");
       if (cancelled || !mapEl.current) return;
       maplibregl.setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
+      mlRef.current = maplibregl;
 
       const map = new maplibregl.Map({
         container: mapEl.current,
@@ -287,31 +296,18 @@ export default function MapExplorer({
         map.on("mouseenter", "metro-stations", () => (map.getCanvas().style.cursor = "pointer"));
         map.on("mouseleave", "metro-stations", () => (map.getCanvas().style.cursor = ""));
 
-        map.addSource("orgs", { type: "geojson", data: emptyFC() });
-        map.addLayer({
-          id: "orgs",
-          type: "circle",
-          source: "orgs",
-          paint: {
-            "circle-color": ["get", "color"],
-            "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 4, 14, 8],
-            "circle-stroke-color": "#0a0b0d",
-            "circle-stroke-width": 1.5,
-            "circle-opacity": ["case", ["==", ["get", "precision"], "area"], 0.75, 1],
-          },
+        // Pins are logo markers (drawn below); nearby ones are grouped, and each group is shown by
+        // its best-known member ("best" = highest rank: has a logo, then funding) with a "+N" badge.
+        map.addSource("orgs", {
+          type: "geojson",
+          data: emptyFC(),
+          cluster: true,
+          clusterRadius: 46,
+          clusterMaxZoom: 16,
+          clusterProperties: { best: ["max", ["get", "rank"]] },
         });
-        map.addLayer({
-          id: "orgs-selected",
-          type: "circle",
-          source: "orgs",
-          filter: ["==", ["get", "slug"], ""],
-          paint: {
-            "circle-color": "transparent",
-            "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 9, 14, 14],
-            "circle-stroke-color": "#ffffff",
-            "circle-stroke-width": 2,
-          },
-        });
+        // Invisible: the source needs a layer to load, and tests can read it.
+        map.addLayer({ id: "orgs", type: "circle", source: "orgs", paint: { "circle-radius": 1, "circle-opacity": 0 } });
 
         // 3D buildings from the OpenMapTiles "building" layer (hidden in 2D).
         const firstSymbol = map.getStyle().layers.find((l) => l.type === "symbol")?.id;
@@ -333,12 +329,16 @@ export default function MapExplorer({
           firstSymbol,
         );
 
-        map.on("click", "orgs", (e) => {
-          const slug = e.features?.[0]?.properties?.slug as string | undefined;
-          if (slug) choose(slug);
+        // Keep the logo pins in step with the map (cheap: a few hundred points at most).
+        let queued = false;
+        map.on("render", () => {
+          if (queued) return;
+          queued = true;
+          requestAnimationFrame(() => {
+            queued = false;
+            syncRef.current();
+          });
         });
-        map.on("mouseenter", "orgs", () => (map.getCanvas().style.cursor = "pointer"));
-        map.on("mouseleave", "orgs", () => (map.getCanvas().style.cursor = ""));
         map.on("moveend", () => {
           setBounds(map.getBounds());
           // Exposed for tests and debugging: where the camera settled.
@@ -367,6 +367,91 @@ export default function MapExplorer({
     };
   }, []);
 
+  // ---- Logo pins ----
+  // Each org's rank decides which logo represents a group: score first, list order breaks ties.
+  const rankOf = useMemo(() => new Map(orgs.map((o, i) => [o.slug, o.score * 1000 + (999 - (i % 1000))])), [orgs]);
+  const byRank = useMemo(() => new Map(orgs.map((o) => [rankOf.get(o.slug)!, o])), [orgs, rankOf]);
+  chooseRef.current = choose;
+
+  /** A pin: the logo on a white tile (or a name tag), with a "+N" badge for a group. */
+  function pinElement(o: ExplorerOrg, count: number, selectedPin = false) {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = `pin${count > 1 ? " group" : ""}${selectedPin ? " selected" : ""}${o.precision === "area" ? " approx" : ""}`;
+    el.style.setProperty("--c", o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color);
+    el.dataset.slug = o.slug;
+    const label = count > 1 ? `${o.name} and ${count - 1} more nearby` : o.name;
+    el.setAttribute("aria-label", count > 1 ? `${label}: zoom in` : `${o.name}: open details`);
+    el.title = count > 1 ? label : `${o.name} · ${o.place}${o.precision === "area" ? " (approx.)" : ""}`;
+    const nameTag = () => {
+      const tag = document.createElement("span");
+      tag.className = "pin-name";
+      const dot = document.createElement("i");
+      tag.append(dot, document.createTextNode(o.name.length > 22 ? `${o.name.slice(0, 21)}…` : o.name));
+      return tag;
+    };
+    if (o.logo) {
+      const img = document.createElement("img");
+      img.className = "pin-logo";
+      img.src = o.logo;
+      img.alt = "";
+      img.decoding = "async";
+      img.onerror = () => img.replaceWith(nameTag());
+      img.onload = () => isBlank(img) && img.replaceWith(nameTag());
+      el.append(img);
+    } else {
+      el.append(nameTag());
+    }
+    if (count > 1) {
+      const badge = document.createElement("span");
+      badge.className = "pin-count";
+      badge.textContent = `+${count - 1}`;
+      el.append(badge);
+    }
+    return el;
+  }
+
+  /** Add, move and remove logo pins to match what the clustered source shows right now. */
+  function syncPins() {
+    const map = mapRef.current;
+    const ml = mlRef.current;
+    if (!map || !ml || !map.getSource("orgs") || !map.isSourceLoaded("orgs")) return;
+    const next = new Map<string, import("maplibre-gl").Marker>();
+    for (const f of map.querySourceFeatures("orgs")) {
+      const p = f.properties as { cluster?: boolean; cluster_id?: number; point_count?: number; best?: number; slug?: string; rank?: number };
+      const count = p.cluster ? p.point_count ?? 1 : 1;
+      const org = byRank.get(p.cluster ? p.best! : p.rank!);
+      if (!org) continue;
+      const key = p.cluster ? `g${p.cluster_id}:${org.slug}:${count}` : `s:${org.slug}`;
+      if (next.has(key)) continue;
+      const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+      let marker = pinsRef.current.get(key);
+      if (!marker) {
+        const el = pinElement(org, count);
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (p.cluster && p.cluster_id != null) {
+            (map.getSource("orgs") as GeoJSONSource)
+              .getClusterExpansionZoom(p.cluster_id)
+              .then((z) => map.easeTo({ center: coords, zoom: Math.min(z + 0.3, 17), duration: 600 }))
+              .catch(() => {});
+          } else {
+            chooseRef.current(org.slug);
+          }
+        });
+        marker = new ml.Marker({ element: el, anchor: "center" }).setLngLat(coords).addTo(map);
+      } else {
+        marker.setLngLat(coords);
+      }
+      next.set(key, marker);
+    }
+    for (const [key, m] of pinsRef.current) if (!next.has(key)) m.remove();
+    pinsRef.current = next;
+  }
+
+  const syncRef = useRef(syncPins);
+  syncRef.current = syncPins;
+
   // ---- Push filtered data to the map ----
   useEffect(() => {
     const map = mapRef.current;
@@ -374,16 +459,14 @@ export default function MapExplorer({
     const pinned = filtered.filter((o) => o.lng != null && o.lat != null);
     (map.getSource("orgs") as GeoJSONSource).setData({
       type: "FeatureCollection",
-      features: pinned.map((o) => ({
-        type: "Feature",
-        geometry: { type: "Point", coordinates: [o.lng!, o.lat!] },
-        properties: {
-          slug: o.slug,
-          name: o.name,
-          precision: o.precision,
-          color: o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color,
-        },
-      })),
+      // The open organisation gets its own pin (below), so it's never hidden inside a group.
+      features: pinned
+        .filter((o) => o.slug !== selected)
+        .map((o) => ({
+          type: "Feature",
+          geometry: { type: "Point", coordinates: [o.lng!, o.lat!] },
+          properties: { slug: o.slug, rank: rankOf.get(o.slug)! },
+        })),
     });
     // One faint circle per sector that has approximate pins in view.
     const usedAreas = new Set(pinned.filter((o) => o.precision === "area" && o.area).map((o) => o.area!));
@@ -397,13 +480,12 @@ export default function MapExplorer({
           properties: { color: "#7cc4ff", name: a.name },
         })),
     });
-  }, [filtered, ready, areas]);
+  }, [filtered, ready, areas, selected, rankOf]);
 
   // ---- Selection: highlight the pin, fly to it, scroll the list ----
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
-    map.setFilter("orgs-selected", ["==", ["get", "slug"], selected ?? ""]);
     const org = orgs.find((o) => o.slug === selected);
     document.querySelector(`[data-slug="${selected}"]`)?.scrollIntoView({ block: "nearest", behavior: "smooth" });
     const wide = window.matchMedia("(min-width: 861px)").matches;
@@ -431,15 +513,16 @@ export default function MapExplorer({
     let cancelled = false;
     import("maplibre-gl").then((ml) => {
       if (cancelled) return;
-      // A pulsing ring on the chosen pin.
-      const ring = document.createElement("div");
+      // The chosen organisation's own pin, raised, with a pulsing ring.
+      const el = pinElement(org, 1, true);
+      const ring = document.createElement("span");
       ring.className = "pin-pulse";
-      ring.style.setProperty("--c", org.kind === "company" ? sectorColor(org.sectors[0]) : KINDS[org.kind].color);
       ring.setAttribute("aria-hidden", "true");
-      marker = new ml.Marker({ element: ring }).setLngLat([org.lng!, org.lat!]).addTo(map);
+      el.prepend(ring);
+      marker = new ml.Marker({ element: el, anchor: "center" }).setLngLat([org.lng!, org.lat!]).addTo(map);
       if (!embedded) return;
       // Embeds have no side panel: a small popup that opens the profile on the main site.
-      const el = document.createElement("div");
+      const box = document.createElement("div");
       const strong = document.createElement("strong");
       strong.textContent = org.name;
       const sub = document.createElement("div");
@@ -450,8 +533,8 @@ export default function MapExplorer({
       a.textContent = "Open profile";
       a.target = "_blank";
       a.rel = "noopener";
-      el.append(strong, sub, a);
-      popup = new ml.Popup({ offset: 12, closeButton: false }).setLngLat([org.lng!, org.lat!]).setDOMContent(el).addTo(map);
+      box.append(strong, sub, a);
+      popup = new ml.Popup({ offset: 22, closeButton: false }).setLngLat([org.lng!, org.lat!]).setDOMContent(box).addTo(map);
     });
     return () => {
       cancelled = true;
@@ -459,6 +542,21 @@ export default function MapExplorer({
       popup?.remove();
     };
   }, [selected, ready, orgs, embedded, siteUrl]);
+
+  // Remember whether this visitor likes the metro shown (browser storage can be unavailable: then it's just on).
+  const [metroPrefRead, setMetroPrefRead] = useState(false);
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem("dncr:metro") === "off") setShowMetro(false);
+    } catch {}
+    setMetroPrefRead(true);
+  }, []);
+  useEffect(() => {
+    if (!metroPrefRead) return;
+    try {
+      window.localStorage.setItem("dncr:metro", showMetro ? "on" : "off");
+    } catch {}
+  }, [showMetro, metroPrefRead]);
 
   // ---- Metro layer and the station radius ----
   useEffect(() => {
@@ -590,7 +688,6 @@ export default function MapExplorer({
               </>
             )}
             <button className="chip" aria-pressed={hiringOnly} onClick={() => setHiringOnly((v) => !v)}>Hiring</button>
-            <button className="chip" aria-pressed={showMetro} onClick={() => setShowMetro((v) => !v)}>Metro</button>
           </div>
           <p className="summary">
             <b>{stats.companies}</b> companies in {stats.sectors} sectors
@@ -628,14 +725,7 @@ export default function MapExplorer({
                   choose(o.slug);
                 }}
               >
-                {o.logo ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img className="logo logo-photo" src={o.logo} alt="" width={40} height={40} loading="lazy" />
-                ) : (
-                  <span className="logo" aria-hidden>
-                    {initials(o.name)}
-                  </span>
-                )}
+                <OrgLogo name={o.name} src={o.logo} size={40} color={o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color} />
                 <span className="item-body">
                   <h3>
                     <span className="item-name">{o.name}</span>
@@ -679,6 +769,20 @@ export default function MapExplorer({
         <div className="mapctl" role="group" aria-label="View">
           <button className="chip" aria-pressed={!is3d} onClick={() => setIs3d(false)}>2D</button>
           <button className="chip" aria-pressed={is3d} onClick={() => setIs3d(true)}>3D</button>
+          <button
+            className="chip metro-toggle"
+            aria-pressed={showMetro}
+            onClick={() => setShowMetro((v) => !v)}
+            title={showMetro ? "Hide metro lines and stations" : "Show metro lines and stations"}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <rect x="5" y="3" width="14" height="14" rx="3" />
+              <path d="M5 11h14M9 17l-2 4M15 17l2 4" />
+              <circle cx="9" cy="14" r="0.5" fill="currentColor" />
+              <circle cx="15" cy="14" r="0.5" fill="currentColor" />
+            </svg>
+            Metro
+          </button>
         </div>
         <div ref={mapEl} className="map" role="region" aria-label="Map of Delhi NCR" />
         {selectedOrg && (
