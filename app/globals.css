@@ -47,8 +47,11 @@ button, select, input, textarea { font: inherit; }
 .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
 .chip.icon { width: 30px; padding: 0; justify-content: center; }
 .chip .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-select.chip { appearance: none; padding-right: 26px; background-color: transparent; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 14px) 55%, calc(100% - 10px) 55%; background-size: 4px 4px; background-repeat: no-repeat; }
+select.chip { -webkit-appearance: none; -moz-appearance: none; appearance: none; color-scheme: dark; padding-right: 26px; background-color: var(--panel); color: var(--text); background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 14px) 55%, calc(100% - 10px) 55%; background-size: 4px 4px; background-repeat: no-repeat; }
 select.chip:has(option:checked:not([value=""])) { border-color: var(--accent); color: var(--accent); }
+select.chip:hover { background-color: var(--panel-2); }
+/* Some browsers draw the open list with their own colours unless options are styled too. */
+select option, select optgroup { background-color: var(--panel); color: var(--text); }
 /* Two mutually exclusive choices read as one control. */
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; gap: 2px; }
 .seg .chip { height: 24px; border: 0; }
@@ -140,9 +143,10 @@ a.chip:hover { border-color: var(--muted); }
 .form label { display: grid; gap: 6px; }
 .form label > span { font-weight: 600; font-size: 14px; }
 .form .req { color: #ff8a8a; }
-.form input, .form textarea, .form select { width: 100%; padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--panel-2); color: var(--text); font: inherit; }
+.form input, .form textarea, .form select { width: 100%; padding: 10px 12px; border-radius: var(--radius); border: 1px solid var(--line); background-color: var(--panel-2); color: var(--text); font: inherit; }
 .form input:focus, .form textarea:focus, .form select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124, 196, 255, 0.18); }
 .form small { font-size: 12px; }
+.form select, .inline-form select { -webkit-appearance: none; appearance: none; color-scheme: dark; background-color: var(--panel-2); color: var(--text); padding-right: 32px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 18px) 52%, calc(100% - 13px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
 .form .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 /* Buttons: primary (blue), ghost (outlined), small. Links styled as buttons look the same. */
 .btn { justify-self: start; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent); border-radius: 999px; padding: 0 18px; font-weight: 650; font-size: 14px; cursor: pointer; text-decoration: none; white-space: nowrap; }
