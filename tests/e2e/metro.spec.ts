@@ -47,6 +47,8 @@ test.describe("metro", () => {
     await page.goto("/?station=sikanderpur&r=2000");
     await expect(page.getByLabel("Near metro station")).toHaveValue("sikanderpur");
     await expect(page.getByRole("button", { name: "2.0 km" })).toHaveAttribute("aria-pressed", "true");
+    // The map zooms in to the station (13 for a 2 km radius) and isn't pulled back out.
+    await expect(page.locator(".map")).toHaveAttribute("data-zoom", "13.0", { timeout: 10_000 });
 
     await page.goto("/?station=%3Cscript%3E&r=99999");
     await expect(page.locator(".list .item").first()).toBeVisible();
