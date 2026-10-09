@@ -9,7 +9,7 @@ import { circlePolygon, haversineMeters } from "@/lib/geo";
 import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
 import OrgPanel from "./OrgPanel";
 import ShareCard from "./ShareCard";
-import OrgLogo, { isBlank } from "./OrgLogo";
+import OrgLogo, { inspectLogo } from "./OrgLogo";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
 export interface ExplorerOrg {
@@ -400,7 +400,11 @@ export default function MapExplorer({
       img.alt = "";
       img.decoding = "async";
       img.onerror = () => img.replaceWith(nameTag());
-      img.onload = () => isBlank(img) && img.replaceWith(nameTag());
+      img.onload = () => {
+        const v = inspectLogo(img);
+        if (v === "blank") img.replaceWith(nameTag());
+        else if (v === "light") img.classList.add("on-dark");
+      };
       el.append(img);
     } else {
       el.append(nameTag());
@@ -627,7 +631,7 @@ export default function MapExplorer({
     const where = stationObj ? `within ${formatDistance(radius)} of ${stationObj.name} metro 🚇` : city ? `in ${city}` : "across Delhi NCR";
     const tags = ["#DelhiNCR", city ? `#${city.replace(/\s+/g, "")}` : "#Gurugram #Noida", "#Startups", "#StartupIndia", sector ? `#${(SECTORS[sector]?.label ?? "").replace(/[^A-Za-z]/g, "")}` : "#IndianStartups"].join(" ");
     const caption = `${n} ${what} ${where}\n\nFind every startup in Delhi NCR on one free, open map 👇`;
-    const file = ["delhi-ncr-map", stationObj?.id, sector, city?.toLowerCase().replace(/\s+/g, "-")].filter(Boolean).join("-");
+    const file = ["delhincr-map", stationObj?.id, sector, city?.toLowerCase().replace(/\s+/g, "-")].filter(Boolean).join("-");
     const ls = link.toString();
     return { query: q.toString(), link: ls ? `/?${ls}` : "/", caption, file, tags };
   }, [orgs, stationObj, radius, sector, city]);

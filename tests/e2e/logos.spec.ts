@@ -37,6 +37,27 @@ test.describe("logos and logo pins", () => {
     await expect(page.getByTestId("org-panel").locator(".panel-head .org-logo")).toHaveCount(1);
   });
 
+  test("logo tiles keep their size in tables and lists, and names stay on one line", async ({ page }) => {
+    await page.goto("/directory");
+    const sizes = await page.locator("table.orgs .org-logo").evaluateAll((els) =>
+      els.slice(0, 80).map((el) => {
+        const r = el.getBoundingClientRect();
+        return [Math.round(r.width), Math.round(r.height)];
+      }),
+    );
+    expect(sizes.length).toBeGreaterThan(20);
+    for (const s of sizes) expect(s).toEqual([28, 28]);
+    const tall = await page.locator("table.orgs .name-cell").evaluateAll((els) => els.filter((el) => el.getBoundingClientRect().height > 40).length);
+    expect(tall).toBe(0);
+
+    await page.goto("/c/spinny");
+    for (const s of await page.locator(".name-cell .org-logo").evaluateAll((els) => els.map((el) => Math.round(el.getBoundingClientRect().width)))) {
+      expect(s).toBe(28);
+    }
+    const head = await page.locator(".profile-head .org-logo").boundingBox();
+    expect(Math.round(head!.width)).toBe(64);
+  });
+
   test("the logo route only serves known organisations with a website", async ({ request }) => {
     const [noSite] = await sql<{ slug: string }>("select slug from organizations_public where website is null limit 1");
     // "No logo" is a 1-pixel PNG marked X-Logo: none (so pages log no errors).
