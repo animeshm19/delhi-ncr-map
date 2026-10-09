@@ -9,6 +9,8 @@ import { circlePolygon, haversineMeters } from "@/lib/geo";
 import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
 import OrgPanel from "./OrgPanel";
 import ShareCard from "./ShareCard";
+import SaveButton from "./SaveButton";
+import { useSaved } from "@/lib/saved";
 import OrgLogo, { inspectLogo } from "./OrgLogo";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
@@ -84,6 +86,8 @@ export default function MapExplorer({
   const [station, setStation] = useState("");
   const [radius, setRadius] = useState(1000);
   const [hiringOnly, setHiringOnly] = useState(false);
+  const [savedOnly, setSavedOnly] = useState(false);
+  const saved = useSaved();
   const [ready, setReady] = useState(false);
 
   const stationObj = getStation(station);
@@ -103,12 +107,13 @@ export default function MapExplorer({
       if (sector && !o.sectors.includes(sector)) return false;
       if (city && o.city !== city) return false;
       if (hiringOnly && !o.hiring) return false;
+      if (savedOnly && !saved.includes(o.slug)) return false;
       if (stationObj && !((distance.get(o.slug) ?? Infinity) <= radius)) return false;
       if (q && !`${o.name} ${o.one_liner ?? ""} ${o.place}`.toLowerCase().includes(q)) return false;
       return true;
     });
     return stationObj ? out.sort((a, b) => distance.get(a.slug)! - distance.get(b.slug)!) : out;
-  }, [orgs, layer, sector, city, query, hiringOnly, stationObj, distance, radius]);
+  }, [orgs, layer, sector, city, query, hiringOnly, savedOnly, saved, stationObj, distance, radius]);
 
   const listed = useMemo(() => {
     if (!followMap || !bounds) return filtered;
@@ -151,6 +156,7 @@ export default function MapExplorer({
     if (cty && CITIES.some((x) => x.live && x.name === cty)) setCity(cty);
     if (params.get("hiring") === "1") setHiringOnly(true);
     if (params.get("layer") === "support") setLayer("support");
+    if (params.get("saved") === "1") setSavedOnly(true);
     setLinkRead(true);
   }, [orgs]);
 
@@ -716,6 +722,7 @@ export default function MapExplorer({
             <Link href="/events">Events</Link>
             <Link href="/metro">By metro</Link>
             <Link href="/directory">Directory</Link>
+            <Link href="/saved">Saved{saved.length ? ` (${saved.length})` : ""}</Link>
             <Link href="/stats">Stats</Link>
             <Link href="/about">About</Link>
           </nav>
@@ -779,6 +786,12 @@ export default function MapExplorer({
               </>
             )}
             <button className="chip" aria-pressed={hiringOnly} onClick={() => setHiringOnly((v) => !v)}>Hiring</button>
+            <button className="chip saved-chip" aria-pressed={savedOnly} onClick={() => setSavedOnly((v) => !v)} title="Only companies you've saved on this device">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill={savedOnly ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" aria-hidden>
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+              Saved{saved.length ? ` (${saved.length})` : ""}
+            </button>
           </div>
           <p className="summary">
             <b>{stats.companies}</b> companies in {stats.sectors} sectors
@@ -863,9 +876,16 @@ export default function MapExplorer({
                   </small>
                 </span>
               </a>
+              <SaveButton slug={o.slug} name={o.name} />
             </li>
           ))}
-          {listed.length === 0 && <li className="item muted">Nothing matches. Try another filter, or zoom out.</li>}
+          {listed.length === 0 && (
+            <li className="item muted">
+              {savedOnly && saved.length === 0
+                ? "Nothing saved yet: tap the bookmark on any company to keep it here."
+                : "Nothing matches. Try another filter, or zoom out."}
+            </li>
+          )}
         </ul>
       </aside>
 

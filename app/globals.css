@@ -389,3 +389,24 @@ li:has(> .name-cell) { display: flex; align-items: center; flex-wrap: wrap; gap:
 .share-status { font-size: 12px; color: var(--accent); }
 .share-tip { font-size: 12px; margin: 0; }
 @media (prefers-reduced-motion: reduce) { .share-modal[open] { animation: none; } .share-loading { animation: none; } }
+
+/* ---------- Saved companies ---------- */
+.list > li { position: relative; }
+.list > li > .save-btn { position: absolute; top: 10px; right: 10px; opacity: 0; transition: opacity 150ms ease; }
+.list > li:hover > .save-btn, .list > li > .save-btn:focus-visible, .list > li > .save-btn.on { opacity: 1; }
+@media (hover: none) { .list > li > .save-btn { opacity: 1; } }
+.list .item { padding-right: 44px; }
+.save-btn.on { color: #fbbf24; }
+.save-btn.btn.on { border-color: #fbbf2466; }
+.save-btn svg { flex: none; }
+.save-btn.btn { gap: 6px; }
+.saved-chip[aria-pressed="true"] svg { color: inherit; }
+.saved-actions { flex-wrap: wrap; align-items: center; }
+.btn.danger { color: #fca5a5; border-color: #7f1d1d; }
+.btn.disabled { opacity: 0.5; pointer-events: none; }
+.saved-list { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+.saved-list li { display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); animation: fade-in 220ms ease both; }
+.saved-name { font-weight: 650; font-size: 16px; }
+.saved-body p { margin: 4px 0; color: var(--text); opacity: 0.85; font-size: 14px; }
+.saved-tools { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 640px) { .saved-list li { grid-template-columns: 44px 1fr; } .saved-tools { grid-column: 1 / -1; justify-content: flex-start; } }

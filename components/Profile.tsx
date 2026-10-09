@@ -7,6 +7,7 @@ import { orgLogo } from "@/lib/logos";
 import { sectorColor } from "@/lib/taxonomy";
 import OrgLogo from "./OrgLogo";
 import ShareCard from "./ShareCard";
+import SaveButton from "./SaveButton";
 import SiteFooter from "./SiteFooter";
 
 const VERIFICATION_LABEL: Record<Org["verification"], string> = {
@@ -56,6 +57,7 @@ export default async function Profile({ org }: { org: Org }) {
           <a href={org.website} rel="noopener">{org.website.replace(/^https?:\/\/(www\.)?/, "")}</a>
         )}
         {org.lng != null && <Link href={`/?c=${org.slug}`}>View on the map</Link>}
+        <SaveButton slug={org.slug} name={org.name} variant="btn" />
         <ShareCard
           query={`c=${org.slug}`}
           link={profilePath(org)}

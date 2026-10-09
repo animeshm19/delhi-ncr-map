@@ -8,6 +8,7 @@ import { KINDS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { formatDistance } from "@/lib/metro";
 import OrgLogo from "./OrgLogo";
 import ShareCard from "./ShareCard";
+import SaveButton from "./SaveButton";
 
 const VERIFICATION_LABEL: Record<PanelOrg["verification"], string> = {
   unverified: "Unverified",
@@ -120,6 +121,7 @@ export default function OrgPanel({
             <Link href={org.href} className="btn small" prefetch={false}>
               <DocIcon /> Full profile
             </Link>
+            <SaveButton slug={org.slug} name={org.name} variant="btn" />
             {detail?.website && (
               <a href={detail.website} className="btn ghost small" rel="noopener nofollow" target="_blank">
                 {detail.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
