@@ -10,6 +10,22 @@ test.describe("layout and keyboard", () => {
     }
   });
 
+  for (const [width, height] of [[360, 740], [390, 844], [412, 915]]) {
+    test(`phones (${width}×${height}) can reach the company list under the map and open a company`, async ({ page }) => {
+      await page.setViewportSize({ width, height });
+      await page.goto("/");
+      await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
+      const list = page.locator(".list");
+      expect((await list.boundingBox())!.height).toBeGreaterThan(300);
+      const first = page.locator(".list .item").first();
+      await first.scrollIntoViewIfNeeded();
+      await expect(first).toBeInViewport();
+      const name = (await first.locator(".item-name").textContent())!.trim();
+      await first.click();
+      await expect(page.getByTestId("org-panel").getByRole("heading", { name, level: 2 })).toBeVisible();
+    });
+  }
+
   test("keyboard users see where they are", async ({ page }) => {
     await page.goto("/");
     await page.locator(".list .item").first().waitFor();

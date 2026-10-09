@@ -105,6 +105,10 @@ select option, select optgroup { background-color: var(--panel); color: var(--te
   .explorer { grid-template-columns: 1fr; grid-template-rows: 46dvh 1fr; }
   .mapwrap { order: -1; }
   .sidebar { border-right: 0; border-top: 1px solid var(--line); }
+  /* Phones: the filters are taller than the space under the map, so the area under the map scrolls as one
+     (filters, then the list) instead of squeezing the list to nothing. */
+  .sidebar { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .sidebar .list { flex: none; overflow: visible; padding-bottom: env(safe-area-inset-bottom); }
 }
 
 /* ---------- Content pages ---------- */
