@@ -66,6 +66,8 @@ export default function MapExplorer({
   const pinsRef = useRef(new Map<string, import("maplibre-gl").Marker>());
   // Latest values for map event handlers created once.
   const chooseRef = useRef<(slug: string) => void>(() => {});
+  // Set while the opening flight turns 3D on, so the 2D/3D effect doesn't fly the camera itself.
+  const introTo3d = useRef(false);
   const listRef = useRef<HTMLUListElement>(null);
 
   const [layer, setLayer] = useState<Layer>("companies");
@@ -345,7 +347,10 @@ export default function MapExplorer({
         map.on("moveend", () => {
           setBounds(map.getBounds());
           // Exposed for tests and debugging: where the camera settled.
-          if (mapEl.current) mapEl.current.dataset.zoom = map.getZoom().toFixed(1);
+          if (mapEl.current) {
+            mapEl.current.dataset.zoom = map.getZoom().toFixed(1);
+            mapEl.current.dataset.pitch = map.getPitch().toFixed(0);
+          }
         });
 
         // Frame whatever is pinned (Gurugram, Noida and Greater Noida today; Delhi as it's added).
@@ -361,6 +366,46 @@ export default function MapExplorer({
         setBounds(map.getBounds());
         setReady(true);
 
+        // ---- Opening animation: start flat and top-down, then glide in and tilt into 3D once loaded ----
+        const done = () => {
+          if (mapEl.current) mapEl.current.dataset.intro = "done";
+        };
+        const deepLink = /[?&](c|station)=/.test(window.location.search);
+        if (embedded || deepLink) {
+          done();
+        } else {
+          const final = { center: map.getCenter(), zoom: map.getZoom() + 0.35, pitch: 56, bearing: -16 };
+          map.jumpTo({ center: final.center, zoom: final.zoom - 1.6, pitch: 0, bearing: 0 });
+          if (mapEl.current) mapEl.current.dataset.intro = "waiting";
+          // A soft horizon for the tilted view (skipped where the style or version can't do it).
+          try {
+            map.setSky({ "sky-color": "#0a0b0d", "horizon-color": "#13202e", "fog-color": "#0a0b0d", "sky-horizon-blend": 0.6, "horizon-fog-blend": 0.7, "fog-ground-blend": 0.35 });
+          } catch {}
+          let started = false;
+          const start = () => {
+            if (started) return;
+            started = true;
+            introTo3d.current = true;
+            setIs3d(true);
+            const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (mapEl.current) mapEl.current.dataset.intro = "flying";
+            if (reduce) {
+              map.jumpTo(final);
+              done();
+              return;
+            }
+            map.once("moveend", done);
+            map.easeTo({ ...final, duration: 3200, easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2) });
+          };
+          // When the first tiles are drawn, or after 2.5 s on a slow connection.
+          map.once("idle", start);
+          window.setTimeout(start, 2500);
+          // Anyone who grabs the map first stops the show.
+          map.once("dragstart", () => {
+            started = true;
+            done();
+          });
+        }
       });
     })();
     return () => {
@@ -594,6 +639,11 @@ export default function MapExplorer({
     const map = mapRef.current;
     if (!ready || !map) return;
     if (map.getLayer("buildings-3d")) map.setLayoutProperty("buildings-3d", "visibility", is3d ? "visible" : "none");
+    // The opening animation already flies the camera into 3D.
+    if (introTo3d.current) {
+      introTo3d.current = false;
+      return;
+    }
     // Only move the camera when the view actually changes; a no-op easeTo would cancel
     // any move already under way (like zooming to a station from a shared link).
     if (is3d) map.easeTo({ pitch: 60, bearing: -20, zoom: Math.max(map.getZoom(), 14) });
