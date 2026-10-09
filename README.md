@@ -107,6 +107,7 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
 | Auth | Supabase magic links (PKCE) |
 | Hosting | Vercel Hobby, Mumbai region (`bom1`); one daily cron (`/api/cron/jobs`, 01:30 UTC) syncs job boards |
 | Data fallback | With no database configured, the app reads `data/seed.json` |
+| Analytics | Vercel Web Analytics: page views only, no cookies, served from the site's own domain |
 
 ### Security
 
@@ -156,6 +157,7 @@ editor; the site picks them up within an hour.
 - **Vercel Hobby**: free, for non-commercial use.
 - **Supabase Free**: 500 MB database. A free project pauses after 7 days without activity; the site keeps
   serving cached pages, and one click in the dashboard resumes it.
+- **Vercel Web Analytics**: included in Hobby (a monthly event allowance).
 - OpenFreeMap, OpenStreetMap and Google's favicon service need no keys.
 
 ## Repository
