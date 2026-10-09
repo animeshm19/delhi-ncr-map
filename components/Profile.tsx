@@ -6,6 +6,7 @@ import type { Org } from "@/lib/types";
 import { orgLogo } from "@/lib/logos";
 import { sectorColor } from "@/lib/taxonomy";
 import OrgLogo from "./OrgLogo";
+import ShareCard from "./ShareCard";
 import SiteFooter from "./SiteFooter";
 
 const VERIFICATION_LABEL: Record<Org["verification"], string> = {
@@ -55,6 +56,14 @@ export default async function Profile({ org }: { org: Org }) {
           <a href={org.website} rel="noopener">{org.website.replace(/^https?:\/\/(www\.)?/, "")}</a>
         )}
         {org.lng != null && <Link href={`/?c=${org.slug}`}>View on the map</Link>}
+        <ShareCard
+          query={`c=${org.slug}`}
+          link={profilePath(org)}
+          caption={`${org.name} is on the Delhi NCR Map 📍 ${[area?.name, org.municipality].filter(Boolean).join(", ")}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
+          fileName={`delhi-ncr-map-${org.slug}`}
+          label="Share as an image"
+          className="btn ghost small"
+        />
       </div>
 
       <h2>Details</h2>

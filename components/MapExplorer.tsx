@@ -8,6 +8,7 @@ import { CITIES, SITE_NAME } from "@/lib/site";
 import { circlePolygon, haversineMeters } from "@/lib/geo";
 import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
 import OrgPanel from "./OrgPanel";
+import ShareCard from "./ShareCard";
 import OrgLogo, { isBlank } from "./OrgLogo";
 import type { Area, Kind, Precision, Status } from "@/lib/types";
 
@@ -192,6 +193,8 @@ export default function MapExplorer({
     if (!selected || embedded) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
+      // A dialog on top (like Share) handles its own Esc.
+      if (document.querySelector("dialog[open]")) return;
       const el = document.activeElement as HTMLElement | null;
       if (el && (el.tagName === "INPUT" || el.tagName === "SELECT" || el.tagName === "TEXTAREA")) return;
       closePanel();
@@ -595,6 +598,40 @@ export default function MapExplorer({
 
   const selectedOrg = selected ? orgs.find((o) => o.slug === selected) ?? null : null;
 
+  // What "Share this view" puts on the card: the station, sector and city filters (as /card counts them).
+  const shareView = useMemo(() => {
+    const q = new URLSearchParams();
+    const link = new URLSearchParams();
+    if (stationObj) {
+      q.set("station", stationObj.id);
+      q.set("r", String(radius));
+      link.set("station", stationObj.id);
+      link.set("r", String(radius));
+    }
+    if (sector) {
+      q.set("sector", sector);
+      link.set("sector", sector);
+    }
+    if (city) {
+      q.set("city", city);
+      link.set("city", city);
+    }
+    const n = orgs.filter(
+      (o) =>
+        o.kind === "company" &&
+        (!sector || o.sectors.includes(sector)) &&
+        (!city || o.city === city) &&
+        (!stationObj || (o.anchor != null && haversineMeters(o.anchor, [stationObj.lng, stationObj.lat]) <= radius)),
+    ).length;
+    const what = `${sector ? `${SECTORS[sector]?.label} ` : ""}startup${n === 1 ? "" : "s"}`;
+    const where = stationObj ? `within ${formatDistance(radius)} of ${stationObj.name} metro 🚇` : city ? `in ${city}` : "across Delhi NCR";
+    const tags = ["#DelhiNCR", city ? `#${city.replace(/\s+/g, "")}` : "#Gurugram #Noida", "#Startups", "#StartupIndia", sector ? `#${(SECTORS[sector]?.label ?? "").replace(/[^A-Za-z]/g, "")}` : "#IndianStartups"].join(" ");
+    const caption = `${n} ${what} ${where}\n\nFind every startup in Delhi NCR on one free, open map 👇`;
+    const file = ["delhi-ncr-map", stationObj?.id, sector, city?.toLowerCase().replace(/\s+/g, "-")].filter(Boolean).join("-");
+    const ls = link.toString();
+    return { query: q.toString(), link: ls ? `/?${ls}` : "/", caption, file, tags };
+  }, [orgs, stationObj, radius, sector, city]);
+
   if (embedded) {
     return (
       <div className="explorer embedded">
@@ -695,6 +732,19 @@ export default function MapExplorer({
             them. <Link href="/stats">More numbers</Link>
           </p>
         </header>
+
+        <div className="share-row">
+          <ShareCard
+            query={shareView.query}
+            link={shareView.link}
+            caption={shareView.caption}
+            fileName={shareView.file}
+            tags={shareView.tags}
+            label="Share this view"
+            className="chip share-chip"
+          />
+          <span className="muted">An image for Instagram, WhatsApp or LinkedIn</span>
+        </div>
 
         <div className="listmeta">
           <span aria-live="polite">

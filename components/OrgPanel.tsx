@@ -7,6 +7,7 @@ import type { PanelOrg, PanelOrgSummary } from "@/lib/panel-types";
 import { KINDS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { formatDistance } from "@/lib/metro";
 import OrgLogo from "./OrgLogo";
+import ShareCard from "./ShareCard";
 
 const VERIFICATION_LABEL: Record<PanelOrg["verification"], string> = {
   unverified: "Unverified",
@@ -81,6 +82,15 @@ export default function OrgPanel({
       style={{ "--c": color } as React.CSSProperties}
     >
       <div className="panel-tools">
+        <ShareCard
+          query={`c=${org.slug}`}
+          link={org.href}
+          caption={`${org.name} is on the Delhi NCR Map 📍 ${org.place}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
+          fileName={`delhi-ncr-map-${org.slug}`}
+          label=""
+          className="icon-btn"
+          ariaLabel={`Share ${org.name} as an image`}
+        />
         <button className="icon-btn" onClick={copyLink} aria-label="Copy a link to this organisation" title="Copy link">
           {copied ? <CheckIcon /> : <LinkIcon />}
         </button>

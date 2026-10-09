@@ -357,3 +357,30 @@ code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-si
 ul:has(> li > .name-cell) { list-style: none; padding-left: 0; display: grid; gap: 6px; }
 .mapctl .metro-toggle[aria-pressed="false"] { color: var(--muted); }
 .mapctl .metro-toggle[aria-pressed="false"] svg { opacity: 0.6; }
+
+/* ---------- Share as an image ---------- */
+.share-row { display: flex; align-items: center; gap: 10px; padding: 0 16px 12px; font-size: 12px; }
+.share-chip { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); color: var(--accent); }
+.share-chip:hover { border-color: var(--accent); }
+.share-modal { padding: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); color: var(--text); width: min(560px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow: auto; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6); }
+.share-modal[open] { animation: share-in 260ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.share-modal::backdrop { background: rgba(4, 5, 7, 0.72); backdrop-filter: blur(4px); }
+@keyframes share-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } to { opacity: 1; transform: none; } }
+.share-inner { padding: 20px; display: grid; gap: 14px; }
+.share-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.share-head h2 { margin: 0; font-size: 18px; }
+.share-head p { margin: 4px 0 0; font-size: 13px; }
+.share-format { justify-self: start; }
+.share-preview { position: relative; margin: 0 auto; width: 100%; max-width: 360px; border-radius: 14px; overflow: hidden; background: #07080b; border: 1px solid var(--line); }
+.share-preview.post { aspect-ratio: 4 / 5; }
+.share-preview.story { aspect-ratio: 9 / 16; max-width: 270px; }
+.share-preview img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 240ms ease; }
+.share-preview.loaded img { opacity: 1; }
+.share-loading { position: absolute; inset: 0; background: linear-gradient(90deg, #0d0f13, #171a20, #0d0f13); background-size: 200% 100%; animation: shimmer 1.2s linear infinite; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.share-actions .btn { gap: 8px; }
+.share-caption { display: grid; gap: 6px; font-size: 12px; color: var(--muted); }
+.share-caption textarea { width: 100%; box-sizing: border-box; resize: vertical; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--text); font: 13px/1.45 inherit; }
+.share-status { font-size: 12px; color: var(--accent); }
+.share-tip { font-size: 12px; margin: 0; }
+@media (prefers-reduced-motion: reduce) { .share-modal[open] { animation: none; } .share-loading { animation: none; } }
