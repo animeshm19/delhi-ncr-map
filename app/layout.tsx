@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    `A public, community-owned map and directory of ${REGION}'s startups and tech companies, and the organisations that support them. Gurugram first; Noida and Delhi next.`,
+    `A public, community-owned map and directory of ${REGION}'s startups and tech companies, and the organisations that support them. Gurugram, Noida and Greater Noida today; Delhi next.`,
   applicationName: SITE_NAME,
   alternates: { types: { "application/rss+xml": [{ url: "/feed.xml", title: `${SITE_NAME}: new companies and events` }] } },
   openGraph: { type: "website", siteName: SITE_NAME, locale: "en_IN" },

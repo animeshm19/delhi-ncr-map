@@ -101,7 +101,7 @@ export default async function Profile({ org }: { org: Org }) {
             <dd>
               {org.funding_note}
               <br />
-              <small className="muted">Total disclosed funding as reported by Inc42 (see sources)</small>
+              <small className="muted">Total disclosed funding, as given by the list it comes from (see sources)</small>
             </dd>
           </>
         )}

@@ -20,24 +20,34 @@ export default async function About() {
       <p className="lede">
         A public, community-owned map and directory of the startups and tech companies in Delhi NCR, and the
         organisations that support them. {orgs.length} organisations listed today, {companies} of them companies.
-        Gurugram is mapped first; Noida and Delhi are next.
+        Gurugram, Noida and Greater Noida are mapped today; Delhi is next.
       </p>
 
       <h2>Who&apos;s included</h2>
       <p>
-        Any innovative or tech company headquartered or with a real team in Delhi NCR (Gurugram, Noida, Delhi and around), at any age, including acquired
-        and closed companies (tagged as such). Support organisations get their own layer: incubators and
-        accelerators, investors, coworking spaces, universities and research labs, government programmes and
-        community groups. IT-services shops, agencies and multinationals with only a sales office are left out; so are
-        airlines, hotel owners and consumer brands without a tech product. Exclusions are recorded with their
-        reasons in the project&apos;s data notes.
+        Every company a public startup list or directory names as based in Gurugram, Noida or Greater Noida, at any
+        age, including acquired and closed companies (tagged as such). That covers venture-funded startups, D2C
+        brands, software and IT-services firms and digital agencies, each tagged by sector so you can filter. Support
+        organisations get their own layer: incubators and accelerators, investors, coworking spaces, universities and
+        research labs, government programmes and community groups.
+      </p>
+      <p>
+        Left out: companies headquartered elsewhere with only an office here; large corporations and their
+        subsidiaries; entries that aren&apos;t companies (events, parks, shops, industry bodies); names we can&apos;t
+        identify; and traditional businesses with no digital product (property developers, contract manufacturers,
+        hotel owners, hospitals, staffing firms). Every exclusion is listed with its reason in{" "}
+        <a href="https://github.com/animeshm19/delhi-ncr-map/blob/main/data/EXCLUSIONS.md" rel="noopener">the data notes</a>.
       </p>
 
       <h2>How the data is collected</h2>
       <ul>
-        <li><b>Who&apos;s listed.</b> Every organisation comes from a public list that places it in the region: for Gurugram, Inc42&apos;s
-          city startup lists (overall, fintech, edtech, healthtech, AI, ecommerce, enterprise tech), Seedtable,
-          Wikipedia, and news of funding rounds. Sector and founding year come from the same lists.</li>
+        <li><b>Who&apos;s listed.</b> Every organisation comes from a public list that places it in the region:
+          Inc42&apos;s city lists (overall, high-growth, fintech, edtech, healthtech, AI, SaaS, ecommerce, D2C and
+          enterprise tech) for Gurugram and Noida; Seedtable; StartupBlink; Y Combinator&apos;s directory; eChai&apos;s
+          Startup Grid, which also gives the sector or locality where a team works; Fliarbi; Wellfound; Wikipedia;
+          and news of funding rounds. Sector, founding year, funding and the one-line description come from the
+          same lists. Where two lists disagree on the city, the headquarters lists (Inc42, Y Combinator, Seedtable)
+          win.</li>
         <li><b>Where they are.</b> An office location comes from public records: the company&apos;s state GST
           registration (place of business), its company-registry filing, or its own contact page. Each one is linked
           on the profile, with the date it was read.</li>

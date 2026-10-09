@@ -26,6 +26,7 @@ export const SITE_URL = resolveSiteUrl({
 /** Cities the map covers, in the order they're being added. */
 export const CITIES = [
   { slug: "gurugram", name: "Gurugram", center: [77.06, 28.46] as [number, number], live: true },
-  { slug: "noida", name: "Noida", center: [77.36, 28.56] as [number, number], live: false },
+  { slug: "noida", name: "Noida", center: [77.36, 28.56] as [number, number], live: true },
+  { slug: "greater-noida", name: "Greater Noida", center: [77.51, 28.47] as [number, number], live: true },
   { slug: "delhi", name: "Delhi", center: [77.21, 28.63] as [number, number], live: false },
 ];
