@@ -285,7 +285,11 @@ export default function MapExplorer({
         });
         map.on("mouseenter", "orgs", () => (map.getCanvas().style.cursor = "pointer"));
         map.on("mouseleave", "orgs", () => (map.getCanvas().style.cursor = ""));
-        map.on("moveend", () => setBounds(map.getBounds()));
+        map.on("moveend", () => {
+          setBounds(map.getBounds());
+          // Exposed for tests and debugging: where the camera settled.
+          if (mapEl.current) mapEl.current.dataset.zoom = map.getZoom().toFixed(1);
+        });
 
         // Frame whatever is pinned (Gurugram today; Noida and Delhi as they're added).
         const pts = orgs.filter((o) => o.lng != null && o.lat != null);
@@ -402,7 +406,10 @@ export default function MapExplorer({
     const map = mapRef.current;
     if (!ready || !map) return;
     if (map.getLayer("buildings-3d")) map.setLayoutProperty("buildings-3d", "visibility", is3d ? "visible" : "none");
-    map.easeTo(is3d ? { pitch: 60, bearing: -20, zoom: Math.max(map.getZoom(), 14) } : { pitch: 0, bearing: 0 });
+    // Only move the camera when the view actually changes; a no-op easeTo would cancel
+    // any move already under way (like zooming to a station from a shared link).
+    if (is3d) map.easeTo({ pitch: 60, bearing: -20, zoom: Math.max(map.getZoom(), 14) });
+    else if (map.getPitch() !== 0 || map.getBearing() !== 0) map.easeTo({ pitch: 0, bearing: 0 });
   }, [is3d, ready]);
 
   if (embedded) {
