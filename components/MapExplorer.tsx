@@ -340,7 +340,7 @@ export default function MapExplorer({
       sub.textContent = org.precision === "area" ? `${org.place} (approx.)` : org.place;
       const a = document.createElement("a");
       a.href = embedded ? `${siteUrl}${org.href}` : org.href;
-      a.textContent = "Open profile →";
+      a.textContent = "Open profile";
       if (embedded) {
         a.target = "_blank";
         a.rel = "noopener";
@@ -418,15 +418,16 @@ export default function MapExplorer({
         <header>
           <div className="brand">
             <h1>{SITE_NAME}</h1>
-            <nav>
-              <Link href="/submit">Submit</Link>
-              <Link href="/directory">Directory</Link>
-              <Link href="/hiring">Hiring</Link>
-              <Link href="/events">Events</Link>
-              <Link href="/about">About</Link>
-              <Link href="/data">Data</Link>
-            </nav>
+            <Link href="/submit" className="btn small">Add a company</Link>
           </div>
+          <nav className="sitenav" aria-label="Site">
+            <Link href="/hiring">Hiring</Link>
+            <Link href="/events">Events</Link>
+            <Link href="/metro">By metro</Link>
+            <Link href="/directory">Directory</Link>
+            <Link href="/stats">Stats</Link>
+            <Link href="/about">About</Link>
+          </nav>
           <input
             className="search"
             type="search"
@@ -436,8 +437,10 @@ export default function MapExplorer({
             aria-label="Search"
           />
           <div className="tabs" role="group" aria-label="Layer">
-            <button className="chip" aria-pressed={layer === "companies"} onClick={() => setLayer("companies")}>Companies</button>
-            <button className="chip" aria-pressed={layer === "support"} onClick={() => setLayer("support")}>Support</button>
+            <span className="seg">
+              <button className="chip" aria-pressed={layer === "companies"} onClick={() => setLayer("companies")}>Companies</button>
+              <button className="chip" aria-pressed={layer === "support"} onClick={() => setLayer("support")}>Support</button>
+            </span>
             <select className="chip" value={sector} onChange={(e) => setSector(e.target.value)} aria-label="Sector">
               <option value="">All sectors</option>
               {usedSectors.map((s) => (
@@ -456,7 +459,7 @@ export default function MapExplorer({
                 </button>
               ) : (
                 <span key={c.slug} className="chip soon" title={`${c.name} is being added next`}>
-                  {c.name} <span className="muted">soon</span>
+                  {c.name} <span className="soon-tag">soon</span>
                 </span>
               ),
             )}
@@ -481,25 +484,24 @@ export default function MapExplorer({
                     {formatDistance(r)}
                   </button>
                 ))}
-                <button className="chip" onClick={() => setStation("")} aria-label="Clear station">✕</button>
+                <button className="chip icon" onClick={() => setStation("")} aria-label="Clear station">✕</button>
               </>
             )}
             <button className="chip" aria-pressed={hiringOnly} onClick={() => setHiringOnly((v) => !v)}>Hiring</button>
             <button className="chip" aria-pressed={showMetro} onClick={() => setShowMetro((v) => !v)}>Metro</button>
           </div>
-          <div className="stats">
-            <div className="stat"><b>{stats.companies}</b><span>Companies</span></div>
-            <div className="stat"><b>{stats.sectors}</b><span>Sectors</span></div>
-            <div className="stat"><b>{stats.hiring}</b><span>Hiring</span></div>
-            <div className="stat"><b>{stats.support}</b><span>Support</span></div>
-          </div>
+          <p className="summary">
+            <b>{stats.companies}</b> companies in {stats.sectors} sectors
+            {stats.hiring > 0 && <>, <b>{stats.hiring}</b> hiring,</>} and <b>{stats.support}</b> organisations supporting
+            them. <Link href="/stats">More numbers</Link>
+          </p>
         </header>
 
         <div className="listmeta">
-          <span>
+          <span aria-live="polite">
             {stationObj
               ? `${filtered.length} within ${formatDistance(radius)} of ${stationObj.name}`
-              : `${onMap} on the map · ${filtered.length - onMap} listed without an address`}
+              : <>{onMap} on the map<span className="sep" />{filtered.length - onMap} without an address</>}
           </span>
           <label>
             <input type="checkbox" checked={followMap} onChange={(e) => setFollowMap(e.target.checked)} />
@@ -515,6 +517,7 @@ export default function MapExplorer({
                 className="item"
                 data-slug={o.slug}
                 data-selected={o.slug === selected}
+                style={{ "--c": o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color } as React.CSSProperties}
                 onClick={(e) => {
                   // First click selects on the map; a click on the selected item opens the profile.
                   if (o.lng != null && o.slug !== selected) {
@@ -527,29 +530,39 @@ export default function MapExplorer({
                   // eslint-disable-next-line @next/next/no-img-element
                   <img className="logo logo-photo" src={o.logo} alt="" width={40} height={40} loading="lazy" />
                 ) : (
-                  <span
-                    className="logo"
-                    style={{ background: o.kind === "company" ? sectorColor(o.sectors[0]) : KINDS[o.kind].color }}
-                    aria-hidden
-                  >
+                  <span className="logo" aria-hidden>
                     {initials(o.name)}
                   </span>
                 )}
-                <span>
+                <span className="item-body">
                   <h3>
-                    {o.name}
+                    <span className="item-name">{o.name}</span>
                     {o.status !== "active" && <span className="badge">{o.status}</span>}
                     {o.hiring && <span className="badge hiring">Hiring</span>}
                   </h3>
                   {o.one_liner && <p>{o.one_liner}</p>}
-                  <small>
-                    {o.kind === "company" ? o.sectors.map(sectorLabel).join(" · ") || "Company" : KINDS[o.kind].label}
-                    {" · "}
-                    {o.place}
-                    {o.precision !== "exact" && o.precision !== "building" ? " (approx.)" : ""}
-                    {o.founded ? ` · est. ${o.founded}` : ""}
+                  <small className="meta">
+                    {o.kind === "company" ? (
+                      o.sectors.length ? (
+                        o.sectors.map((sl) => (
+                          <span key={sl} className="meta-sector">
+                            <i style={{ background: sectorColor(sl) }} aria-hidden />
+                            {sectorLabel(sl)}
+                          </span>
+                        ))
+                      ) : (
+                        <span>Company</span>
+                      )
+                    ) : (
+                      <span>{KINDS[o.kind].label}</span>
+                    )}
+                    <span>
+                      {o.place}
+                      {o.precision !== "exact" && o.precision !== "building" ? " (approx.)" : ""}
+                    </span>
+                    {o.founded && <span>est. {o.founded}</span>}
                     {stationObj && distance.has(o.slug) && (
-                      <span className="dist"> · {formatDistance(distance.get(o.slug)!)} from {stationObj.name}</span>
+                      <span className="dist">{formatDistance(distance.get(o.slug)!)} from {stationObj.name}</span>
                     )}
                   </small>
                 </span>
