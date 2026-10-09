@@ -36,7 +36,7 @@ export default async function About() {
         subsidiaries; entries that aren&apos;t companies (events, parks, shops, industry bodies); names we can&apos;t
         identify; and traditional businesses with no digital product (property developers, contract manufacturers,
         hotel owners, hospitals, staffing firms). Every exclusion is listed with its reason in{" "}
-        <a href="https://github.com/animeshm19/delhincr-map/blob/main/data/EXCLUSIONS.md" rel="noopener">the data notes</a>.
+        <a href="https://github.com/animeshm19/delhi-ncr-map/blob/main/data/EXCLUSIONS.md" rel="noopener">the data notes</a>.
       </p>
 
       <h2>How the data is collected</h2>
