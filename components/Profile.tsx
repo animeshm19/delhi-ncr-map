@@ -3,7 +3,9 @@ import { anchorOf, getArea, getJobs, getOrgs, profilePath } from "@/lib/data";
 import { formatDistance, lineOf, stationsByDistance, walkMinutes } from "@/lib/metro";
 import { KINDS, sectorLabel } from "@/lib/taxonomy";
 import type { Org } from "@/lib/types";
-import { logoUrl } from "@/lib/logos";
+import { orgLogo } from "@/lib/logos";
+import { sectorColor } from "@/lib/taxonomy";
+import OrgLogo from "./OrgLogo";
 import SiteFooter from "./SiteFooter";
 
 const VERIFICATION_LABEL: Record<Org["verification"], string> = {
@@ -44,10 +46,7 @@ export default async function Profile({ org }: { org: Org }) {
         {KINDS[org.kind].label} · {org.municipality} · <span className="badge">{VERIFICATION_LABEL[org.verification]}</span>
       </p>
       <div className="profile-head">
-        {logoUrl(org.logo_path) && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={logoUrl(org.logo_path)!} alt="" width={56} height={56} className="logo-img" />
-        )}
+        <OrgLogo name={org.name} src={orgLogo(org)} size={64} color={org.kind === "company" ? sectorColor(org.sectors[0]) : KINDS[org.kind].color} eager />
         <h1>{org.name}</h1>
       </div>
       {org.one_liner && <p className="lede">{org.one_liner}</p>}
@@ -155,7 +154,12 @@ export default async function Profile({ org }: { org: Org }) {
           <h2>Connections ({connections.length})</h2>
           <ul>
             {connections.map((c) => (
-              <li key={c.slug}><Link href={profilePath(c)}>{c.name}</Link></li>
+              <li key={c.slug}>
+                <Link href={profilePath(c)} className="name-cell">
+                  <OrgLogo name={c.name} src={orgLogo(c)} size={28} />
+                  {c.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </>
@@ -166,7 +170,13 @@ export default async function Profile({ org }: { org: Org }) {
           <h2>Similar</h2>
           <ul>
             {similar.map((s) => (
-              <li key={s.slug}><Link href={profilePath(s)}>{s.name}</Link> <span className="muted">· {s.municipality}</span></li>
+              <li key={s.slug}>
+                <Link href={profilePath(s)} className="name-cell">
+                  <OrgLogo name={s.name} src={orgLogo(s)} size={28} />
+                  {s.name}
+                </Link>{" "}
+                <span className="muted">· {s.municipality}</span>
+              </li>
             ))}
           </ul>
         </>

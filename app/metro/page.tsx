@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
+import OrgLogo from "@/components/OrgLogo";
+import { orgLogo } from "@/lib/logos";
 import { anchorOf, getOrgs, profilePath } from "@/lib/data";
 import { haversineMeters } from "@/lib/geo";
 import { METRO, formatDistance, getStation } from "@/lib/metro";
@@ -87,7 +89,11 @@ export default async function Metro() {
                         {list.slice(0, 4).map(({ o, m }, i) => (
                           <span key={o.slug}>
                             {i > 0 && ", "}
-                            <Link href={profilePath(o)}>{o.name}</Link> <span className="muted">{formatDistance(m)}</span>
+                            <Link href={profilePath(o)} className="name-cell inline">
+                              <OrgLogo name={o.name} src={orgLogo(o)} size={18} />
+                              {o.name}
+                            </Link>{" "}
+                            <span className="muted">{formatDistance(m)}</span>
                           </span>
                         ))}
                         {list.length > 4 && <span className="muted"> and {list.length - 4} more</span>}

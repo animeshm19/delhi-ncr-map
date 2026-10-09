@@ -1,6 +1,6 @@
 import "server-only";
 import { anchorOf, getArea, getJobs, getOrgs, profilePath } from "@/lib/data";
-import { logoUrl } from "@/lib/logos";
+import { orgLogo } from "@/lib/logos";
 import { lineOf, stationsByDistance, walkMinutes } from "@/lib/metro";
 import { KINDS, sectorLabel } from "@/lib/taxonomy";
 import type { Org } from "@/lib/types";
@@ -25,7 +25,7 @@ export async function buildPanel(slug: string): Promise<PanelOrg | null> {
   const summary = (o: Org) => ({
     slug: o.slug,
     name: o.name,
-    logo: logoUrl(o.logo_path),
+    logo: orgLogo(o),
     label: o.kind === "company" ? (o.sectors[0] ? sectorLabel(o.sectors[0]) : "Company") : KINDS[o.kind].label,
     place: place(o) + (o.location_precision === "area" ? " (approx.)" : ""),
     href: profilePath(o),
@@ -64,7 +64,7 @@ export async function buildPanel(slug: string): Promise<PanelOrg | null> {
     acquiredBy: acquirer ? { name: acquirer.name, href: profilePath(acquirer) } : null,
     oneLiner: org.one_liner ?? null,
     website: safeHttpUrl(org.website),
-    logo: logoUrl(org.logo_path),
+    logo: orgLogo(org),
     href: profilePath(org),
     verification: org.verification,
     location: {

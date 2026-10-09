@@ -1,5 +1,6 @@
 "use client";
 
+import OrgLogo from "./OrgLogo";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ export type BoardRole = {
   url: string;
   posted: string | null;
   isNew: boolean;
-  company: { slug: string; name: string; sectors: string[] };
+  company: { slug: string; name: string; sectors: string[]; logo: string | null };
 };
 
 export default function HiringBoard({ roles, sectors }: { roles: BoardRole[]; sectors: { slug: string; label: string }[] }) {
@@ -59,7 +60,10 @@ export default function HiringBoard({ roles, sectors }: { roles: BoardRole[]; se
               </a>
               {r.isNew && <span className="badge new">New</span>}
               <div className="muted">
-                <Link href={`/c/${r.company.slug}`}>{r.company.name}</Link>
+                <Link href={`/c/${r.company.slug}`} className="name-cell">
+                  <OrgLogo name={r.company.name} src={r.company.logo} size={24} />
+                  {r.company.name}
+                </Link>
                 {r.team && <> · {r.team}</>}
                 {r.location && <> · {r.location}</>}
               </div>

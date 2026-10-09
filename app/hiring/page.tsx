@@ -1,3 +1,4 @@
+import { orgLogo } from "@/lib/logos";
 import type { Metadata } from "next";
 import Link from "next/link";
 import HiringBoard, { type BoardRole } from "@/components/HiringBoard";
@@ -31,7 +32,7 @@ export default async function Hiring() {
         url: j.url,
         posted: j.posted,
         isNew: now - new Date(j.first_seen).getTime() < WEEK,
-        company: { slug: o.slug, name: o.name, sectors: o.sectors },
+        company: { slug: o.slug, name: o.name, sectors: o.sectors, logo: orgLogo(o) },
       };
     });
 

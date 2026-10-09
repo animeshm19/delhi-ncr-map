@@ -6,6 +6,7 @@ import type { ExplorerOrg } from "./MapExplorer";
 import type { PanelOrg, PanelOrgSummary } from "@/lib/panel-types";
 import { KINDS, sectorColor, sectorLabel } from "@/lib/taxonomy";
 import { formatDistance } from "@/lib/metro";
+import OrgLogo from "./OrgLogo";
 
 const VERIFICATION_LABEL: Record<PanelOrg["verification"], string> = {
   unverified: "Unverified",
@@ -92,12 +93,7 @@ export default function OrgPanel({
       <div className="panel-body" ref={bodyRef}>
         <div className="panel-content" key={org.slug}>
           <header className="panel-head">
-            {org.logo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img className="panel-logo photo" src={org.logo} alt="" width={64} height={64} />
-            ) : (
-              <span className="panel-logo" aria-hidden>{initials(org.name)}</span>
-            )}
+            <OrgLogo name={org.name} src={org.logo} size={64} color={color} eager />
             <div>
               <h2>{org.name}</h2>
               <p className="panel-kind">
@@ -256,12 +252,7 @@ function OrgList({ title, items, onSelect }: { title: string; items: PanelOrgSum
                 onSelect(s.slug);
               }}
             >
-              {s.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img className="mini-logo photo" src={s.logo} alt="" width={32} height={32} loading="lazy" />
-              ) : (
-                <span className="mini-logo" aria-hidden>{initials(s.name)}</span>
-              )}
+              <OrgLogo name={s.name} src={s.logo} size={32} />
               <span>
                 <b>{s.name}</b>
                 <small>{s.label} · {s.place}</small>
@@ -272,16 +263,6 @@ function OrgList({ title, items, onSelect }: { title: string; items: PanelOrgSum
       </ul>
     </>
   );
-}
-
-export function initials(name: string) {
-  return name
-    .replace(/\(.*?\)/g, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]!.toUpperCase())
-    .join("");
 }
 
 const svg = { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" as const, strokeLinejoin: "round" as const, "aria-hidden": true };
