@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { badgeHeaders, contentSecurityPolicy, securityHeaders } from "@/lib/security";
+import { resolveSiteUrl } from "@/lib/site";
 
 const header = (h: { key: string; value: string }[], k: string) => h.find((x) => x.key === k)?.value;
 
@@ -44,5 +45,24 @@ describe("badgeHeaders", () => {
     expect(h["Content-Security-Policy"]).toBe("default-src 'none'; style-src 'unsafe-inline'; sandbox");
     expect(h["X-Content-Type-Options"]).toBe("nosniff");
     expect(h["Cross-Origin-Resource-Policy"]).toBe("cross-origin");
+  });
+});
+
+describe("resolveSiteUrl", () => {
+  it("uses Vercel's real production domain in production, whatever NEXT_PUBLIC_SITE_URL says", () => {
+    expect(
+      resolveSiteUrl({
+        VERCEL_ENV: "production",
+        VERCEL_PROJECT_PRODUCTION_URL: "delhi-ncr-map-animesh-mittals-projects.vercel.app",
+        NEXT_PUBLIC_SITE_URL: "https://someone-elses-site.vercel.app",
+      }),
+    ).toBe("https://delhi-ncr-map-animesh-mittals-projects.vercel.app");
+  });
+  it("falls back to NEXT_PUBLIC_SITE_URL outside production, then localhost", () => {
+    expect(resolveSiteUrl({ VERCEL_ENV: "preview", VERCEL_PROJECT_PRODUCTION_URL: "x.vercel.app", NEXT_PUBLIC_SITE_URL: "http://localhost:3100/" })).toBe("http://localhost:3100");
+    expect(resolveSiteUrl({})).toBe("http://localhost:3000");
+  });
+  it("ignores a malformed production domain", () => {
+    expect(resolveSiteUrl({ VERCEL_ENV: "production", VERCEL_PROJECT_PRODUCTION_URL: "evil.com/@x", NEXT_PUBLIC_SITE_URL: "https://ok.example" })).toBe("https://ok.example");
   });
 });
