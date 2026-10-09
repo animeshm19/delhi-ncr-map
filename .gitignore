@@ -11,3 +11,6 @@ coverage
 .e2e
 .cache
 public/maplibre
+
+# Written by `next dev` for coding agents; not part of the app
+AGENTS.md
