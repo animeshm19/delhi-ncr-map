@@ -9,7 +9,7 @@ import { REGION } from "@/lib/site";
 export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Startups by metro station",
-  description: `Which ${REGION} startups are within walking distance of each Yellow Line, Rapid Metro and Aqua Line station.`,
+  description: `Which ${REGION} startups are within walking distance of each Delhi Metro, Rapid Metro, Noida Metro and Namo Bharat station.`,
   alternates: { canonical: "/metro" },
 };
 
@@ -36,6 +36,18 @@ export default async function Metro() {
         centre of their sector, so treat these as a guide, not a route.
       </p>
 
+      <nav className="line-jump" aria-label="Lines">
+        {METRO.lines.map((line) => (
+          <a key={line.slug} href={`#line-${line.slug}`} className="chip">
+            <span className="line-swatch" style={{ background: line.color }} aria-hidden /> {line.name}
+          </a>
+        ))}
+      </nav>
+      <p className="muted">
+        {METRO.stations.length} stations on {METRO.lines.length} lines across Delhi, Gurugram, Noida, Greater Noida,
+        Faridabad, Ghaziabad, Bahadurgarh and Meerut.
+      </p>
+
       {METRO.lines.map((line) => (
         <section key={line.slug} aria-labelledby={`line-${line.slug}`}>
           <h2 id={`line-${line.slug}`}>
@@ -43,7 +55,13 @@ export default async function Metro() {
             <span className="muted">· {line.operator}</span>
           </h2>
           <p className="muted">
-            {line.note} <a href={line.source} rel="noopener">Source</a>
+            {line.note} {line.stations.length} stations.{" "}
+            {line.source.map((url, i) => (
+              <span key={url}>
+                {i > 0 && " · "}
+                <a href={url} rel="noopener">{line.source.length > 1 ? `Source ${i + 1}` : "Source"}</a>
+              </span>
+            ))}
           </p>
           <div className="tablewrap">
             <table className="orgs metro-table">
@@ -84,8 +102,8 @@ export default async function Metro() {
       ))}
 
       <p className="muted">
-        Station locations from each station&apos;s Wikipedia page, read {METRO.stations[0].source.retrieved}. Lines are
-        drawn as straight segments between stations.
+        Lines, stations and track shapes from OpenStreetMap ({METRO.meta.license}), read {METRO.meta.retrieved}. Each
+        station links to its OpenStreetMap entry from the map.
       </p>
       <SiteFooter />
     </main>
