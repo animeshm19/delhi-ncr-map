@@ -5,12 +5,14 @@
 insert into organizations (slug, name, kind, published) values ('secret-draft', 'Secret Draft', 'company', false);
 insert into sources (org_slug, url, note) values ('secret-draft', 'https://example.com', 'private source');
 insert into review_queue (type, payload, contact) values ('submit', '{"x":"y"}', 'someone@example.com');
+create temp table expected as select count(*) as published from organizations where published;
+grant select on expected to anon, authenticated;
 
 -- ---------- Anonymous visitor ----------
 set local role anon;
 select tests.claims('anon');
 
-select tests.ok((select count(*) from organizations) = 137, 'anon reads all 137 published organisations');
+select tests.ok((select count(*) from organizations) = (select published from expected), 'anon reads every published organisation');
 select tests.ok((select count(*) from organizations where slug = 'secret-draft') = 0, 'anon cannot see unpublished organisations');
 select tests.ok((select count(*) from organizations_public where slug = 'secret-draft') = 0, 'public view hides unpublished organisations');
 select tests.ok((select count(*) from sources where org_slug = 'secret-draft') = 0, 'anon cannot see sources of unpublished organisations');
