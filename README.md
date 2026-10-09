@@ -49,6 +49,13 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
 - `/account`: magic-link sign-in; approved owners edit their own profile (one-liner, website, hiring, job
   board, logo upload). `/admin`: admins review requests.
 
+**Share as an image** (to promote the map)
+- "Share this view" on the map, and a share button on every panel and profile, make an Instagram-ready
+  card: a 4:5 post (1080×1350) or a 9:16 story (1080×1920) with the count, the metro line, a wall of real
+  company logos and the link (`/card?station=…&r=…&sector=…&city=…` or `/card?c=slug`).
+- On phones it opens the share sheet straight to Instagram (or any app); elsewhere it downloads the image.
+  A caption with the link and hashtags is ready to copy, plus WhatsApp.
+
 **Open data and reuse**
 - `/data/organizations.csv`, `/data/organizations.geojson`, `/data/sources.csv` (CC BY 4.0), `/feed.xml`.
 - `/embed`: the map in an iframe for other sites (same filters as links).
