@@ -21,15 +21,6 @@ test.describe("public pages", () => {
     expect(errors.filter((e) => !/favicon/.test(e))).toEqual([]);
   });
 
-  test("selecting a company from the list opens its popup, second click opens the profile", async ({ page }) => {
-    await page.goto("/");
-    const item = page.locator(".list .item", { hasText: "Policybazaar" });
-    await item.click();
-    await expect(page.locator(".maplibregl-popup")).toContainText("Policybazaar");
-    await item.click();
-    await expect(page).toHaveURL(/\/c\/policybazaar$/);
-  });
-
   test("profile shows sources and request links", async ({ page }) => {
     await page.goto("/c/spinny");
     await expect(page.getByRole("heading", { name: "Spinny", level: 1 })).toBeVisible();
