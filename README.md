@@ -36,7 +36,7 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
   metro stations with walking time, founded, status, funding, hiring, sectors, connections, similar
   companies (they open in the same panel), sources and the edit/claim/removal links. `?c=slug` links open
   it; Esc closes it; on phones it's a sheet under the map.
-- **Filters:** search, companies/support, sector, city (Gurugram, Noida, Greater Noida), hiring, and
+- **Filters:** search, companies/support, sector, city (Gurugram, Noida, Greater Noida), hiring, saved, and
   **near a metro station** within 500 m / 1 km / 2 km (nearest first, shareable as `?station=…&r=…`).
 - **Metro layer** with a **Metro** button on the map to hide or show it (remembered per browser).
 - "Search as I move the map", and every filter is a shareable link.
@@ -44,6 +44,7 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
 **Pages**
 - `/c/{slug}`, `/orgs/{slug}`: profiles with sources, nearest metro, open roles, connections, similar.
 - `/directory`, `/sector/{slug}`, `/area/{slug}`: tables with logos.
+- `/saved`: your saved companies (see below).
 - `/metro`: companies within walking distance of every station, line by line.
 - `/hiring`: open roles read daily from companies' public job boards (Greenhouse, Lever, Ashby).
 - `/events` (+ iCal at `/events.ics`), `/this-week`, `/stats`, `/about`, `/data`.
@@ -57,6 +58,12 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
   company logos and the link (`/card?station=…&r=…&sector=…&city=…` or `/card?c=slug`).
 - On phones it opens the share sheet straight to Instagram (or any app); elsewhere it downloads the image.
   A caption with the link and hashtags is ready to copy, plus WhatsApp.
+
+**Saved companies** (`/saved`)
+- A bookmark on every list row, panel and profile saves a company on this device (no account; kept in the
+  browser, synced across its tabs). A **Saved** chip filters the map to them (`/?saved=1`).
+- `/saved` lists them with their logos; share the list as a link (`/saved?ids=…`, which others can add to
+  their own), download it as a CSV, remove one or clear all.
 
 **Open data and reuse**
 - `/data/organizations.csv`, `/data/organizations.geojson`, `/data/sources.csv` (CC BY 4.0), `/feed.xml`.
