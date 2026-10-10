@@ -72,7 +72,8 @@ describe("organisations", () => {
 describe("areas", () => {
   it("have cited anchors for every area added after the first release", () => {
     for (const a of areas.slice(ORIGINAL_AREAS)) {
-      expect(a.anchor?.url, a.slug).toMatch(/^https:\/\/en\.wikipedia\.org\/wiki\//);
+      // Wikipedia, or the exact OpenStreetMap object the coordinates come from.
+      expect(a.anchor?.url, a.slug).toMatch(/^https:\/\/(en\.wikipedia\.org\/wiki\/|www\.openstreetmap\.org\/(node|way|relation)\/\d+$)/);
     }
   });
 

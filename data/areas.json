@@ -323,5 +323,260 @@
    "url": "https://en.wikipedia.org/wiki/Noida_Sector_18_metro_station",
    "retrieved": "2026-10-09"
   }
+ },
+ {
+  "slug": "noida-sector-142",
+  "name": "Sector 142 (Noida Expressway)",
+  "center": [
+   77.412769,
+   28.49905
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 142 metro station (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/1008841199",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-143",
+  "name": "Sector 143 (Noida Expressway)",
+  "center": [
+   77.422377,
+   28.494256
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 143 metro station (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/4165777365",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-144",
+  "name": "Sector 144 (Noida Expressway)",
+  "center": [
+   77.433077,
+   28.486288
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "Noida Sector 144 metro station (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/4165778734",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-nsez",
+  "name": "Noida Special Economic Zone (NSEZ)",
+  "center": [
+   77.394754,
+   28.532404
+  ],
+  "radius_m": 800,
+  "city": "Noida",
+  "anchor": {
+   "note": "NSEZ metro station (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/4849443432",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-125",
+  "name": "Sector 125",
+  "center": [
+   77.3320892,
+   28.5447999
+  ],
+  "radius_m": 600,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 125 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170566138",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-126",
+  "name": "Sector 126",
+  "center": [
+   77.3394726,
+   28.5397001
+  ],
+  "radius_m": 600,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 126 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170566140",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-127",
+  "name": "Sector 127",
+  "center": [
+   77.3483021,
+   28.5338121
+  ],
+  "radius_m": 600,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 127 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170566141",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-132",
+  "name": "Sector 132 (Noida Expressway)",
+  "center": [
+   77.3767864,
+   28.5120672
+  ],
+  "radius_m": 700,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 132 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170566142",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-135",
+  "name": "Sector 135 (Noida Expressway)",
+  "center": [
+   77.4002273,
+   28.4992078
+  ],
+  "radius_m": 700,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 135 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170571248",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-94",
+  "name": "Sector 94",
+  "center": [
+   77.3243852,
+   28.5509365
+  ],
+  "radius_m": 600,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 94 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/170566146",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "noida-sector-60",
+  "name": "Sector 60",
+  "center": [
+   77.3670379,
+   28.6023902
+  ],
+  "radius_m": 450,
+  "city": "Noida",
+  "anchor": {
+   "note": "Sector 60 outline (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/way/71644071",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-15-ii",
+  "name": "Sector 15 Part II",
+  "center": [
+   77.0460104,
+   28.4614487
+  ],
+  "radius_m": 500,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 15-II (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/2733423583",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-16",
+  "name": "Sector 16",
+  "center": [
+   77.0511794,
+   28.4687344
+  ],
+  "radius_m": 450,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 16 (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/2733423589",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-21-candor",
+  "name": "Sector 21 (Candor TechSpace)",
+  "center": [
+   77.0730087,
+   28.5143629
+  ],
+  "radius_m": 600,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 21 (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/2733423604",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-30",
+  "name": "Sector 30",
+  "center": [
+   77.05688,
+   28.4618719
+  ],
+  "radius_m": 500,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 30 (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/325428870",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-58",
+  "name": "Sector 58 (Golf Course Ext. Road)",
+  "center": [
+   77.1085564,
+   28.4160012
+  ],
+  "radius_m": 600,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 58 (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/2735984467",
+   "retrieved": "2026-10-10"
+  }
+ },
+ {
+  "slug": "sector-69",
+  "name": "Sector 69",
+  "center": [
+   77.0372311,
+   28.3960701
+  ],
+  "radius_m": 700,
+  "city": "Gurugram",
+  "anchor": {
+   "note": "Sector 69 (OpenStreetMap)",
+   "url": "https://www.openstreetmap.org/node/2735894470",
+   "retrieved": "2026-10-10"
+  }
  }
 ]
