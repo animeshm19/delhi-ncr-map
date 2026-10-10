@@ -83,8 +83,7 @@ export default async function About() {
 
       <h2>Licences and credits</h2>
       <p>
-        Code MIT. Dataset CC BY 4.0 (<Link href="/data">download it</Link>). Inspired by the{" "}
-        <a href="https://map.techwednesdays.ca">Edmonton Startup Map</a> hosted by Edmonton Tech Wednesdays. Base map
+        Code MIT. Dataset CC BY 4.0 (<Link href="/data">download it</Link>). Base map
         from <a href="https://openfreemap.org">OpenFreeMap</a>. Every metro and Namo Bharat line, station and track
         shape comes from <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> (© OpenStreetMap
         contributors, ODbL); each station links to its OpenStreetMap entry in the data.

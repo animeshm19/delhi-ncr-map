@@ -432,3 +432,4 @@ li:has(> .name-cell) { display: flex; align-items: center; flex-wrap: wrap; gap:
   .gate-logo .logo-flame { animation: none; }
   .gate-logo .logo-gate path, .gate-logo .logo-chip path { animation: none; stroke-dashoffset: 0; }
 }
+footer.site .credit { font-size: 12px; opacity: 0.8; }

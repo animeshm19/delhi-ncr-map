@@ -27,6 +27,11 @@ export default function SiteFooter() {
         <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, served by{" "}
         <a href="https://openfreemap.org">OpenFreeMap</a> with <a href="https://openmaptiles.org">OpenMapTiles</a>
       </p>
+      <p className="credit">
+        Made by{" "}
+        <a href="https://www.linkedin.com/in/animeshmittal/" rel="noopener" target="_blank">Animesh Mittal</a> · Inspired by{" "}
+        <a href="https://map.techwednesdays.ca" rel="noopener" target="_blank">Edmonton Tech</a>
+      </p>
     </footer>
   );
 }
