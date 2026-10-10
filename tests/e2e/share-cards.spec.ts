@@ -57,7 +57,7 @@ test.describe("Instagram-ready share cards", () => {
     await panel.getByRole("button", { name: "Share Spinny as an image" }).click();
     const dialog = page.getByRole("dialog", { name: "Share as an image" });
     await expect(dialog.getByTestId("share-preview")).toHaveAttribute("src", "/card?c=spinny&format=post");
-    expect(await dialog.getByRole("textbox").inputValue()).toContain("Spinny is on delhincr-map");
+    expect(await dialog.getByRole("textbox").inputValue()).toContain("Spinny is on Delhi Tech Map");
     await page.keyboard.press("Escape");
     await expect(dialog).toBeHidden();
     await expect(panel).toBeVisible();

@@ -8,7 +8,7 @@ import { SECTORS } from "@/lib/taxonomy";
 export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Directory",
-  description: "Every startup, tech company and support organisation on delhincr-map, in one table.",
+  description: "Every startup, tech company and support organisation on Delhi Tech Map, in one table.",
 };
 
 export default async function Directory() {

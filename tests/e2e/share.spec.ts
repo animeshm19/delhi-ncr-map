@@ -60,7 +60,7 @@ test.describe("stats, sharing and reuse", () => {
     expect(res.headers()["content-security-policy"]).toContain("sandbox");
     expect(res.headers()["x-content-type-options"]).toBe("nosniff");
     const svg = await res.text();
-    expect(svg).toContain("delhincr-map");
+    expect(svg).toContain("Delhi Tech Map");
     expect(svg).not.toMatch(/<script|href=/i);
     expect((await request.get("/badge/spinny?theme=light")).status()).toBe(200);
     for (const bad of ["/badge/no-such-company", "/badge/%3Cscript%3E", "/badge/..%2F..%2Fetc"]) {

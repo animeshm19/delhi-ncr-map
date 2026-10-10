@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const org = await getOrg((await params).slug);
   if (!org || org.kind !== "company") {
-    return ogCard({ eyebrow: "Delhi NCR", title: SITE_NAME, subtitle: "Profile not found", footer: "delhincr-map" });
+    return ogCard({ eyebrow: "Delhi NCR", title: SITE_NAME, subtitle: "Profile not found", footer: "Delhi Tech Map" });
   }
   const place = [getArea(org.area)?.name, org.municipality].filter(Boolean).join(", ");
   return ogCard({

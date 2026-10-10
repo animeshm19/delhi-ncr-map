@@ -1,5 +1,5 @@
 /** Site-wide names, in one place so the brand and region can change without hunting. */
-export const SITE_NAME = "delhincr-map";
+export const SITE_NAME = "Delhi Tech Map";
 export const SITE_TAGLINE = "Startups and tech companies across Delhi NCR, mapped";
 export const REGION = "Delhi NCR";
 /**

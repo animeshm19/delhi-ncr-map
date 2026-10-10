@@ -8,7 +8,8 @@ test.describe("public pages", () => {
   test("map loads with pins and a working list, with no console or CSP errors", async ({ page }) => {
     const errors = watchConsole(page);
     await page.goto("/");
-    await expect(page.getByRole("heading", { name: "delhincr-map" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Delhi Tech Map" })).toBeVisible();
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
     await expect(page.locator(".maplibregl-canvas")).toBeVisible();
     await expect(page.getByText(`${await count(PINNED)} on the map`)).toBeVisible();
     await page.getByRole("searchbox", { name: "Search" }).fill("spinny");

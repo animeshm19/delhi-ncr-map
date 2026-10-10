@@ -7,7 +7,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "About and methodology",
   description:
-    "How delhincr-map is made: public sources only, every fact linked to its source, no home addresses, corrections open to anyone.",
+    "How Delhi Tech Map is made: public sources only, every fact linked to its source, no home addresses, corrections open to anyone.",
 };
 
 export default async function About() {

@@ -15,7 +15,7 @@ function point(o: Org): [number, number] | null {
 import { SITE_URL as SITE } from "./site";
 
 export const ATTRIBUTION =
-  "delhincr-map, CC BY 4.0. Map data © OpenStreetMap contributors.";
+  "Delhi Tech Map, CC BY 4.0. Map data © OpenStreetMap contributors.";
 
 function coordKind(o: Org) {
   if (o.location_precision === "exact") return "address";

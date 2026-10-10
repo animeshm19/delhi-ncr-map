@@ -19,6 +19,6 @@ export default async function Image() {
       { label: `${orgs.length - companies} support orgs` },
       { label: "Gurugram · Noida · Delhi" },
     ],
-    footer: "delhincr-map",
+    footer: "Delhi Tech Map",
   });
 }

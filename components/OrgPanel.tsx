@@ -86,7 +86,7 @@ export default function OrgPanel({
         <ShareCard
           query={`c=${org.slug}`}
           link={org.href}
-          caption={`${org.name} is on delhincr-map 📍 ${org.place}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
+          caption={`${org.name} is on Delhi Tech Map 📍 ${org.place}${org.one_liner ? `\n\n${org.one_liner}` : ""}\n\nEvery startup in Delhi NCR on one free map 👇`}
           fileName={`delhincr-map-${org.slug}`}
           label=""
           className="icon-btn"

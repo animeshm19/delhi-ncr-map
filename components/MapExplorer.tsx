@@ -9,7 +9,7 @@ import { circlePolygon, haversineMeters } from "@/lib/geo";
 import { METRO, METRO_TRACKS_URL, formatDistance, getStation, metroGeoJSON } from "@/lib/metro";
 import OrgPanel from "./OrgPanel";
 import ShareCard from "./ShareCard";
-import Logo from "./Logo";
+import Wordmark from "./Wordmark";
 import SaveButton from "./SaveButton";
 import { useSaved } from "@/lib/saved";
 import OrgLogo, { inspectLogo } from "./OrgLogo";
@@ -715,7 +715,7 @@ export default function MapExplorer({
       <aside className="sidebar" aria-label="Search and list">
         <header>
           <div className="brand">
-            <h1 className="brand-name"><Logo size={24} className="brand-mark" />{SITE_NAME}</h1>
+            <Wordmark />
             <Link href="/submit" className="btn small">Add a company</Link>
           </div>
           <nav className="sitenav" aria-label="Site">

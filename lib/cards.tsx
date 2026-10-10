@@ -69,7 +69,7 @@ function Brand({ accent }: { accent: string }) {
       <div style={{ display: "flex", width: 44, height: 44, borderRadius: 22, background: accent, alignItems: "center", justifyContent: "center" }}>
         <div style={{ display: "flex", width: 16, height: 16, borderRadius: 8, background: BG }} />
       </div>
-      <div style={{ display: "flex", fontSize: 30, fontWeight: 800, letterSpacing: 4, color: INK }}>DELHINCR-MAP</div>
+      <div style={{ display: "flex", fontSize: 30, fontWeight: 800, letterSpacing: 4, color: INK }}>DELHI TECH MAP</div>
     </div>
   );
 }
@@ -285,7 +285,7 @@ export async function companyCard(o: Org, format: CardFormat) {
         <div style={{ display: "flex", flex: 1 }} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", borderTop: `2px solid ${LINE}`, paddingTop: 28 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <div style={{ display: "flex", fontSize: 30, fontWeight: 800 }}>Find us on delhincr-map</div>
+            <div style={{ display: "flex", fontSize: 30, fontWeight: 800 }}>Find us on Delhi Tech Map</div>
             <div style={{ display: "flex", fontSize: 24, color: MUTED }}>Every startup in Delhi NCR</div>
           </div>
           <div style={{ display: "flex", fontSize: 26, fontWeight: 800, color, whiteSpace: "nowrap" }}>{host()}</div>
