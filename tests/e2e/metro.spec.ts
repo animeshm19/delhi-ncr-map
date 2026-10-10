@@ -10,6 +10,7 @@ test.describe("metro", () => {
   test("filter companies near a station, nearest first, with a shareable link", async ({ page }) => {
     const errors = watchConsole(page);
     await page.goto("/");
+    await expect(page.locator(".map")).toHaveAttribute("data-intro", "done", { timeout: 20_000 });
     await expect(page.locator(".list .item").first()).toBeVisible();
 
     await page.getByLabel("Near metro station").selectOption("cyber-city");

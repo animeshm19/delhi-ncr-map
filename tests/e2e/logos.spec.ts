@@ -99,8 +99,17 @@ test.describe("logos and logo pins", () => {
       await (await clearGroup(page)).click();
       await page.waitForTimeout(900);
     }
-    const single = page.locator(".pin:not(.group)").first();
-    const slug = await single.getAttribute("data-slug");
+    // A single pin whose centre isn't covered by a neighbouring pin or the map edge.
+    const slug = await page.evaluate(() => {
+      for (const el of document.querySelectorAll<HTMLElement>(".pin:not(.group)")) {
+        const r = el.getBoundingClientRect();
+        const hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+        if (hit && el.contains(hit)) return el.dataset.slug!;
+      }
+      return null;
+    });
+    expect(slug, "a clickable single pin").not.toBeNull();
+    const single = page.locator(`.pin[data-slug='${slug}']`);
     await single.click();
     await expect(page.getByTestId("org-panel")).toBeVisible();
     await expect(page).toHaveURL(new RegExp(`[?&]c=${slug}\\b`));
