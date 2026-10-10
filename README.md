@@ -1,19 +1,19 @@
 # delhincr-map
 
-A public, community-owned map and directory of Delhi NCR's startups and tech companies, and the
-organisations that support them. Every fact links to a public source. Modelled on the
+A public, community-owned map and directory of Delhi NCR's startups and tech companies (from seed-stage
+startups to Google, Adobe and HCLTech), and the organisations that support them. Every fact links to a public source. Modelled on the
 [Edmonton Startup Map](https://map.techwednesdays.ca) (Edmonton Tech Wednesdays; code MIT, data CC BY 4.0).
 
 **Live:** https://delhincr-map.vercel.app
 
 | | Today |
 |---|---|
-| Organisations | 640: 633 companies, 7 support organisations |
-| Cities | Gurugram (398 companies), Noida (216), Greater Noida (19); Delhi next |
-| On the map | 223, pinned to their sector or business district (never a street address) |
-| Logos | Every organisation with a known website (348) gets its logo; the rest show initials |
+| Organisations | 865: 858 companies (including 225 big tech, multinational and large-company tech offices), 7 support organisations |
+| Cities | Gurugram (531 companies), Noida (304), Greater Noida (23); Delhi next |
+| On the map | 315, pinned to their sector or business district (never a street address) |
+| Logos | Every organisation with a known website (573) gets its logo; the rest show initials |
 | Metro | 13 lines, 296 stations, 31 interchanges: all of Delhi Metro, Rapid Metro Gurugram, Noida Aqua Line, Namo Bharat and Meerut Metro, with real track shapes |
-| Sources | Every organisation has at least one public listing; about 1,300 source rows in all |
+| Sources | Every organisation has at least one public listing; about 1,700 source rows in all |
 
 ```bash
 npm install
@@ -77,12 +77,17 @@ npm run dev          # http://localhost:3000, runs from data/seed.json, no datab
 
 1. **Who.** Public lists only: Inc42 (city and sector lists), Y Combinator (via vcbacked.co), Seedtable,
    StartupBlink, Fliarbi, Clera, Wellfound and the eChai Startup Grid, plus Wikipedia/Wikidata. A company is
-   in if a public list places it in a live city. What was left out and why: [`data/EXCLUSIONS.md`](data/EXCLUSIONS.md).
+   in if a public list places it in a live city. Big tech, multinationals and large companies are listed alongside
+   the startups, wherever they are headquartered, when a public page (their own offices or careers page, a job
+   listing, Wikipedia or a news report) places an office in Gurugram, Noida or Greater Noida **and** shows tech
+   work there. Sales-only, registered and customer-service offices, and centres not yet open, are left out. Each
+   was checked twice: once when found and again by an independent audit that re-read every source for exact quotes. What was left out and why: [`data/EXCLUSIONS.md`](data/EXCLUSIONS.md).
 2. **Facts.** Fields are filled only when a source gives them, and each source row says which fields it
    backs (`listing`, `sector`, `founded_year`, `description`, `area`, `website`, `status`). Empty beats invented.
 3. **Where.** Pins are at **sector / business-district level only** (`data/areas.json`), placed from a
    company's public office address (GST registration, company-registry filing, its own contact page, or a
-   directory that shows it). Sector centres are anchored on cited coordinates. Companies sharing a sector are
+   directory that shows it). Sector centres are anchored on cited coordinates (Wikipedia, or the exact
+   OpenStreetMap object). Companies sharing a sector are
    spread inside its dashed circle so each can be clicked. Companies with only a city are listed, not pinned.
 4. **Websites and logos.** Websites come from the eChai Startup Grid's company pages, Y Combinator's
    listing and Wikidata, each cited. A logo is an uploaded file if the owner added one, otherwise the icon

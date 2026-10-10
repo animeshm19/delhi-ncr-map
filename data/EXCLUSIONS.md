@@ -5,8 +5,14 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 
 ## Rules
 
-1. **Headquartered elsewhere:** a local office of a company based in another city or country.
-2. **Large corporations and subsidiaries:** established groups, and subsidiaries or products of a company already listed.
+1. **No tech work here:** since October 2026, big tech, multinationals and large companies are included wherever
+   they are headquartered, when a public page places an office in Gurugram, Noida or Greater Noida and shows tech
+   work there (software, data, IT, engineering or R&D, or a global capability centre). Left out: offices that are
+   only sales, registered or customer-service sites, and centres announced but not yet open (for now: LG's Noida
+   R&D centre, GE Vernova's Noida lab, Daikin's Gurugram hub). Rows below marked "rule 1" have no public page yet
+   showing tech work in the region; companies that qualified moved to the map (for example Cvent, Iris Software,
+   Hughes Communications, Maruti Suzuki). [Suggest one](https://delhincr-map.vercel.app/submit) with a source.
+2. **Subsidiaries:** subsidiaries or products of a company already listed.
 3. **Not a company:** events, parks, shops and venues, industry bodies, initiatives.
 4. **Can't identify:** generic names, page text that is spam or describes another company, or a location given outside the region.
 5. **Traditional business with no digital product:** property developers, contract manufacturers, hotel owners, hospitals, staffing firms, bakeries, movers.
@@ -15,9 +21,9 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 
 | Name | Found on | Reason |
 |---|---|---|
-| Pimcore | seedtable noida | Austrian company (Salzburg); listed as "Noida, Austria" |
-| Guavus | seedtable/echai | US company (a Thales company); local office only; eChai text is spam |
-| Webhelp | seedtable ggn fintech | French company; local office only |
+| Pimcore | seedtable noida | rule 1: Austrian company; its own contact page lists no India office |
+| Guavus | seedtable/echai | rule 1: a Thales company; no source for its NCR office; eChai text is spam |
+| Webhelp | seedtable ggn fintech | rule 1: customer-experience (call-centre) work, now part of Concentrix |
 | Seekify Technologies | seedtable ggn saas | listed as Gurugram, Singapore |
 | Credgenics (Gurugram) | seedtable ggn fintech | conflicts with Inc42 Noida; kept as Noida |
 | Live Mint | startupblink ggn | newspaper (HT Media), not a startup |
@@ -27,10 +33,9 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 | Generative AI | echai sohna road | name too generic to identify the company |
 | Mantle | echai golf course ext | page says New Delhi agency |
 | UP SaaS list entries | inc42 UP saas | no city given (Exclusife, Vectus, Diensten, Claritus, MapleGraph, Megh 9, Workstatus, Bito, EazeWork, 99Oranges, goFusion, Krish Apps Lab, Innoforia, GPS Gateway, Waviz) |
-| Cvent India | echai cyber city | US company's office |
 | Synq.Work | echai cyber city | managed workspaces (coworking), not a startup |
 | Rajiv Gandhi Renewable Energy Park | echai sushant lok | a park, not a company |
-| AccountabilIT GDC India | echai sushant lok | US company's delivery centre |
+| AccountabilIT GDC India | echai sushant lok | rule 1: delivery centre not yet confirmed by a public page |
 | Naukri.com | echai sushant lok | Info Edge is based in Noida; not pinned to Gurugram |
 | Creambell | echai sector 44 | ice-cream brand, no tech product |
 | Hachette India | echai sector 44 | publisher, subsidiary of a French group |
@@ -43,7 +48,6 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 | EV INDIA EXPO | echai sector 62 noida | trade show, not a company |
 | E-Commerce Website and Shopify Store Development Company | echai sector 59 noida | generic agency name |
 | Glued Supercharged | echai sector 125 noida | gaming arcade (venue), not a tech company |
-| Iris Software Technologies | echai sector 135 noida | US-headquartered IT services company |
 | Vedic Cosmeceuticals | echai sector 135 noida | contract skincare manufacturer, no tech product |
 | Max Estates | echai sector 16 noida | property developer |
 | Fashion Stories | echai sector 3 noida | T-shirt manufacturer, no tech product |
@@ -52,9 +56,9 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 | WION | echai film city | news outlet |
 | Next Business Media | echai film city | publisher and events |
 | Lilium Cosmetics | echai greater noida west | cosmetics shop |
-| India Yamaha Motor | echai greater noida | subsidiary of a Japanese multinational |
+| India Yamaha Motor | echai greater noida | rule 1: plant only; no source for R&D or IT work here |
 | URMI Lifesciences | echai greater noida | nutraceutical manufacturer, no tech product |
-| Tecno Mobile, itel, Hisense | fliarbi noida | Indian arms of foreign electronics groups |
+| Tecno Mobile, itel, Hisense | fliarbi noida | rule 1: manufacturing and sales; no source for R&D here |
 | Dharampal Premchand | fliarbi noida | tobacco and food conglomerate |
 | ISRPL, Jubilant Generics, Inox Clean Energy, Patanjali Renewable, Nuberg Engineering | fliarbi noida | large industrial/pharma groups or subsidiaries, not startups |
 | KHY, Tianyin, Rexxam Dixon, Mobase, Vista Consoles, R A Motor | fliarbi noida | contract or auto-component manufacturers |
@@ -64,13 +68,12 @@ These entries from those lists were left out. If one belongs on the map, [sugges
 | Manone, Vone India, Ingenious HR, Sunrising Staffing, AMS Comtel | fliarbi noida | staffing or management consulting, no digital product |
 | News9 Plus (TV9 group), Purple United Sales, SN Capital, Indosup, Novel Patterns | fliarbi noida | news outlets, or no description to identify them |
 | Eduflute Academy, Vagmine Tech, Cloud Science Labs, Prompt Smart Solutions | wellfound | location given outside Noida/Greater Noida or unclear |
-| Maruti Suzuki, Hyundai Motor India, MG Motor India, Vivo, Realme, JCB India, Veet India, Carrier Midea India | fliarbi ggn | large or foreign-owned corporations, not startups |
+| Hyundai Motor India, MG Motor India, Vivo, Realme, JCB India, Veet India, Carrier Midea India | fliarbi ggn | rule 1: no source yet for tech work in Gurugram (Maruti Suzuki is now listed) |
 | District, Nxtra, Airtel Payments Bank, Times Prime, True Credits, BharatPe Money, Adani Digital Labs, Airtel Xstream Play, Newspoint, NoiseFit, LOTS Wholesale, Bright LifeCare (=Healthkart) | fliarbi ggn | subsidiaries or products of companies listed elsewhere |
 | Savan Retailers, Savadika Retail, Krisumi, Smartworld, Addo Platinum, Fonzone Exports, Livguard, Livfast | fliarbi ggn | retail, real estate or manufacturing, not tech startups |
 | Spotlight, PLAYit, Testbook | fliarbi ggn | can't identify the company / location doubtful |
 | Companies named only in Fliarbi's funding and M&A feed (e.g. Internshala, Zappfresh, Culture Circle, Hoppr, Clayfin) | fliarbi ggn | a news mention doesn't establish where the company is based |
-| Builder.ai | inc42 ggn saas | London-headquartered, office here only; also entered insolvency in 2025 |
-| Hughes Communications India | echai udyog vihar | subsidiary of a US company |
+| Builder.ai | inc42 ggn saas | entered insolvency in 2025 |
 | Indosolar | echai udyog vihar | now part of Waaree, a large manufacturer |
 | SAMHI Hotels | echai cyber city / inc42 | hotel owner |
 

@@ -32,8 +32,14 @@ export default async function About() {
         research labs, government programmes and community groups.
       </p>
       <p>
-        Left out: companies headquartered elsewhere with only an office here; large corporations and their
-        subsidiaries; entries that aren&apos;t companies (events, parks, shops, industry bodies); names we can&apos;t
+        Big tech and large companies are listed alongside the startups, not in a separate layer: any company,
+        wherever it is headquartered, with an office in Gurugram, Noida or Greater Noida that does tech work there
+        (software, data, IT, engineering or R&amp;D, or a global capability centre). Each needs a public page placing
+        that office in the city and showing the work. Customer-service-only sites, sales offices and centres that
+        are announced but not yet open are left out until a source shows otherwise.
+      </p>
+      <p>
+        Left out: subsidiaries or products of a company already listed; entries that aren&apos;t companies (events, parks, shops, industry bodies); names we can&apos;t
         identify; and traditional businesses with no digital product (property developers, contract manufacturers,
         hotel owners, hospitals, staffing firms). Every exclusion is listed with its reason in{" "}
         <a href="https://github.com/animeshm19/delhi-ncr-map/blob/main/data/EXCLUSIONS.md" rel="noopener">the data notes</a>.
